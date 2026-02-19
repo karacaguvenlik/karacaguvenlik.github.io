@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <title>Sitemiz Yakında Hizmetinizde...</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<div class="container fade-in">
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, Helvetica, sans-serif;
+            background: #0f172a;
+            color: #ffffff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .container {
+            text-align: center;
+            padding: 30px;
+            max-width: 420px;
+            width: 100%;
+        }
+        .logo img {
+            max-width: 200px;
+            margin-bottom: 20px;
+        }
+        h1 {
+            font-size: 28px;
+            margin-bottom: 12px;
+        }
+        p {
+            font-size: 16px;
+            margin-bottom: 25px;
+            color: #cbd5e1;
+        }
+        .btn {
+            display: block;
+            width: 100%;
+            margin-bottom: 12px;
+            padding: 14px;
+            font-size: 18px;
+            font-weight: bold;
+            border-radius: 8px;
+            text-decoration: none;
+            color: #ffffff;
+        }
+        .phone {
+            background: #22c55e;
+        }
+.location {
+    background: #0ea5e9;
+}
+.location:hover {
+    background: #0284c7;
+}
+        .phone:hover {
+            background: #16a34a;
+        }
+        .whatsapp {
+            background: #25D366;
+        }
+        .whatsapp:hover {
+            background: #1ebe5d;
+        }
+        .instagram {
+            background: linear-gradient(45deg,#f58529,#dd2a7b,#8134af,#515bd4);
+        }
+	.logo-wrap {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 18px;
+    margin-bottom: 30px;
+}
+.fade-in {
+    animation: fadeIn 2s ease forwards;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+}
+.shield {
+    animation: glow 3s ease-in-out infinite;
+}
+
+@keyframes glow {
+    0% {
+        box-shadow: 0 0 0 rgba(76,95,215,0.0);
+    }
+    50% {
+        box-shadow: 0 0 25px rgba(76,95,215,0.6);
+    }
+    100% {
+        box-shadow: 0 0 0 rgba(76,95,215,0.0);
+    }
+}
+.btn {
+    transition: all 0.25s ease;
+}
+
+.btn:hover {
+    transform: scale(1.04);
+    filter: brightness(1.1);
+}
+.whatsapp {
+    animation: pulse 2.2s infinite;
+}
+
+@keyframes pulse {
+    0% {
+        box-shadow: 0 0 0 0 rgba(37,211,102,0.6);
+    }
+    70% {
+        box-shadow: 0 0 0 18px rgba(37,211,102,0);
+    }
+    100% {
+        box-shadow: 0 0 0 0 rgba(37,211,102,0);
+    }
+}
+.instagram {
+    animation: pulse 2.2s infinite;
+}
+
+@keyframes pulse {
+    0% {
+        box-shadow: 0 0 0 0 rgba(37,211,102,0.6);
+    }
+    70% {
+        box-shadow: 0 0 0 18px rgba(37,211,102,0);
+    }
+    100% {
+        box-shadow: 0 0 0 0 rgba(37,211,102,0);
+    }
+}
+.location {
+    animation: pulse 2.2s infinite;
+}
+
+@keyframes pulse {
+    0% {
+        box-shadow: 0 0 0 0 rgba(37,211,102,0.6);
+    }
+    70% {
+        box-shadow: 0 0 0 18px rgba(37,211,102,0);
+    }
+    100% {
+        box-shadow: 0 0 0 0 rgba(37,211,102,0);
+    }
+}
+/* KALKAN */
+.shield {
+    position: relative;
+    width: 120px;
+    height: 150px;
+    background: linear-gradient(180deg,#3b4cc0,#1e2a78);
+    clip-path: polygon(
+        50% 0%,
+        90% 15%,
+        85% 60%,
+        50% 100%,
+        15% 60%,
+        10% 15%
+    );
+}
+
+/* ORTA ÇİZGİLER */
+.shield .line {
+    position: absolute;
+    top: 15px;
+    bottom: 15px;
+    width: 18px;
+    transform: skewX(-10deg);
+    border-radius: 8px;
+}
+
+.shield .line.dark {
+    left: 50%;
+    transform: translateX(-50%) skewX(-10deg);
+    background: linear-gradient(180deg,#2b2b2b,#6b6b6b);
+}
+
+.shield .line.light {
+    left: 62%;
+    background: linear-gradient(180deg,#5b6cff,#2d3db8);
+}
+
+/* YAZI */
+.logo-text {
+    text-align: center;
+}
+
+.logo-text .main {
+    font-size: 34px;
+    letter-spacing: 3px;
+    font-weight: 600;
+    color: #4c5fd7;
+}
+
+.logo-text .sub {
+    font-size: 16px;
+    letter-spacing: 4px;
+    margin-top: 6px;
+    color: #9ca3af;
+}
+    </style>
+</head>
+<body>
+
+<div class="container">
+
+    <!-- LOGO -->
+    <div class="logo-wrap">
+  <div class="shield">
+    <span class="line dark"></span>
+    <span class="line light"></span>
+  </div>
+
+  <div class="logo-text">
+    <div class="main">KARACA GÜVENLİK</div>
+    <div class="sub">– BİLİŞİM SİSTEMLERİ –</div>
+  </div>
+</div>
+
+
+    <!-- YAZI -->
+    <h1>Yakında Hizmetinizdeyiz</h1>
+    <p>
+        Kamera & Alarm Güvenlik Sistemleri<br>
+        Profesyonel çözümler çok yakında.
+    </p>
+
+    <a class="btn location" 
+   href="https://maps.app.goo.gl/PgMU77oGj5NRRiDp8" 
+   target="_blank">
+    📍 Konumumuzu Gör
+</a>
+
+    <!-- WHATSAPP -->
+    <a class="btn whatsapp" href="https://wa.me/905387711146" target="_blank">
+        💬 WhatsApp’tan Yaz
+    </a>
+
+    <!-- INSTAGRAM -->
+    <a class="btn instagram" href="https://instagram.com/karacaguvenlik07" target="_blank">
+        📸 Instagram Sayfamız
+    </a>
+
+</div>
+
+</body>
+</html>
