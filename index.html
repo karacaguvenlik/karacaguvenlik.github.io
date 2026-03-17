@@ -21,6 +21,7 @@
     gap: 10px;
     transition: all 0.3s ease;
     box-shadow: 0 4px 15px rgba(34, 197, 94, 0.2);
+    white-space: nowrap;
 }
 
 .btn-emergency:hover {
@@ -148,8 +149,9 @@
         .contact textarea { border-radius: 20px; height: 100px; }
         .whatsapp { position: fixed; bottom: 20px; right: 20px; background: #25D366; color: #fff; padding: 12px 25px; border-radius: 50px; text-decoration: none; font-weight: 600; z-index: 2000; box-shadow: 0 4px 15px rgba(0,0,0,0.2); }
 
-        /* MOBİL İÇİN EK KODLAR */
-        .menu-btn { display: none; font-size: 24px; cursor: pointer; color: #0f172a; }
+        /* MOBİL İÇİN DÜZENLEME */
+        .mobile-nav-container { display: none; align-items: center; gap: 15px; }
+        .menu-btn { font-size: 30px; cursor: pointer; color: #0f172a; }
         
         @media (max-width: 1024px) { 
             .project-grid { grid-template-columns: repeat(2, 1fr); grid-template-rows: auto; } 
@@ -157,20 +159,33 @@
         }
 
         @media (max-width: 768px) { 
-            header { padding: 10px 20px; height: 70px; }
+            header { padding: 10px 20px; height: 75px; }
             .logo { height: 50px; }
-            .menu-btn { display: block; }
             
-            nav {
-                position: fixed; top: 70px; left: -100%; width: 100%; height: auto;
+            /* Masaüstü Nav ve Butonu Gizle */
+            nav#navbar ul { display: none; }
+            nav#navbar .btn-emergency { display: none; }
+            
+            /* Mobil Buton Konteynerını Göster */
+            .mobile-nav-container { display: flex; }
+            .mobile-nav-container .btn-emergency { 
+                font-size: 11px; 
+                padding: 8px 15px; 
+                line-height: 1.2;
+                text-align: center;
+            }
+
+            /* Açılır Menü Ayarı */
+            nav#navbar {
+                position: fixed; top: 75px; left: -100%; width: 100%; height: auto;
                 background: white; flex-direction: column; padding: 20px;
                 transition: 0.4s; border-bottom: 1px solid #e5e7eb; gap: 10px !important;
+                display: flex !important;
             }
-            nav.active { left: 0; }
-            ul { flex-direction: column; width: 100%; text-align: center; display: flex !important; }
-            nav a { margin: 5px 0; width: 100%; display: block; }
+            nav#navbar.active { left: 0; }
+            nav#navbar ul { display: flex; flex-direction: column; width: 100%; text-align: center; }
+            nav#navbar a { margin: 5px 0; width: 100%; display: block; }
             
-            .btn-emergency { font-size: 10px; padding: 5px 15px; }
             .project-grid { grid-template-columns: 1fr; }
             .container { flex-direction: column; align-items: center; }
             .card { width: 100%; }
@@ -182,7 +197,13 @@
     <header>
         <a href="#" class="logo-link"><img src="logo.png" alt="Karaca Güvenlik" class="logo"></a>
         
-        <div class="menu-btn" onclick="toggleMenu()">☰</div>
+        <div class="mobile-nav-container">
+            <a href="tel:+905387711146" class="btn-emergency">
+                <span class="pulse-dot"></span>
+                7/24 ACİL <br>TEKNİK SERVİS
+            </a>
+            <div class="menu-btn" onclick="toggleMenu()">☰</div>
+        </div>
 
         <nav id="navbar" style="display: flex; align-items: center; gap: 30px;">
             <ul style="display: flex; gap: 10px; list-style: none; margin: 0; padding: 0;">
@@ -197,7 +218,7 @@
                 7/24 ACİL <br>TEKNİK SERVİS
             </a>
         </nav>
-</header>
+    </header>
 
     <section class="hero" id="home">
         <h1>Güvenlikte Profesyonel Çözüm</h1>
@@ -396,8 +417,8 @@
                     
                     <div style="border-radius: 15px; overflow: hidden; box-shadow: 0 5px 15px rgba(0,0,0,0.08); height: 200px; width: 100%; border: 1px solid #e5e7eb;">
                         <iframe 
-                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3205.567282608961!2d32.04962667529073!3d36.54043258230056!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14dc992c581f2795%3A0x79a3e5f7aafaafbb!2zS0FSQUNBIEfDnFZFTkzEsEsgVkUgQsSwTMSwxZ7EsE0gU8SwU1RFTUxFUsSw!5e0!3m2!1str!2sus!4v1773758516651!5m2!1str!2sus" 
-                            width="600" height="350" style="border:0;" allowfullscreen="" loading="lazy" >
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3211.5!2d32.0!3d36.5!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMzbCsDMwJzAwLjAiTiAzMsKwMDAnMDAuMCJF!5e0!3m2!1str!2str!4v1600000000000!5m2!1str!2str" 
+                            width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy">
                         </iframe>
                     </div>
                 </div>
