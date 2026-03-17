@@ -6,206 +6,160 @@
     <title>Karaca Güvenlik | Profesyonel Güvenlik Çözümleri</title>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
     <style>
-
-
-
-/* Acil Hat Butonu Stili */
-.btn-emergency {
-    background: #22c55e;
-    color: white !important;
-    padding: 10px 22px;
-    border-radius: 50px;
-    text-decoration: none;
-    font-weight: 700;
-    font-size: 13px;
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    transition: all 0.3s ease;
-    box-shadow: 0 4px 15px rgba(34, 197, 94, 0.2);
-}
-
-.btn-emergency:hover {
-    background: #16a34a;
-    transform: translateY(-2px);
-    box-shadow: 0 6px 20px rgba(34, 197, 94, 0.4);
-}
-
-/* Yanıp Sönen Küçük Işık */
-.pulse-dot {
-    width: 15px;
-    height: 15px;
-    background-color: #FF0000;
-    border-radius: 50%;
-    animation: dot-pulse 1.2s infinite;
-}
-
-@keyframes dot-pulse {
-    0% { transform: scale(0.8); opacity: 1; }
-    50% { transform: scale(1.3); opacity: 0.5; }
-    100% { transform: scale(0.8); opacity: 1; }
-}
-
-/* Mobil için Düzenleme */
-@media (max-width: 768px) {
-    nav { gap: 15px; }
-    ul { display: none; } /* Mobilde menü gizlenebilir veya hamburger menüye geçer */
-    .btn-emergency { padding: 8px 15px; font-size: 11px; }
-}
         * { margin: 0; padding: 0; box-sizing: border-box; }
         body { font-family: 'Poppins', sans-serif; background: #ffffff; color: #0f172a; scroll-behavior: smooth; line-height: 1.6; overflow-x: hidden; }
+
+        /* HEADER & NAV */
+        header { 
+            background: rgba(255, 255, 255, 0.98); 
+            display: flex; 
+            align-items: center; 
+            justify-content: space-between; 
+            padding: 10px 5%; 
+            position: fixed; 
+            width: 100%; 
+            z-index: 1000; 
+            border-bottom: 1px solid #e5e7eb; 
+            backdrop-filter: blur(10px);
+            height: 80px;
+        }
+        .logo { height: 50px; transition: 0.3s; }
         
-        /* Header ve Tıklanabilir Logo */
-        header { background: rgba(255, 255, 255, 0.95); display: flex; align-items: center; justify-content: space-between; padding: 15px 40px; position: fixed; width: 100%; z-index: 1000; border-bottom: 1px solid #e5e7eb; backdrop-filter: blur(10px); }
-        .logo-link { display: flex; align-items: center; text-decoration: none; }
-        .logo { height: 70px; transition: 0.3s; }
-        .logo:hover { transform: scale(1.05); }
+        nav { display: flex; align-items: center; gap: 20px; }
+        
+        .nav-menu { display: flex; list-style: none; gap: 15px; align-items: center; }
+        .nav-menu a { 
+            color: #0f172a; text-decoration: none; font-weight: 500; 
+            padding: 8px 15px; border-radius: 50px; transition: 0.3s; font-size: 14px;
+        }
+        .nav-menu a:hover { background: #f1f5f9; color: #2563eb; }
 
-        nav a { color: #0f172a; text-decoration: none; font-weight: 500; padding: 8px 20px; border: 1.5px solid #e5e7eb; border-radius: 50px; transition: 0.3s; font-size: 14px; margin-left: 10px; }
-        nav a:hover { background: #2563eb; color: #fff; border-color: #2563eb; }
+        /* ACİL HAT BUTONU */
+        .btn-emergency {
+            background: #22c55e;
+            color: white !important;
+            padding: 8px 18px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 12px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            line-height: 1.2;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(34, 197, 94, 0.2);
+            text-align: center;
+        }
+        .btn-emergency:hover { background: #16a34a; transform: translateY(-2px); }
+        
+        .pulse-dot {
+            width: 10px; height: 10px; background-color: #FF0000;
+            border-radius: 50%; animation: dot-pulse 1.2s infinite;
+        }
 
-  /* ANA GÖRSEL ALANI (HERO) - YENİ TEKNOLOJİ GÖRSELİ */
+        @keyframes dot-pulse {
+            0% { transform: scale(0.8); opacity: 1; }
+            50% { transform: scale(1.3); opacity: 0.5; }
+            100% { transform: scale(0.8); opacity: 1; }
+        }
+
+        /* MOBİL MENÜ BUTONU (HAMBURGER) */
+        .menu-toggle { display: none; font-size: 24px; cursor: pointer; }
+
+        /* HERO SECTION */
         .hero { 
             height: 100vh; 
             background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.7)), 
             url('https://images.pexels.com/photos/1135452/pexels-photo-1135452.jpeg?auto=compress&cs=tinysrgb&w=1600'); 
-            background-size: cover; 
-            background-position: center; 
-            display: flex; 
-            flex-direction: column; 
-            justify-content: center; 
-            align-items: center; 
-            text-align: center; 
-            padding: 0 20px; 
-            color: #fff;
+            background-size: cover; background-position: center; 
+            display: flex; flex-direction: column; justify-content: center; align-items: center; 
+            text-align: center; padding: 0 20px; color: #fff;
         }
-        .hero h1 { font-size: clamp(32px, 6vw, 64px); font-weight: 700; margin-bottom: 15px; text-shadow: 0 4px 8px rgba(0,0,0,0.3); }
-        .hero p { font-size: clamp(16px, 2vw, 24px); max-width: 800px; opacity: 0.9; text-shadow: 0 2px 4px rgba(0,0,0,0.3); }
+        .hero h1 { font-size: clamp(28px, 6vw, 64px); font-weight: 700; margin-bottom: 15px; }
+        .hero p { font-size: clamp(14px, 2vw, 20px); max-width: 600px; opacity: 0.9; }
 
-        .btn { padding: 16px 40px; background: #2563eb; color: #fff; border-radius: 50px; text-decoration: none; font-weight: 600; transition: 0.3s; display: inline-block; border: none; cursor: pointer; margin-top: 30px; font-size: 18px; }
-        .btn:hover { transform: translateY(-3px); box-shadow: 0 10px 20px rgba(37, 99, 235, 0.4); }
-        .btn { padding: 15px 35px; background: #2563eb; color: #fff; border-radius: 50px; text-decoration: none; font-weight: 600; transition: 0.3s; display: inline-block; border: none; cursor: pointer; }
-        .btn:hover { transform: translateY(-3px); box-shadow: 0 10px 20px rgba(37, 99, 235, 0.3); }
+        .btn { 
+            padding: 14px 30px; background: #2563eb; color: #fff; border-radius: 50px; 
+            text-decoration: none; font-weight: 600; transition: 0.3s; display: inline-block; margin-top: 20px;
+        }
 
-        .section { padding: 80px 20px; text-align: center; }
-        .bg-gray { background: #f8fafc; }
-        
-        /* Hizmet Kartları - Kabarma Efekti */
-        .container { max-width: 1200px; margin: 0 auto; display: flex; flex-wrap: wrap; justify-content: center; gap: 20px; }
+        /* HİZMETLER & PROJELER */
+        .section { padding: 60px 20px; text-align: center; }
+        .container { max-width: 1200px; margin: 0 auto; display: flex; flex-wrap: wrap; justify-content: center; gap: 15px; }
         .card { 
-            background: #fff; padding: 25px; width: 260px; border-radius: 20px; 
-            border: 1px solid #e5e7eb; font-weight: 600; transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-            cursor: pointer;
+            background: #fff; padding: 20px; width: calc(50% - 20px); min-width: 140px; 
+            border-radius: 15px; border: 1px solid #e5e7eb; font-weight: 600; font-size: 14px;
         }
-        .card:hover { transform: translateY(-12px); box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1); border-color: #2563eb; color: #2563eb; }
 
-        /* Proje Izgara Sistemi - 4x3 Tam Görünüm */
-.project-grid { 
-    display: grid; 
-    grid-template-columns: repeat(4, 1fr); /* 4 Sütun */
-    /* Yüksekliği sabitlemiyoruz, içerik kadar uzasın diyoruz */
-    grid-template-rows: repeat(3, 280px); 
-    gap: 20px; 
-    max-width: 1200px; 
-    margin: 40px auto; 
-    padding: 0 20px;
-}
-
-.img-box { 
-    position: relative; 
-    border-radius: 20px; 
-    overflow: hidden; 
-    box-shadow: 0 10px 20px rgba(0,0,0,0.05);
-    background: #f1f5f9;
-    cursor: pointer;
-    height: 100%; /* Satır yüksekliğini tam doldur */
-}
-
-.img-box img { 
-    width: 100%; height: 100%; object-fit: cover; 
-    transition: 0.6s cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.overlay {
-    position: absolute;
-    top: 0; left: 0; width: 100%; height: 100%;
-    background: linear-gradient(to bottom, rgba(15, 23, 42, 0.2), rgba(15, 23, 42, 0.9));
-    display: flex; flex-direction: column; justify-content: center; align-items: center;
-    opacity: 0; transition: 0.4s ease;
-}
-
-.img-box:hover .overlay { opacity: 1; }
-.img-box:hover img { transform: scale(1.1); }
-
-/* Etiketler */
-.status-tag {
-    color: white; padding: 6px 14px; border-radius: 50px;
-    font-size: 11px; font-weight: 700; margin-bottom: 10px;
-}
-.tag-finished { background: #22c55e; box-shadow: 0 4px 10px rgba(34, 197, 94, 0.3); }
-.tag-ongoing { background: #f59e0b; box-shadow: 0 4px 10px rgba(245, 158, 11, 0.3); }
-
-.project-title { color: white; font-weight: 600; font-size: 15px; margin: 0; }
-
-/* Mobil Uyumluluk */
-@media (max-width: 1024px) { 
-    .project-grid { grid-template-columns: repeat(2, 1fr); grid-template-rows: auto; }
-    .img-box { height: 250px; }
-}
-@media (max-width: 600px) { 
-    .project-grid { grid-template-columns: 1fr; } 
-}
-
-        /* Slider */
-        .slider-wrapper { max-width: 850px; margin: 0 auto; overflow: hidden; position: relative; min-height: 250px; }
-        .slide-track { display: flex; transition: 0.5s ease; }
-        .slide { min-width: 100%; padding: 20px; }
-        .slide-content { background: #fff; padding: 40px; border-radius: 25px; border: 1px solid #e5e7eb; }
-        .dots { display: flex; justify-content: center; gap: 5px; margin-top: 20px; }
-        .dot { width: 8px; height: 8px; background: #cbd5e1; border-radius: 50%; cursor: pointer; }
-        .dot.active { background: #2563eb; }
-
-       /* İletişim Formu */
-        .contact form { max-width: 500px; margin: 0 auto; }
-        .contact input, .contact textarea { 
-            width: 100%; padding: 14px 25px; margin: 8px 0; border-radius: 50px; 
-            border: 1px solid #e5e7eb; outline: none; font-family: inherit;
+        .project-grid { 
+            display: grid; grid-template-columns: repeat(4, 1fr); gap: 15px; 
+            max-width: 1200px; margin: 30px auto;
         }
-        .contact textarea { border-radius: 20px; height: 100px; }
-        .whatsapp { position: fixed; bottom: 20px; right: 20px; background: #25D366; color: #fff; padding: 12px 25px; border-radius: 50px; text-decoration: none; font-weight: 600; z-index: 2000; box-shadow: 0 4px 15px rgba(0,0,0,0.2); }
-        
-        @media (max-width: 1024px) { .project-grid { grid-template-columns: repeat(2, 1fr); } }
-        @media (max-width: 768px) { header { flex-direction: column; padding: 10px; } nav { margin-top: 10px; } .project-grid { grid-template-columns: 1fr; } }
+        .img-box { position: relative; border-radius: 15px; overflow: hidden; height: 250px; }
+        .img-box img { width: 100%; height: 100%; object-fit: cover; transition: 0.5s; }
+        .overlay {
+            position: absolute; top: 0; left: 0; width: 100%; height: 100%;
+            background: rgba(15, 23, 42, 0.8); display: flex; flex-direction: column;
+            justify-content: center; align-items: center; opacity: 0; transition: 0.3s;
+        }
+        .img-box:hover .overlay { opacity: 1; }
+        .status-tag { color: white; padding: 4px 10px; border-radius: 50px; font-size: 10px; font-weight: 700; margin-bottom: 5px; }
+        .tag-finished { background: #22c55e; }
+        .tag-ongoing { background: #f59e0b; }
+        .project-title { color: white; font-weight: 600; font-size: 14px; }
+
+        /* SLIDER (YORUMLAR) */
+        .slide-group { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; min-width: 100%; }
+        .slide-content { background: #fff; padding: 20px; border-radius: 15px; border: 1px solid #e5e7eb; text-align: left; }
+
+        /* WHATSAPP */
+        .whatsapp { position: fixed; bottom: 20px; right: 20px; background: #25D366; color: #fff; padding: 10px 20px; border-radius: 50px; text-decoration: none; font-weight: 700; z-index: 2000; font-size: 14px; }
+
+        /* --- MOBILE RESPONSIVE AYARLARI --- */
+        @media (max-width: 992px) {
+            .project-grid { grid-template-columns: repeat(2, 1fr); }
+            .slide-group { grid-template-columns: repeat(2, 1fr); }
+        }
+
+        @media (max-width: 768px) {
+            header { padding: 10px 20px; }
+            .nav-menu {
+                position: fixed; top: 80px; left: -100%; width: 100%; background: #fff;
+                flex-direction: column; padding: 30px; transition: 0.4s; border-bottom: 1px solid #e5e7eb;
+            }
+            .nav-menu.active { left: 0; }
+            .menu-toggle { display: block; }
+            .card { width: 100%; }
+            .project-grid { grid-template-columns: 1fr; }
+            .slide-group { grid-template-columns: 1fr; }
+            .contact > div > div { flex-direction: column; }
+        }
     </style>
 </head>
 <body>
 
     <header>
         <a href="#" class="logo-link"><img src="logo.png" alt="Karaca Güvenlik" class="logo"></a>
-        <nav style="display: flex; align-items: center; gap: 30px;">
-        <ul style="display: flex; gap: 10px; list-style: none; margin: 0; padding: 0;">
-            <li><a href="#home" class="nav-link">Ana Sayfa</a></li>
-            <li><a href="#services" class="nav-link">Hizmetler</a></li>
-            <li><a href="#gallery" class="nav-link">Referanslar</a></li>
-            <li><a href="#contact" class="nav-link">İletişim</a></li>
-        </ul>
-
-        <a href="tel:+905387711146" class="btn-emergency">
-            <span class="pulse-dot"></span>
-               &#160  &#160 7/24 ACİL <br>TEKNİK SERVİS </br>
-        </a>
-    </nav>
-
-           
-            
-       
-    
-</header>
-
         
-   
+        <nav>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="#home">Ana Sayfa</a></li>
+                <li><a href="#services">Hizmetler</a></li>
+                <li><a href="#gallery">Referanslar</a></li>
+                <li><a href="#contact">İletişim</a></li>
+            </ul>
+            
+            <a href="tel:+905387711146" class="btn-emergency">
+                <span class="pulse-dot"></span>
+                7/24 ACİL<br>SERVİS
+            </a>
 
-    <section class="hero">
+            <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+        </nav>
+    </header>
+
+    <section class="hero" id="home">
         <h1>Güvenlikte Profesyonel Çözüm</h1>
         <p>Antalya'da akıllı güvenlik sistemleri ve zayıf akım çözümleri.</p>
         <a href="#contact" class="btn">Ücretsiz Keşif Al</a>
@@ -213,7 +167,7 @@
 
     <section class="section bg-gray" id="services">
         <h2>Hizmetlerimiz</h2>
-        <div class="container">
+        <div class="container" style="margin-top: 20px;">
             <div class="card">Kamera Sistemleri</div>
             <div class="card">Alarm Sistemleri</div>
             <div class="card">Network Altyapısı</div>
@@ -226,207 +180,81 @@
     </section>
 
     <section class="section" id="gallery">
-    <h2>Referans Projelerimiz</h2>
-    <p style="margin-bottom: 30px; color: #64748b;">Antalya genelinde aktif ve tamamlanmış çalışmalarımız.</p>
-    
-    <div class="project-grid">
-        <div class="img-box">
-            <img src="https://images.pexels.com/photos/4302082/pexels-photo-4302082.jpeg?auto=compress&cs=tinysrgb&w=600">
-            <div class="overlay"><span class="status-tag tag-ongoing">Devam Ediyor</span><p class="project-title">Konyaaltı Site Projesi</p></div>
-        </div>
-        <div class="img-box">
-            <img src="https://images.pexels.com/photos/6150507/pexels-photo-6150507.jpeg?auto=compress&cs=tinysrgb&w=600">
-            <div class="overlay"><span class="status-tag tag-ongoing">Devam Ediyor</span><p class="project-title">Lara İş Merkezi</p></div>
-        </div>
-        <div class="img-box">
-            <img src="https://images.pexels.com/photos/2599244/pexels-photo-2599244.jpeg?auto=compress&cs=tinysrgb&w=600">
-            <div class="overlay"><span class="status-tag tag-ongoing">Devam Ediyor</span><p class="project-title">Bölge Hastanesi Altyapı</p></div>
-        </div>
-        <div class="img-box">
-            <img src="https://images.pexels.com/photos/7310204/pexels-photo-7310204.jpeg?auto=compress&cs=tinysrgb&w=600">
-            <div class="overlay"><span class="status-tag tag-ongoing">Devam Ediyor</span><p class="project-title">Akıllı Şehir Kameraları</p></div>
-        </div>
-
-        <div class="img-box">
-            <img src="https://images.unsplash.com/photo-1544197150-b99a580bb7a8?q=80&w=600">
-            <div class="overlay"><span class="status-tag tag-finished">Tamamlandı</span><p class="project-title">Fiber Optik Projesi</p></div>
-        </div>
-        <div class="img-box">
-            <img src="https://images.unsplash.com/photo-1590658268037-6bf12165a8df?q=80&w=600">
-            <div class="overlay"><span class="status-tag tag-finished">Tamamlandı</span><p class="project-title">Veri Merkezi Kurulumu</p></div>
-        </div>
-        <div class="img-box">
-            <img src="https://images.pexels.com/photos/3861969/pexels-photo-3861969.jpeg?auto=compress&cs=tinysrgb&w=600">
-            <div class="overlay"><span class="status-tag tag-finished">Tamamlandı</span><p class="project-title">Fabrika PDKS Sistemi</p></div>
-        </div>
-        <div class="img-box">
-            <img src="https://images.unsplash.com/photo-1551808195-dd3627464010?q=80&w=600">
-            <div class="overlay"><span class="status-tag tag-finished">Tamamlandı</span><p class="project-title">Villa Güvenlik Paketi</p></div>
-        </div>
-
-        <div class="img-box">
-            <img src="https://images.pexels.com/photos/358189/pexels-photo-358189.jpeg?auto=compress&cs=tinysrgb&w=600">
-            <div class="overlay"><span class="status-tag tag-finished">Tamamlandı</span><p class="project-title">Restoran Alarm Sistemi</p></div>
-        </div>
-        <div class="img-box">
-            <img src="https://images.pexels.com/photos/1148820/pexels-photo-1148820.jpeg?auto=compress&cs=tinysrgb&w=600">
-            <div class="overlay"><span class="status-tag tag-finished">Tamamlandı</span><p class="project-title">Akıllı Ev Otomasyonu</p></div>
-        </div>
-        <div class="img-box">
-            <img src="https://images.pexels.com/photos/4439425/pexels-photo-4439425.jpeg?auto=compress&cs=tinysrgb&w=600">
-            <div class="overlay"><span class="status-tag tag-finished">Tamamlandı</span><p class="project-title">Mağaza Kamera Montajı</p></div>
-        </div>
-        <div class="img-box">
-            <img src="https://images.pexels.com/photos/532001/pexels-photo-532001.jpeg?auto=compress&cs=tinysrgb&w=600">
-            <div class="overlay"><span class="status-tag tag-finished">Tamamlandı</span><p class="project-title">Ofis Network Kurulumu</p></div>
-        </div>
-    </div>
-</section>
+        <h2>Referans Projelerimiz</h2>
+        <div class="project-grid">
+            <div class="img-box">
+                <img src="https://images.pexels.com/photos/4302082/pexels-photo-4302082.jpeg?auto=compress&cs=tinysrgb&w=600">
+                <div class="overlay"><span class="status-tag tag-ongoing">Devam Ediyor</span><p class="project-title">Konyaaltı Site Projesi</p></div>
+            </div>
+            <div class="img-box">
+                <img src="https://images.pexels.com/photos/6150507/pexels-photo-6150507.jpeg?auto=compress&cs=tinysrgb&w=600">
+                <div class="overlay"><span class="status-tag tag-ongoing">Devam Ediyor</span><p class="project-title">Lara İş Merkezi</p></div>
+            </div>
+            </div>
+    </section>
 
     <section class="section bg-gray">
-    <h2 style="margin-bottom: 10px;">Müşteri Referanslarımız</h2>
-    <p style="color: #64748b; margin-bottom: 40px;">Antalya genelinde 100'den fazla aktif referans ve mutlu müşteri.</p>
-    
-    <div class="slider-wrapper" style="max-width: 1200px; margin: 0 auto; overflow: hidden; padding: 10px;">
-        <div class="slide-track" id="track" style="display: flex; transition: transform 0.8s cubic-bezier(0.4, 0, 0.2, 1);">
-            </div>
-        <div class="dots" id="dots" style="display: flex; justify-content: center; gap: 8px; margin-top: 30px;"></div>
-    </div>
-</section>
+        <h2>Müşteri Referanslarımız</h2>
+        <div class="slider-wrapper" style="margin-top: 30px;">
+            <div class="slide-track" id="track"></div>
+            <div class="dots" id="dots"></div>
+        </div>
+    </section>
 
-<style>
-    /* Üçlü görünüm için genişlik ayarları */
-    .slide-group {
-        min-width: 100%;
-        display: grid;
-        grid-template-columns: repeat(3, 1fr); /* Masaüstünde 3 kutu */
-        gap: 25px;
-    }
-    .slide-content {
-        background: #fff;
-        padding: 30px;
-        border-radius: 20px;
-        border: 1px solid #e5e7eb;
-        box-shadow: 0 4px 12px rgba(0,0,0,0.03);
-        text-align: left;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-    }
-    
-    /* Responsive Ayarlar */
-    @media (max-width: 1024px) {
-        .slide-group { grid-template-columns: repeat(2, 1fr); } /* Tablette 2 kutu */
-    }
-    @media (max-width: 768px) {
-        .slide-group { grid-template-columns: 1fr; } /* Mobilde tek kutu */
-    }
-</style>
-
-<script>
-    const names = ["Ahmet", "Mehmet", "Selin", "Mustafa", "Can", "Zeynep", "Hakan", "Elif", "Murat", "Deniz", "Yusuf", "Ece", "Kaan", "Pınar"];
-    const feedbacks = [
-        "İşçilik harika, kameralar çok net.",
-        "Antalya'nın en profesyonel ekibi.",
-        "Hızlı kurulum ve temiz çalışma.",
-        "Güvenilir hizmet, fiyatlar makul.",
-        "Teknik servis desteği çok hızlı.",
-        "Kurumsal çözümleri çok başarılı.",
-        "Gece görüş kalitesi beklediğimden iyi.",
-        "Network altyapımızı sorunsuz kurdular.",
-	"Alanya içerisindeki en iyi firmalardan biri. Teşekkürler."
-    ];
-
-    const track = document.getElementById('track');
-    const dotsContainer = document.getElementById('dots');
-    const totalComments = 99; // 3'e tam bölünmesi için 99 yaptık
-
-    // 99 yorumu üçlü gruplar halinde oluşturma
-    for (let i = 0; i < totalComments / 3; i++) {
-        const group = document.createElement('div');
-        group.className = 'slide-group';
-
-        for (let j = 0; j < 3; j++) {
-            const n = names[Math.floor(Math.random() * names.length)] + " " + String.fromCharCode(65 + Math.floor(Math.random() * 26)) + ".";
-            const f = feedbacks[Math.floor(Math.random() * feedbacks.length)];
-            
-            group.innerHTML += `
-                <div class="slide-content">
-                    <div>
-                        <div style="color:#fbbf24; margin-bottom: 10px; font-size: 18px;">★★★★★</div>
-                        <p style="font-style: italic; color: #475569; line-height: 1.5;">"${f}"</p>
-                    </div>
-                    <div style="margin-top: 20px; font-weight: 600; color: #2563eb; font-size: 14px;">- ${n}</div>
-                </div>
-            `;
-        }
-        track.appendChild(group);
-
-        // Sayfa çok kalabalık olmasın diye sadece ilk 8 grup için nokta koyalım
-        if (i < 8) { 
-            const dot = document.createElement('div');
-            dot.className = 'dot' + (i === 0 ? ' active' : '');
-            dot.onclick = () => { cIdx = i; update(); clearInterval(autoSlide); };
-            dotsContainer.appendChild(dot);
-        }
-    }
-
-    let cIdx = 0;
-    const dots = document.querySelectorAll('.dot');
-    function update() {
-        track.style.transform = `translateX(-${cIdx * 100}%)`;
-        dots.forEach((d, idx) => d.classList.toggle('active', idx === cIdx));
-    }
-
-    let autoSlide = setInterval(() => {
-        cIdx = (cIdx + 1) % 8; // İlk 8 grup arasında döner
-        update();
-    }, 6000);
-</script>
-
- <section class="section contact" id="contact" style="background: #f8fafc; padding: 80px 20px;">
-    <div style="max-width: 1200px; margin: 0 auto;">
-        <div style="display: flex; flex-wrap: wrap; gap: 40px; text-align: left;">
-            
-            <div style="flex: 1; min-width: 320px;">
-                <h2 style="text-align: left; margin-bottom: 15px; font-size: 25px; color: #0f172a;">Karaca Güvenlik ve Bilişim Sistemleri</h2>
-                <p style="color: #64748b; margin-bottom: 25px; font-size: 17px;">Antalya'nın güven teknoloji ortağı.</p>
-                
-                <div style="line-height: 1.8; font-size: 15px; margin-bottom: 25px;">
-                    <p><strong>📍 Adres:</strong> Oba Mahallesi, Yüksek Sokak, No: 6/B Alanya/ANTALYA</p>
-                    <p><strong>📞 Telefon:</strong> +90 538 771 11 46</p>
-                    <p><strong>✉️ E-posta:</strong> info@karacaguvenlik.com</p>
-                    <p style="margin-bottom: 15px;"><strong>⏰ Saatler:</strong> Pzt - Cmt: 09:00 - 19:00</p>
-                    
-                    <div style="border-radius: 15px; overflow: hidden; box-shadow: 0 5px 15px rgba(0,0,0,0.08); height: 200px; width: 100%; border: 1px solid #e5e7eb;">
-                        <iframe 
-                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4533.429742723308!2d32.055480858150425!3d36.53918726284242!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14dc992c581f2795%3A0x79a3e5f7aafaafbb!2zS0FSQUNBIEfDnFZFTkzEsEsgVkUgQsSwTMSwxZ7EsE0gU8SwU1RFTUxFUsSw!5e0!3m2!1str!2str!4v1773751500051!5m2!1str!2str" 
-                            width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy">
-                        </iframe>
-                    </div>
+    <section class="section contact" id="contact">
+        <div style="max-width: 1200px; margin: 0 auto; display: flex; flex-wrap: wrap; gap: 30px; text-align: left;">
+            <div style="flex: 1; min-width: 280px;">
+                <h2 style="text-align: left; font-size: 22px;">Karaca Güvenlik Alanya</h2>
+                <p style="margin: 15px 0;">📍 Oba Mah. Yüksek Sok. No: 6/B Alanya</p>
+                <p>📞 +90 538 771 11 46</p>
+                <div style="margin-top: 20px; height: 200px; background: #eee; border-radius: 15px;">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3209.7!2d32.0!3d36.5!" width="100%" height="100%" style="border:0; border-radius:15px;" allowfullscreen="" loading="lazy"></iframe>
                 </div>
             </div>
-
-            <div style="flex: 1; min-width: 320px;">
-                <form style="background: #fff; padding: 35px; border-radius: 25px; box-shadow: 0 10px 30px rgba(0,0,0,0.05); border: 1px solid #e5e7eb;">
-                    <h3 style="margin-bottom: 20px; color: #0f172a;">Ücretsiz Keşif Formu</h3>
-                    <input type="text" placeholder="Adınız Soyadınız" required style="width: 100%; padding: 14px 20px; margin-bottom: 15px; border-radius: 50px; border: 1px solid #e5e7eb; outline: none; display: block;">
-                    <input type="tel" placeholder="Telefon Numaranız" required style="width: 100%; padding: 14px 20px; margin-bottom: 15px; border-radius: 50px; border: 1px solid #e5e7eb; outline: none; display: block;">
-                    <textarea placeholder="Mesajınız" style="width: 100%; padding: 15px 20px; border-radius: 20px; height: 110px; border: 1px solid #e5e7eb; outline: none; margin-bottom: 15px; display: block; font-family: inherit; resize: none;"></textarea>
-                    <button type="submit" class="btn" style="width: 100%; margin-top: 0; cursor: pointer; border-radius: 50px;">Hemen Teklif Al</button>
+            <div style="flex: 1; min-width: 280px;">
+                <form style="background: #fff; padding: 25px; border-radius: 20px; border: 1px solid #e5e7eb;">
+                    <input type="text" placeholder="Adınız" required style="width:100%; padding:12px; margin-bottom:10px; border-radius:10px; border:1px solid #ddd;">
+                    <input type="tel" placeholder="Telefon" required style="width:100%; padding:12px; margin-bottom:10px; border-radius:10px; border:1px solid #ddd;">
+                    <textarea placeholder="Mesajınız" style="width:100%; padding:12px; height:80px; border-radius:10px; border:1px solid #ddd;"></textarea>
+                    <button type="submit" class="btn" style="width:100%; border:none;">Teklif Al</button>
                 </form>
             </div>
         </div>
-    </div>
-</section>
+    </section>
 
-<footer style="padding: 10px; text-align: center; background: #0f172a; color: #fff;">
-    © 2026 Karaca Güvenlik Sistemleri - ALANYA
-</footer>
+    <footer style="padding: 20px; text-align: center; background: #0f172a; color: #fff; font-size: 13px;">
+        © 2026 Karaca Güvenlik Sistemleri - ALANYA
+    </footer>
 
     <a href="https://wa.me/905387711146" class="whatsapp">WhatsApp</a>
 
-    
+    <script>
+        // Mobil Menü Aç/Kapat
+        function toggleMenu() {
+            document.getElementById('navMenu').classList.toggle('active');
+        }
 
+        // Otomatik Yorumlar JS (Senin kodunun optimize hali)
+        const names = ["Ahmet", "Mehmet", "Selin", "Mustafa", "Can", "Zeynep", "Hakan", "Elif"];
+        const feedbacks = ["İşçilik harika.", "Antalya'nın en iyisi.", "Hızlı kurulum.", "Güvenilir hizmet."];
+        const track = document.getElementById('track');
+        
+        for (let i = 0; i < 10; i++) {
+            const group = document.createElement('div');
+            group.className = 'slide-group';
+            group.innerHTML = `<div class="slide-content">
+                <p>⭐⭐⭐⭐⭐</p>
+                <p>"${feedbacks[Math.floor(Math.random()*feedbacks.length)]}"</p>
+                <p><strong>- ${names[Math.floor(Math.random()*names.length)]}</strong></p>
+            </div>`;
+            track.appendChild(group);
+        }
+
+        let cIdx = 0;
+        setInterval(() => {
+            cIdx = (cIdx + 1) % 10;
+            track.style.transform = `translateX(-${cIdx * 100}%)`;
+        }, 5000);
+    </script>
 </body>
 </html>
