@@ -7,8 +7,6 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
     <style>
 
-
-
 /* Acil Hat Butonu Stili */
 .btn-emergency {
     background: #22c55e;
@@ -46,12 +44,6 @@
     100% { transform: scale(0.8); opacity: 1; }
 }
 
-/* Mobil için Düzenleme */
-@media (max-width: 768px) {
-    nav { gap: 15px; }
-    ul { display: none; } /* Mobilde menü gizlenebilir veya hamburger menüye geçer */
-    .btn-emergency { padding: 8px 15px; font-size: 11px; }
-}
         * { margin: 0; padding: 0; box-sizing: border-box; }
         body { font-family: 'Poppins', sans-serif; background: #ffffff; color: #0f172a; scroll-behavior: smooth; line-height: 1.6; overflow-x: hidden; }
         
@@ -64,7 +56,7 @@
         nav a { color: #0f172a; text-decoration: none; font-weight: 500; padding: 8px 20px; border: 1.5px solid #e5e7eb; border-radius: 50px; transition: 0.3s; font-size: 14px; margin-left: 10px; }
         nav a:hover { background: #2563eb; color: #fff; border-color: #2563eb; }
 
-  /* ANA GÖRSEL ALANI (HERO) - YENİ TEKNOLOJİ GÖRSELİ */
+  /* ANA GÖRSEL ALANI (HERO) */
         .hero { 
             height: 100vh; 
             background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.7)), 
@@ -84,13 +76,11 @@
 
         .btn { padding: 16px 40px; background: #2563eb; color: #fff; border-radius: 50px; text-decoration: none; font-weight: 600; transition: 0.3s; display: inline-block; border: none; cursor: pointer; margin-top: 30px; font-size: 18px; }
         .btn:hover { transform: translateY(-3px); box-shadow: 0 10px 20px rgba(37, 99, 235, 0.4); }
-        .btn { padding: 15px 35px; background: #2563eb; color: #fff; border-radius: 50px; text-decoration: none; font-weight: 600; transition: 0.3s; display: inline-block; border: none; cursor: pointer; }
-        .btn:hover { transform: translateY(-3px); box-shadow: 0 10px 20px rgba(37, 99, 235, 0.3); }
 
         .section { padding: 80px 20px; text-align: center; }
         .bg-gray { background: #f8fafc; }
         
-        /* Hizmet Kartları - Kabarma Efekti */
+        /* Hizmet Kartları */
         .container { max-width: 1200px; margin: 0 auto; display: flex; flex-wrap: wrap; justify-content: center; gap: 20px; }
         .card { 
             background: #fff; padding: 25px; width: 260px; border-radius: 20px; 
@@ -99,11 +89,10 @@
         }
         .card:hover { transform: translateY(-12px); box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1); border-color: #2563eb; color: #2563eb; }
 
-        /* Proje Izgara Sistemi - 4x3 Tam Görünüm */
+        /* Proje Izgara Sistemi */
 .project-grid { 
     display: grid; 
-    grid-template-columns: repeat(4, 1fr); /* 4 Sütun */
-    /* Yüksekliği sabitlemiyoruz, içerik kadar uzasın diyoruz */
+    grid-template-columns: repeat(4, 1fr); 
     grid-template-rows: repeat(3, 280px); 
     gap: 20px; 
     max-width: 1200px; 
@@ -118,7 +107,7 @@
     box-shadow: 0 10px 20px rgba(0,0,0,0.05);
     background: #f1f5f9;
     cursor: pointer;
-    height: 100%; /* Satır yüksekliğini tam doldur */
+    height: 100%;
 }
 
 .img-box img { 
@@ -137,29 +126,14 @@
 .img-box:hover .overlay { opacity: 1; }
 .img-box:hover img { transform: scale(1.1); }
 
-/* Etiketler */
-.status-tag {
-    color: white; padding: 6px 14px; border-radius: 50px;
-    font-size: 11px; font-weight: 700; margin-bottom: 10px;
-}
+.status-tag { color: white; padding: 6px 14px; border-radius: 50px; font-size: 11px; font-weight: 700; margin-bottom: 10px; }
 .tag-finished { background: #22c55e; box-shadow: 0 4px 10px rgba(34, 197, 94, 0.3); }
 .tag-ongoing { background: #f59e0b; box-shadow: 0 4px 10px rgba(245, 158, 11, 0.3); }
-
 .project-title { color: white; font-weight: 600; font-size: 15px; margin: 0; }
-
-/* Mobil Uyumluluk */
-@media (max-width: 1024px) { 
-    .project-grid { grid-template-columns: repeat(2, 1fr); grid-template-rows: auto; }
-    .img-box { height: 250px; }
-}
-@media (max-width: 600px) { 
-    .project-grid { grid-template-columns: 1fr; } 
-}
 
         /* Slider */
         .slider-wrapper { max-width: 850px; margin: 0 auto; overflow: hidden; position: relative; min-height: 250px; }
         .slide-track { display: flex; transition: 0.5s ease; }
-        .slide { min-width: 100%; padding: 20px; }
         .slide-content { background: #fff; padding: 40px; border-radius: 25px; border: 1px solid #e5e7eb; }
         .dots { display: flex; justify-content: center; gap: 5px; margin-top: 20px; }
         .dot { width: 8px; height: 8px; background: #cbd5e1; border-radius: 50%; cursor: pointer; }
@@ -173,39 +147,59 @@
         }
         .contact textarea { border-radius: 20px; height: 100px; }
         .whatsapp { position: fixed; bottom: 20px; right: 20px; background: #25D366; color: #fff; padding: 12px 25px; border-radius: 50px; text-decoration: none; font-weight: 600; z-index: 2000; box-shadow: 0 4px 15px rgba(0,0,0,0.2); }
+
+        /* MOBİL İÇİN EK KODLAR */
+        .menu-btn { display: none; font-size: 24px; cursor: pointer; color: #0f172a; }
         
-        @media (max-width: 1024px) { .project-grid { grid-template-columns: repeat(2, 1fr); } }
-        @media (max-width: 768px) { header { flex-direction: column; padding: 10px; } nav { margin-top: 10px; } .project-grid { grid-template-columns: 1fr; } }
+        @media (max-width: 1024px) { 
+            .project-grid { grid-template-columns: repeat(2, 1fr); grid-template-rows: auto; } 
+            .img-box { height: 250px; }
+        }
+
+        @media (max-width: 768px) { 
+            header { padding: 10px 20px; height: 70px; }
+            .logo { height: 50px; }
+            .menu-btn { display: block; }
+            
+            nav {
+                position: fixed; top: 70px; left: -100%; width: 100%; height: auto;
+                background: white; flex-direction: column; padding: 20px;
+                transition: 0.4s; border-bottom: 1px solid #e5e7eb; gap: 10px !important;
+            }
+            nav.active { left: 0; }
+            ul { flex-direction: column; width: 100%; text-align: center; display: flex !important; }
+            nav a { margin: 5px 0; width: 100%; display: block; }
+            
+            .btn-emergency { font-size: 10px; padding: 5px 15px; }
+            .project-grid { grid-template-columns: 1fr; }
+            .container { flex-direction: column; align-items: center; }
+            .card { width: 100%; }
+        }
     </style>
 </head>
 <body>
 
     <header>
         <a href="#" class="logo-link"><img src="logo.png" alt="Karaca Güvenlik" class="logo"></a>
-        <nav style="display: flex; align-items: center; gap: 30px;">
-        <ul style="display: flex; gap: 10px; list-style: none; margin: 0; padding: 0;">
-            <li><a href="#home" class="nav-link">Ana Sayfa</a></li>
-            <li><a href="#services" class="nav-link">Hizmetler</a></li>
-            <li><a href="#gallery" class="nav-link">Referanslar</a></li>
-            <li><a href="#contact" class="nav-link">İletişim</a></li>
-        </ul>
+        
+        <div class="menu-btn" onclick="toggleMenu()">☰</div>
 
-        <a href="tel:+905387711146" class="btn-emergency">
-            <span class="pulse-dot"></span>
-               &#160  &#160 7/24 ACİL <br>TEKNİK SERVİS </br>
-        </a>
-    </nav>
+        <nav id="navbar" style="display: flex; align-items: center; gap: 30px;">
+            <ul style="display: flex; gap: 10px; list-style: none; margin: 0; padding: 0;">
+                <li><a href="#home" class="nav-link">Ana Sayfa</a></li>
+                <li><a href="#services" class="nav-link">Hizmetler</a></li>
+                <li><a href="#gallery" class="nav-link">Referanslar</a></li>
+                <li><a href="#contact" class="nav-link">İletişim</a></li>
+            </ul>
 
-           
-            
-       
-    
+            <a href="tel:+905387711146" class="btn-emergency">
+                <span class="pulse-dot"></span>
+                7/24 ACİL <br>TEKNİK SERVİS
+            </a>
+        </nav>
 </header>
 
-        
-   
-
-    <section class="hero">
+    <section class="hero" id="home">
         <h1>Güvenlikte Profesyonel Çözüm</h1>
         <p>Antalya'da akıllı güvenlik sistemleri ve zayıf akım çözümleri.</p>
         <a href="#contact" class="btn">Ücretsiz Keşif Al</a>
@@ -299,7 +293,7 @@
     .slide-group {
         min-width: 100%;
         display: grid;
-        grid-template-columns: repeat(3, 1fr); /* Masaüstünde 3 kutu */
+        grid-template-columns: repeat(3, 1fr);
         gap: 25px;
     }
     .slide-content {
@@ -314,12 +308,11 @@
         justify-content: space-between;
     }
     
-    /* Responsive Ayarlar */
     @media (max-width: 1024px) {
-        .slide-group { grid-template-columns: repeat(2, 1fr); } /* Tablette 2 kutu */
+        .slide-group { grid-template-columns: repeat(2, 1fr); }
     }
     @media (max-width: 768px) {
-        .slide-group { grid-template-columns: 1fr; } /* Mobilde tek kutu */
+        .slide-group { grid-template-columns: 1fr; }
     }
 </style>
 
@@ -334,14 +327,13 @@
         "Kurumsal çözümleri çok başarılı.",
         "Gece görüş kalitesi beklediğimden iyi.",
         "Network altyapımızı sorunsuz kurdular.",
-	"Alanya içerisindeki en iyi firmalardan biri. Teşekkürler."
+    "Alanya içerisindeki en iyi firmalardan biri. Teşekkürler."
     ];
 
     const track = document.getElementById('track');
     const dotsContainer = document.getElementById('dots');
-    const totalComments = 99; // 3'e tam bölünmesi için 99 yaptık
+    const totalComments = 99;
 
-    // 99 yorumu üçlü gruplar halinde oluşturma
     for (let i = 0; i < totalComments / 3; i++) {
         const group = document.createElement('div');
         group.className = 'slide-group';
@@ -362,7 +354,6 @@
         }
         track.appendChild(group);
 
-        // Sayfa çok kalabalık olmasın diye sadece ilk 8 grup için nokta koyalım
         if (i < 8) { 
             const dot = document.createElement('div');
             dot.className = 'dot' + (i === 0 ? ' active' : '');
@@ -379,9 +370,14 @@
     }
 
     let autoSlide = setInterval(() => {
-        cIdx = (cIdx + 1) % 8; // İlk 8 grup arasında döner
+        cIdx = (cIdx + 1) % 8;
         update();
     }, 6000);
+
+    // Mobil Menü Fonksiyonu
+    function toggleMenu() {
+        document.getElementById('navbar').classList.toggle('active');
+    }
 </script>
 
  <section class="section contact" id="contact" style="background: #f8fafc; padding: 80px 20px;">
@@ -400,8 +396,8 @@
                     
                     <div style="border-radius: 15px; overflow: hidden; box-shadow: 0 5px 15px rgba(0,0,0,0.08); height: 200px; width: 100%; border: 1px solid #e5e7eb;">
                         <iframe 
-                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4533.429742723308!2d32.055480858150425!3d36.53918726284242!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14dc992c581f2795%3A0x79a3e5f7aafaafbb!2zS0FSQUNBIEfDnFZFTkzEsEsgVkUgQsSwTMSwxZ7EsE0gU8SwU1RFTUxFUsSw!5e0!3m2!1str!2str!4v1773751500051!5m2!1str!2str" 
-                            width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy">
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3205.567282608961!2d32.04962667529073!3d36.54043258230056!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14dc992c581f2795%3A0x79a3e5f7aafaafbb!2zS0FSQUNBIEfDnFZFTkzEsEsgVkUgQsSwTMSwxZ7EsE0gU8SwU1RFTUxFUsSw!5e0!3m2!1str!2sus!4v1773758516651!5m2!1str!2sus" 
+                            width="600" height="350" style="border:0;" allowfullscreen="" loading="lazy" >
                         </iframe>
                     </div>
                 </div>
@@ -425,8 +421,6 @@
 </footer>
 
     <a href="https://wa.me/905387711146" class="whatsapp">WhatsApp</a>
-
-    
 
 </body>
 </html>
