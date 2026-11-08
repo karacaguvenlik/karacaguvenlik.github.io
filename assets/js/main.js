@@ -162,12 +162,43 @@
         btn.classList.toggle('is-busy', busy);
     };
 
+    // Turkish phone numbers: accepts 0538..., 538..., +90 538..., 90538...; mobile (5xx) or landline (2xx-4xx)
+    const phoneDigits = (v) => {
+        let n = String(v).replace(/\D/g, '');
+        if (n.startsWith('90') && n.length === 12) n = n.slice(2);
+        if (n.length === 10) n = '0' + n;
+        return n;
+    };
+    const phoneValid = (v) => /^0[2-5]\d{9}$/.test(phoneDigits(v));
+    const phoneFormat = (n) => [n.slice(0, 4), n.slice(4, 7), n.slice(7, 9), n.slice(9, 11)].filter(Boolean).join(' ');
+    const phone = document.getElementById('phone');
+    if (phone) {
+        const check = () => {
+            const v = phone.value.trim();
+            phone.setCustomValidity(!v || phoneValid(v) ? '' : 'Lütfen geçerli bir telefon numarası girin (örn. 0538 771 11 46).');
+        };
+        phone.addEventListener('input', (e) => {
+            // Only auto-format plain digit entry; leave +90 / pasted formats until blur
+            if (e.inputType && e.inputType.startsWith('delete')) return check();
+            if (/^[\d\s]*$/.test(phone.value) && phone.value.replace(/\s/g, '').startsWith('0')) {
+                phone.value = phoneFormat(phone.value.replace(/\D/g, '').slice(0, 11));
+            }
+            check();
+        });
+        phone.addEventListener('blur', () => {
+            if (phoneValid(phone.value)) phone.value = phoneFormat(phoneDigits(phone.value));
+            check();
+        });
+    }
+
     // Quote form
     const form = document.getElementById('quoteForm');
     if (form) form.addEventListener('submit', async (e) => {
         e.preventDefault();
         const d = new FormData(form);
         if (d.get('_honey')) return;
+        if (!phoneValid(d.get('phone'))) { phone.setCustomValidity('Lütfen geçerli bir telefon numarası girin (örn. 0538 771 11 46).'); phone.reportValidity(); return; }
+        d.set('phone', phoneFormat(phoneDigits(d.get('phone'))));
         setBusy(form, true);
         const sent = await submitMail({
             _subject: `Yeni keşif talebi: ${d.get('name')} (${d.get('service')})`,
