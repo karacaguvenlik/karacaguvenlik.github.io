@@ -372,7 +372,7 @@ a.service { display: block; color: inherit; }
 .whatsapp {
     position: fixed; right: 22px; bottom: 22px; z-index: 90;
     display: inline-flex; align-items: center; gap: 10px; padding: 14px 20px 14px 16px; border-radius: 999px;
-    background: #25d366; color: #fff; font-weight: 700; font-size: 15px;
+    background: #15803d; color: #fff; font-weight: 700; font-size: 15px;
     box-shadow: 0 14px 30px -8px rgba(37,211,102,.6);
     transition: transform .35s var(--ease), box-shadow .35s;
 }
