@@ -279,6 +279,29 @@ a.service { display: block; color: inherit; }
 }
 .review .stars { color: #fbbf24; letter-spacing: 3px; margin-bottom: 14px; }
 .review p { color: #d3d8ea; font-size: 16px; line-height: 1.55; }
+.review__by { margin-top: 16px; font-size: 14px; font-weight: 600; color: #b9c1ff; }
+.review-actions { text-align: center; margin-top: 44px; }
+.review-actions p { color: var(--muted); }
+.review-actions .hero__buttons { justify-content: center; margin-top: 18px; }
+.section__note { margin-top: 10px; font-size: 13.5px; color: var(--muted); }
+
+/* ---------- Review dialog ---------- */
+.modal { margin: auto; padding: 0; border: 0; background: transparent; color: var(--text); width: min(560px, calc(100% - 24px)); max-height: calc(100dvh - 24px); overflow: auto; }
+.modal::backdrop { background: rgba(3, 5, 12, .75); backdrop-filter: blur(6px); }
+.modal .form { position: relative; top: auto; background: #0d1326; }
+.modal .form h3 { padding-right: 44px; }
+.modal__close { position: absolute; top: 16px; right: 16px; width: 38px; height: 38px; border-radius: 50%; border: 1px solid var(--border-strong); background: rgba(255,255,255,.05); color: #fff; font-size: 22px; line-height: 1; cursor: pointer; }
+.modal__close:hover { background: rgba(255,255,255,.12); }
+.field-row { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+.rating { border: 0; }
+.rating legend { font-size: 13px; font-weight: 600; color: #c3c9de; margin-bottom: 8px; }
+/* Reversed order so ~ can highlight the chosen star and all stars before it */
+.rating__stars { display: inline-flex; flex-direction: row-reverse; gap: 4px; }
+.rating__stars input { position: absolute; opacity: 0; width: 1px; height: 1px; }
+.rating__stars label { font-size: 32px; line-height: 1; color: #39405a; cursor: pointer; transition: color .15s, transform .15s; }
+.rating__stars label:hover, .rating__stars label:hover ~ label, .rating__stars input:checked ~ label { color: #fbbf24; }
+.rating__stars label:hover { transform: scale(1.12); }
+.rating__stars input:focus-visible + label { outline: 2px solid var(--primary-2); outline-offset: 3px; border-radius: 4px; }
 
 /* ---------- CTA ---------- */
 .cta { padding: 100px 0 0; }
@@ -334,6 +357,14 @@ a.service { display: block; color: inherit; }
 .consent { display: flex; gap: 12px; align-items: flex-start; margin: 4px 0 16px; font-size: 13px; color: var(--muted); line-height: 1.5; cursor: pointer; }
 .consent input { width: 18px; height: 18px; margin-top: 1px; flex-shrink: 0; accent-color: var(--primary-2); cursor: pointer; }
 .consent a { color: #c3cbff; text-decoration: underline; }
+.hp { position: absolute !important; left: -9999px; width: 1px; height: 1px; opacity: 0; }
+.form__status { margin-top: 16px; padding: 14px 16px; border-radius: 14px; font-size: 14.5px; line-height: 1.5; }
+.form__status--ok { background: rgba(34,197,94,.12); border: 1px solid rgba(34,197,94,.4); color: #bbf7d0; }
+.form__status--error { background: rgba(239,68,68,.12); border: 1px solid rgba(239,68,68,.4); color: #fecaca; }
+.form__status a:not(.btn) { color: #fff; text-decoration: underline; }
+.form__status-actions { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 12px; }
+.form__status-actions .btn { padding: 10px 18px; font-size: 14px; }
+.btn.is-busy { opacity: .7; cursor: progress; }
 
 .form {
     padding: 40px; border-radius: var(--radius-lg); position: sticky; top: calc(var(--header-h) + 24px);
