@@ -170,18 +170,23 @@
         return n;
     };
     const phoneValid = (v) => /^0[2-5]\d{9}$/.test(phoneDigits(v));
-    const phoneFormat = (n) => [n.slice(0, 4), n.slice(4, 7), n.slice(7, 9), n.slice(9, 11)].filter(Boolean).join(' ');
+    // Displayed and e-mailed as xxx-xxx-xxxx (10 digits, without the leading 0)
+    const phoneFormat = (n) => {
+        const d = n.replace(/^0/, '');
+        return [d.slice(0, 3), d.slice(3, 6), d.slice(6, 10)].filter(Boolean).join('-');
+    };
+    const PHONE_MSG = 'Lütfen geçerli bir telefon numarası girin (xxx-xxx-xxxx).';
     const phone = document.getElementById('phone');
     if (phone) {
         const check = () => {
             const v = phone.value.trim();
-            phone.setCustomValidity(!v || phoneValid(v) ? '' : 'Lütfen geçerli bir telefon numarası girin (örn. 0538 771 11 46).');
+            phone.setCustomValidity(!v || phoneValid(v) ? '' : PHONE_MSG);
         };
         phone.addEventListener('input', (e) => {
-            // Only auto-format plain digit entry; leave +90 / pasted formats until blur
+            // Live-format only plain digit entry starting with an area code (2-5); 0 / +90 forms are normalised on blur
             if (e.inputType && e.inputType.startsWith('delete')) return check();
-            if (/^[\d\s]*$/.test(phone.value) && phone.value.replace(/\s/g, '').startsWith('0')) {
-                phone.value = phoneFormat(phone.value.replace(/\D/g, '').slice(0, 11));
+            if (/^[\d\s-]*$/.test(phone.value) && /^[2-5]/.test(phone.value)) {
+                phone.value = phoneFormat(phone.value.replace(/\D/g, '').slice(0, 10));
             }
             check();
         });
@@ -197,7 +202,7 @@
         e.preventDefault();
         const d = new FormData(form);
         if (d.get('_honey')) return;
-        if (!phoneValid(d.get('phone'))) { phone.setCustomValidity('Lütfen geçerli bir telefon numarası girin (örn. 0538 771 11 46).'); phone.reportValidity(); return; }
+        if (!phoneValid(d.get('phone'))) { phone.setCustomValidity(PHONE_MSG); phone.reportValidity(); return; }
         d.set('phone', phoneFormat(phoneDigits(d.get('phone'))));
         setBusy(form, true);
         const sent = await submitMail({
