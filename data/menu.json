@@ -1,0 +1,2313 @@
+{
+  "categories": [
+    {
+      "id": "breakfast",
+      "name": {
+        "tr": "Kahvaltı",
+        "en": "Breakfast",
+        "de": "Frühstück",
+        "ru": "Завтраки"
+      }
+    },
+    {
+      "id": "soups",
+      "name": {
+        "tr": "Çorbalar",
+        "en": "Soups",
+        "de": "Suppen",
+        "ru": "Супы"
+      }
+    },
+    {
+      "id": "salads",
+      "name": {
+        "tr": "Salatalar",
+        "en": "Salads",
+        "de": "Salate",
+        "ru": "Салаты"
+      }
+    },
+    {
+      "id": "pasta",
+      "name": {
+        "tr": "Makarnalar",
+        "en": "Pasta",
+        "de": "Pasta",
+        "ru": "Паста"
+      }
+    },
+    {
+      "id": "chicken",
+      "name": {
+        "tr": "Soslu Tavuklar",
+        "en": "Chicken with Sauce",
+        "de": "Hähnchen mit Sauce",
+        "ru": "Курица с соусом"
+      }
+    },
+    {
+      "id": "grill",
+      "name": {
+        "tr": "Izgaralar",
+        "en": "Grill",
+        "de": "Grillgerichte",
+        "ru": "Блюда на гриле"
+      }
+    },
+    {
+      "id": "pizza",
+      "name": {
+        "tr": "Pizzalar",
+        "en": "Pizzas",
+        "de": "Pizzen",
+        "ru": "Пицца"
+      }
+    },
+    {
+      "id": "burgers",
+      "name": {
+        "tr": "Burgerler",
+        "en": "Burgers",
+        "de": "Burger",
+        "ru": "Бургеры"
+      }
+    },
+    {
+      "id": "kids",
+      "name": {
+        "tr": "Çocuk Menüsü",
+        "en": "Kids’ Menu",
+        "de": "Kindermenü",
+        "ru": "Детское меню"
+      }
+    },
+    {
+      "id": "desserts",
+      "name": {
+        "tr": "Tatlılar",
+        "en": "Desserts",
+        "de": "Desserts",
+        "ru": "Десерты"
+      }
+    },
+    {
+      "id": "cold-drinks",
+      "name": {
+        "tr": "İçecekler",
+        "en": "Cold Drinks",
+        "de": "Kalte Getränke",
+        "ru": "Прохладительные напитки"
+      }
+    },
+    {
+      "id": "hot-drinks",
+      "name": {
+        "tr": "Sıcak İçecekler",
+        "en": "Hot Drinks",
+        "de": "Heiße Getränke",
+        "ru": "Горячие напитки"
+      }
+    }
+  ],
+  "products": [
+    {
+      "id": "breakfast-plate",
+      "categoryId": "breakfast",
+      "name": {
+        "tr": "Kahvaltı",
+        "en": "Breakfast Plate",
+        "de": "Frühstücksteller",
+        "ru": "Завтрак"
+      },
+      "description": {
+        "tr": "",
+        "en": "",
+        "de": "",
+        "ru": ""
+      },
+      "price": 170,
+      "image": "/images/breakfast.jpg",
+      "active": true
+    },
+    {
+      "id": "omelette",
+      "categoryId": "breakfast",
+      "name": {
+        "tr": "Sade Omlet",
+        "en": "Plain Omelette",
+        "de": "Omelett",
+        "ru": "Омлет"
+      },
+      "description": {
+        "tr": "",
+        "en": "",
+        "de": "",
+        "ru": ""
+      },
+      "price": 170,
+      "image": "/images/breakfast.jpg",
+      "active": true
+    },
+    {
+      "id": "cheese-omelette",
+      "categoryId": "breakfast",
+      "name": {
+        "tr": "Peynirli Omlet",
+        "en": "Cheese Omelette",
+        "de": "Käseomelett",
+        "ru": "Омлет с сыром"
+      },
+      "description": {
+        "tr": "",
+        "en": "",
+        "de": "",
+        "ru": ""
+      },
+      "price": 170,
+      "image": "/images/breakfast.jpg",
+      "active": true
+    },
+    {
+      "id": "mushroom-omelette",
+      "categoryId": "breakfast",
+      "name": {
+        "tr": "Mantarlı Omlet",
+        "en": "Mushroom Omelette",
+        "de": "Pilzomelett",
+        "ru": "Омлет с грибами"
+      },
+      "description": {
+        "tr": "",
+        "en": "",
+        "de": "",
+        "ru": ""
+      },
+      "price": 170,
+      "image": "/images/breakfast.jpg",
+      "active": true
+    },
+    {
+      "id": "mixed-omelette",
+      "categoryId": "breakfast",
+      "name": {
+        "tr": "Karışık Omlet",
+        "en": "Mixed Omelette",
+        "de": "Gemischtes Omelett",
+        "ru": "Омлет ассорти"
+      },
+      "description": {
+        "tr": "",
+        "en": "",
+        "de": "",
+        "ru": ""
+      },
+      "price": 170,
+      "image": "/images/breakfast.jpg",
+      "active": true
+    },
+    {
+      "id": "kasar-toast",
+      "categoryId": "breakfast",
+      "name": {
+        "tr": "Kaşarlı Tost",
+        "en": "Toast with Kashar Cheese",
+        "de": "Toast mit Kaschkawal-Käse",
+        "ru": "Тост с сыром кашар"
+      },
+      "description": {
+        "tr": "",
+        "en": "",
+        "de": "",
+        "ru": ""
+      },
+      "price": 170,
+      "image": "/images/breakfast.jpg",
+      "active": true
+    },
+    {
+      "id": "mixed-toast",
+      "categoryId": "breakfast",
+      "name": {
+        "tr": "Karışık Tost",
+        "en": "Mixed Toast",
+        "de": "Toast mit Belag",
+        "ru": "Смешанный тост"
+      },
+      "description": {
+        "tr": "",
+        "en": "",
+        "de": "",
+        "ru": ""
+      },
+      "price": 170,
+      "image": "/images/breakfast.jpg",
+      "active": true
+    },
+    {
+      "id": "menemen",
+      "categoryId": "breakfast",
+      "name": {
+        "tr": "Menemen",
+        "en": "Menemen",
+        "de": "Menemen",
+        "ru": "Менемен"
+      },
+      "description": {
+        "tr": "",
+        "en": "",
+        "de": "",
+        "ru": ""
+      },
+      "price": 170,
+      "image": "/images/breakfast.jpg",
+      "active": true
+    },
+    {
+      "id": "sigara-boregi",
+      "categoryId": "breakfast",
+      "name": {
+        "tr": "Sigara Böreği",
+        "en": "Sigara Böreği (Crispy Pastry Rolls)",
+        "de": "Sigara-Börek (knusprige Teigröllchen)",
+        "ru": "Сигара-бёрек (хрустящие рулетики)"
+      },
+      "description": {
+        "tr": "",
+        "en": "",
+        "de": "",
+        "ru": ""
+      },
+      "price": 170,
+      "image": "/images/breakfast.jpg",
+      "active": true
+    },
+    {
+      "id": "fries",
+      "categoryId": "breakfast",
+      "name": {
+        "tr": "Cips",
+        "en": "French Fries",
+        "de": "Pommes frites",
+        "ru": "Картофель фри"
+      },
+      "description": {
+        "tr": "",
+        "en": "",
+        "de": "",
+        "ru": ""
+      },
+      "price": 170,
+      "image": "/images/breakfast.jpg",
+      "active": true
+    },
+    {
+      "id": "lentil-soup",
+      "categoryId": "soups",
+      "name": {
+        "tr": "Mercimek Çorbası",
+        "en": "Lentil Soup",
+        "de": "Linsensuppe",
+        "ru": "Чечевичный суп"
+      },
+      "description": {
+        "tr": "",
+        "en": "",
+        "de": "",
+        "ru": ""
+      },
+      "price": 100,
+      "image": "/images/soup.jpg",
+      "active": true
+    },
+    {
+      "id": "tomato-soup",
+      "categoryId": "soups",
+      "name": {
+        "tr": "Domates Çorbası",
+        "en": "Tomato Soup",
+        "de": "Tomatensuppe",
+        "ru": "Томатный суп"
+      },
+      "description": {
+        "tr": "",
+        "en": "",
+        "de": "",
+        "ru": ""
+      },
+      "price": 100,
+      "image": "/images/soup.jpg",
+      "active": true
+    },
+    {
+      "id": "mediterranean-salad",
+      "categoryId": "salads",
+      "name": {
+        "tr": "Akdeniz Salatası",
+        "en": "Mediterranean Salad",
+        "de": "Mediterraner Salat",
+        "ru": "Средиземноморский салат"
+      },
+      "description": {
+        "tr": "",
+        "en": "",
+        "de": "",
+        "ru": ""
+      },
+      "price": 210,
+      "image": "/images/salad.jpg",
+      "active": true
+    },
+    {
+      "id": "chicken-salad",
+      "categoryId": "salads",
+      "name": {
+        "tr": "Tavuklu Salata",
+        "en": "Chicken Salad",
+        "de": "Hähnchensalat",
+        "ru": "Салат с курицей"
+      },
+      "description": {
+        "tr": "",
+        "en": "",
+        "de": "",
+        "ru": ""
+      },
+      "price": 210,
+      "image": "/images/salad.jpg",
+      "active": true
+    },
+    {
+      "id": "tuna-salad",
+      "categoryId": "salads",
+      "name": {
+        "tr": "Ton Balıklı Salata",
+        "en": "Tuna Salad",
+        "de": "Thunfischsalat",
+        "ru": "Салат с тунцом"
+      },
+      "description": {
+        "tr": "",
+        "en": "",
+        "de": "",
+        "ru": ""
+      },
+      "price": 210,
+      "image": "/images/salad.jpg",
+      "active": true
+    },
+    {
+      "id": "green-salad",
+      "categoryId": "salads",
+      "name": {
+        "tr": "Yeşil Salata",
+        "en": "Green Salad",
+        "de": "Grüner Salat",
+        "ru": "Зелёный салат"
+      },
+      "description": {
+        "tr": "",
+        "en": "",
+        "de": "",
+        "ru": ""
+      },
+      "price": 210,
+      "image": "/images/salad.jpg",
+      "active": true
+    },
+    {
+      "id": "spaghetti-bolognese",
+      "categoryId": "pasta",
+      "name": {
+        "tr": "Spagetti Bolonez",
+        "en": "Spaghetti Bolognese",
+        "de": "Spaghetti Bolognese",
+        "ru": "Спагетти болоньезе"
+      },
+      "description": {
+        "tr": "",
+        "en": "",
+        "de": "",
+        "ru": ""
+      },
+      "price": 240,
+      "image": "/images/pasta.jpg",
+      "active": true
+    },
+    {
+      "id": "carbonara",
+      "categoryId": "pasta",
+      "name": {
+        "tr": "Carbonara",
+        "en": "Carbonara",
+        "de": "Carbonara",
+        "ru": "Карбонара"
+      },
+      "description": {
+        "tr": "",
+        "en": "",
+        "de": "",
+        "ru": ""
+      },
+      "price": 240,
+      "image": "/images/pasta.jpg",
+      "active": true
+    },
+    {
+      "id": "penne-arabiatta",
+      "categoryId": "pasta",
+      "name": {
+        "tr": "Penne Arabiatta",
+        "en": "Penne Arrabbiata",
+        "de": "Penne all’Arrabbiata",
+        "ru": "Пенне арабьята"
+      },
+      "description": {
+        "tr": "",
+        "en": "",
+        "de": "",
+        "ru": ""
+      },
+      "price": 240,
+      "image": "/images/pasta.jpg",
+      "active": true
+    },
+    {
+      "id": "lasagna",
+      "categoryId": "pasta",
+      "name": {
+        "tr": "Lazanya",
+        "en": "Lasagne",
+        "de": "Lasagne",
+        "ru": "Лазанья"
+      },
+      "description": {
+        "tr": "",
+        "en": "",
+        "de": "",
+        "ru": ""
+      },
+      "price": 240,
+      "image": "/images/pasta.jpg",
+      "active": true
+    },
+    {
+      "id": "curry-chicken",
+      "categoryId": "chicken",
+      "name": {
+        "tr": "Köri Soslu Tavuk",
+        "en": "Chicken with Curry",
+        "de": "Hähnchen mit Curry",
+        "ru": "Курица с карри"
+      },
+      "description": {
+        "tr": "",
+        "en": "",
+        "de": "",
+        "ru": ""
+      },
+      "price": 300,
+      "image": "/images/chicken.jpg",
+      "active": true
+    },
+    {
+      "id": "cheese-chicken",
+      "categoryId": "chicken",
+      "name": {
+        "tr": "Peynirli Tavuk",
+        "en": "Chicken with Cheese",
+        "de": "Hähnchen mit Käse",
+        "ru": "Курица с сыром"
+      },
+      "description": {
+        "tr": "",
+        "en": "",
+        "de": "",
+        "ru": ""
+      },
+      "price": 300,
+      "image": "/images/chicken.jpg",
+      "active": true
+    },
+    {
+      "id": "soy-chicken",
+      "categoryId": "chicken",
+      "name": {
+        "tr": "Soya Soslu Tavuk",
+        "en": "Chicken with Soy Sauce",
+        "de": "Hähnchen mit Sojasauce",
+        "ru": "Курица с соевым соусом"
+      },
+      "description": {
+        "tr": "",
+        "en": "",
+        "de": "",
+        "ru": ""
+      },
+      "price": 300,
+      "image": "/images/chicken.jpg",
+      "active": true
+    },
+    {
+      "id": "chicken-shish",
+      "categoryId": "grill",
+      "name": {
+        "tr": "Tavuk Şiş",
+        "en": "Chicken Shish",
+        "de": "Hähnchenspieß",
+        "ru": "Куриный шашлык"
+      },
+      "description": {
+        "tr": "",
+        "en": "",
+        "de": "",
+        "ru": ""
+      },
+      "price": 330,
+      "image": "/images/grill.jpg",
+      "active": true
+    },
+    {
+      "id": "meat-shish",
+      "categoryId": "grill",
+      "name": {
+        "tr": "Et Şiş",
+        "en": "Meat Shish",
+        "de": "Fleischspieß",
+        "ru": "Мясной шашлык"
+      },
+      "description": {
+        "tr": "",
+        "en": "",
+        "de": "",
+        "ru": ""
+      },
+      "price": 330,
+      "image": "/images/grill.jpg",
+      "active": true
+    },
+    {
+      "id": "grilled-chicken",
+      "categoryId": "grill",
+      "name": {
+        "tr": "Tavuk Izgara",
+        "en": "Grilled Chicken",
+        "de": "Gegrilltes Hähnchen",
+        "ru": "Курица на гриле"
+      },
+      "description": {
+        "tr": "",
+        "en": "",
+        "de": "",
+        "ru": ""
+      },
+      "price": 330,
+      "image": "/images/grill.jpg",
+      "active": true
+    },
+    {
+      "id": "grilled-meatball",
+      "categoryId": "grill",
+      "name": {
+        "tr": "Izgara Köfte",
+        "en": "Grilled Meatballs",
+        "de": "Gegrillte Köfte",
+        "ru": "Кёфте на гриле"
+      },
+      "description": {
+        "tr": "",
+        "en": "",
+        "de": "",
+        "ru": ""
+      },
+      "price": 330,
+      "image": "/images/grill.jpg",
+      "active": true
+    },
+    {
+      "id": "citr-pizza",
+      "categoryId": "pizza",
+      "name": {
+        "tr": "Çıtır Pizza",
+        "en": "Çıtır Pizza",
+        "de": "Çıtır-Pizza",
+        "ru": "Пицца «Читыр»"
+      },
+      "description": {
+        "tr": "Pizza sosu, mozzarella, dana döner, cherry domates, mısır, zeytin ve soğan.",
+        "en": "Pizza sauce, mozzarella, beef döner, cherry tomatoes, corn, olives and onion.",
+        "de": "Pizzasauce, Mozzarella, Rinderdöner, Kirschtomaten, Mais, Oliven und Zwiebeln.",
+        "ru": "Томатный соус, моцарелла, говяжий донер, помидоры черри, кукуруза, оливки и лук."
+      },
+      "price": 300,
+      "image": "/images/pizza-01.jpg",
+      "active": true
+    },
+    {
+      "id": "ananas",
+      "categoryId": "pizza",
+      "name": {
+        "tr": "Pizza Ananas",
+        "en": "Pineapple Pizza",
+        "de": "Pizza Ananas",
+        "ru": "Пицца с ананасом"
+      },
+      "description": {
+        "tr": "Pizza sosu, mozzarella, jambon, salam, mantar ve ananas.",
+        "en": "Pizza sauce, mozzarella, ham, salami, mushrooms and pineapple.",
+        "de": "Pizzasauce, Mozzarella, Schinken, Salami, Pilze und Ananas.",
+        "ru": "Томатный соус, моцарелла, ветчина, салями, грибы и ананас."
+      },
+      "price": 300,
+      "image": "/images/pizza-02.jpg",
+      "active": true
+    },
+    {
+      "id": "bolognese-pizza",
+      "categoryId": "pizza",
+      "name": {
+        "tr": "Pizza Bolonez",
+        "en": "Bolognese Pizza",
+        "de": "Pizza Bolognese",
+        "ru": "Пицца болоньезе"
+      },
+      "description": {
+        "tr": "Pizza sosu, mozzarella ve Bolonez sosu.",
+        "en": "Pizza sauce, mozzarella and Bolognese sauce.",
+        "de": "Pizzasauce, Mozzarella und Bolognese-Sauce.",
+        "ru": "Томатный соус, моцарелла и соус болоньезе."
+      },
+      "price": 300,
+      "image": "/images/pizza-03.jpg",
+      "active": true
+    },
+    {
+      "id": "calzone",
+      "categoryId": "pizza",
+      "name": {
+        "tr": "Pizza Calzone",
+        "en": "Calzone Pizza",
+        "de": "Pizza Calzone",
+        "ru": "Пицца кальцоне"
+      },
+      "description": {
+        "tr": "Pizza sosu, mozzarella, jambon ve mantar.",
+        "en": "Pizza sauce, mozzarella, ham and mushrooms.",
+        "de": "Pizzasauce, Mozzarella, Schinken und Pilze.",
+        "ru": "Томатный соус, моцарелла, ветчина и грибы."
+      },
+      "price": 300,
+      "image": "/images/pizza-04.jpg",
+      "active": true
+    },
+    {
+      "id": "seafood-pizza",
+      "categoryId": "pizza",
+      "name": {
+        "tr": "Pizza Deniz Ürünleri",
+        "en": "Seafood Pizza",
+        "de": "Pizza mit Meeresfrüchten",
+        "ru": "Пицца с морепродуктами"
+      },
+      "description": {
+        "tr": "Pizza sosu, mozzarella, kalamar ve ton balığı.",
+        "en": "Pizza sauce, mozzarella, calamari and tuna.",
+        "de": "Pizzasauce, Mozzarella, Calamari und Thunfisch.",
+        "ru": "Томатный соус, моцарелла, кальмар и тунец."
+      },
+      "price": 300,
+      "image": "/images/pizza-05.jpg",
+      "active": true
+    },
+    {
+      "id": "formagio",
+      "categoryId": "pizza",
+      "name": {
+        "tr": "Pizza Formagio",
+        "en": "Four Cheese Pizza",
+        "de": "Pizza Formagio (Vier Käse)",
+        "ru": "Пицца формаджо (четыре сыра)"
+      },
+      "description": {
+        "tr": "Pizza sosu, mozzarella ve dört farklı peynir çeşidi.",
+        "en": "Pizza sauce, mozzarella and four different cheeses.",
+        "de": "Pizzasauce, Mozzarella und vier verschiedene Käsesorten.",
+        "ru": "Томатный соус, моцарелла и четыре вида сыра."
+      },
+      "price": 300,
+      "image": "/images/pizza-06.jpg",
+      "active": true
+    },
+    {
+      "id": "fungi",
+      "categoryId": "pizza",
+      "name": {
+        "tr": "Pizza Fungi",
+        "en": "Mushroom Pizza",
+        "de": "Pizza Funghi",
+        "ru": "Пицца с грибами"
+      },
+      "description": {
+        "tr": "Pizza sosu, mozzarella ve kültür mantarı.",
+        "en": "Pizza sauce, mozzarella and mushrooms.",
+        "de": "Pizzasauce, Mozzarella und Champignons.",
+        "ru": "Томатный соус, моцарелла и шампиньоны."
+      },
+      "price": 300,
+      "image": "/images/pizza-07.jpg",
+      "active": true
+    },
+    {
+      "id": "gorgonzola",
+      "categoryId": "pizza",
+      "name": {
+        "tr": "Pizza Gorgonzola",
+        "en": "Gorgonzola Pizza",
+        "de": "Pizza Gorgonzola",
+        "ru": "Пицца горгонзола"
+      },
+      "description": {
+        "tr": "Pizza sosu, mozzarella ve rokfor peyniri.",
+        "en": "Pizza sauce, mozzarella and Roquefort cheese.",
+        "de": "Pizzasauce, Mozzarella und Roquefort.",
+        "ru": "Томатный соус, моцарелла и сыр рокфор."
+      },
+      "price": 300,
+      "image": "/images/pizza-08.jpg",
+      "active": true
+    },
+    {
+      "id": "hawaii",
+      "categoryId": "pizza",
+      "name": {
+        "tr": "Pizza Hawaii",
+        "en": "Hawaiian Pizza",
+        "de": "Pizza Hawaii",
+        "ru": "Пицца гавайская"
+      },
+      "description": {
+        "tr": "Pizza sosu, mozzarella, jambon ve ananas.",
+        "en": "Pizza sauce, mozzarella, ham and pineapple.",
+        "de": "Pizzasauce, Mozzarella, Schinken und Ananas.",
+        "ru": "Томатный соус, моцарелла, ветчина и ананас."
+      },
+      "price": 300,
+      "image": "/images/pizza-09.jpg",
+      "active": true
+    },
+    {
+      "id": "margherita",
+      "categoryId": "pizza",
+      "name": {
+        "tr": "Pizza Margarita",
+        "en": "Margherita Pizza",
+        "de": "Pizza Margherita",
+        "ru": "Пицца маргарита"
+      },
+      "description": {
+        "tr": "Pizza sosu ve mozzarella.",
+        "en": "Pizza sauce and mozzarella.",
+        "de": "Pizzasauce und Mozzarella.",
+        "ru": "Томатный соус и моцарелла."
+      },
+      "price": 300,
+      "image": "/images/pizza-10.jpg",
+      "active": true
+    },
+    {
+      "id": "misto",
+      "categoryId": "pizza",
+      "name": {
+        "tr": "Pizza Misto",
+        "en": "Misto Pizza",
+        "de": "Pizza Misto",
+        "ru": "Пицца мисто"
+      },
+      "description": {
+        "tr": "Pizza sosu, mozzarella, sucuk, jambon, mantar, yeşil biber, zeytin ve salam.",
+        "en": "Pizza sauce, Turkish sausage, ham, mushrooms, green pepper, olives and salami.",
+        "de": "Pizzasauce, Sucuk, Schinken, Pilze, grüne Paprika, Oliven und Salami.",
+        "ru": "Томатный соус, суджук, ветчина, грибы, зелёный перец, оливки и салями."
+      },
+      "price": 300,
+      "image": "/images/pizza-11.jpg",
+      "active": true
+    },
+    {
+      "id": "pargina",
+      "categoryId": "pizza",
+      "name": {
+        "tr": "Pizza Pargina",
+        "en": "Pargina Pizza",
+        "de": "Pizza Pargina",
+        "ru": "Пицца парджина"
+      },
+      "description": {
+        "tr": "Pizza sosu, mozzarella, jambon ve mantar.",
+        "en": "Pizza sauce, mozzarella, ham and mushrooms.",
+        "de": "Pizzasauce, Mozzarella, Schinken und Pilze.",
+        "ru": "Томатный соус, моцарелла, ветчина и грибы."
+      },
+      "price": 300,
+      "image": "/images/pizza-12.jpg",
+      "active": true
+    },
+    {
+      "id": "pepperoni",
+      "categoryId": "pizza",
+      "name": {
+        "tr": "Pizza Pepperoni",
+        "en": "Pepperoni Pizza",
+        "de": "Pizza Pepperoni",
+        "ru": "Пицца пепперони"
+      },
+      "description": {
+        "tr": "Pizza sosu, mozzarella ve sucuk.",
+        "en": "Pizza sauce, mozzarella and Turkish sausage.",
+        "de": "Pizzasauce, Mozzarella und Sucuk.",
+        "ru": "Томатный соус, моцарелла и суджук."
+      },
+      "price": 300,
+      "image": "/images/pizza-13.jpg",
+      "active": true
+    },
+    {
+      "id": "pollo",
+      "categoryId": "pizza",
+      "name": {
+        "tr": "Pizza Pollo",
+        "en": "Chicken Pizza",
+        "de": "Pizza Pollo (Hähnchen)",
+        "ru": "Пицца полло (с курицей)"
+      },
+      "description": {
+        "tr": "Pizza sosu, mozzarella, tavuk, jalapeno ve yeşil biber.",
+        "en": "Pizza sauce, mozzarella, chicken, jalapeño and green pepper.",
+        "de": "Pizzasauce, Mozzarella, Hähnchen, Jalapeño und grüne Paprika.",
+        "ru": "Томатный соус, моцарелла, курица, халапеньо и зелёный перец."
+      },
+      "price": 300,
+      "image": "/images/pizza-14.jpg",
+      "active": true
+    },
+    {
+      "id": "prociutto",
+      "categoryId": "pizza",
+      "name": {
+        "tr": "Pizza Prociutto",
+        "en": "Prosciutto Pizza",
+        "de": "Pizza Prosciutto",
+        "ru": "Пицца прошутто"
+      },
+      "description": {
+        "tr": "Pizza sosu, mozzarella ve jambon.",
+        "en": "Pizza sauce, mozzarella and ham.",
+        "de": "Pizzasauce, Mozzarella und Schinken.",
+        "ru": "Томатный соус, моцарелла и ветчина."
+      },
+      "price": 300,
+      "image": "/images/pizza-15.jpg",
+      "active": true
+    },
+    {
+      "id": "quatro",
+      "categoryId": "pizza",
+      "name": {
+        "tr": "Pizza Quatro",
+        "en": "Quatro Pizza",
+        "de": "Pizza Quatro",
+        "ru": "Пицца кватро"
+      },
+      "description": {
+        "tr": "Pizza sosu, mozzarella, mantar, salam ve jambon.",
+        "en": "Pizza sauce, mozzarella, mushrooms, salami and ham.",
+        "de": "Pizzasauce, Mozzarella, Pilze, Salami und Schinken.",
+        "ru": "Томатный соус, моцарелла, грибы, салями и ветчина."
+      },
+      "price": 300,
+      "image": "/images/pizza-16.jpg",
+      "active": true
+    },
+    {
+      "id": "salami",
+      "categoryId": "pizza",
+      "name": {
+        "tr": "Pizza Salami",
+        "en": "Salami Pizza",
+        "de": "Pizza Salami",
+        "ru": "Пицца с салями"
+      },
+      "description": {
+        "tr": "Pizza sosu, mozzarella ve salam.",
+        "en": "Pizza sauce, mozzarella and salami.",
+        "de": "Pizzasauce, Mozzarella und Salami.",
+        "ru": "Томатный соус, моцарелла и салями."
+      },
+      "price": 300,
+      "image": "/images/pizza-17.jpg",
+      "active": true
+    },
+    {
+      "id": "tonno",
+      "categoryId": "pizza",
+      "name": {
+        "tr": "Pizza Tonno",
+        "en": "Tuna Pizza",
+        "de": "Pizza Tonno (Thunfisch)",
+        "ru": "Пицца тонно (с тунцом)"
+      },
+      "description": {
+        "tr": "Pizza sosu, mozzarella, ton balığı, soğan, mısır ve kapari.",
+        "en": "Pizza sauce, mozzarella, tuna, onion, corn and capers.",
+        "de": "Pizzasauce, Mozzarella, Thunfisch, Zwiebeln, Mais und Kapern.",
+        "ru": "Томатный соус, моцарелла, тунец, лук, кукуруза и каперсы."
+      },
+      "price": 300,
+      "image": "/images/pizza-18.jpg",
+      "active": true
+    },
+    {
+      "id": "veggie",
+      "categoryId": "pizza",
+      "name": {
+        "tr": "Pizza Veggie",
+        "en": "Vegetable Pizza",
+        "de": "Pizza Veggie (Gemüse)",
+        "ru": "Овощная пицца"
+      },
+      "description": {
+        "tr": "Pizza sosu, mozzarella, yeşil biber, domates, kabak, patlıcan, kapya biber ve soğan.",
+        "en": "Pizza sauce, mozzarella, green pepper, tomato, zucchini, eggplant, red pepper and onion.",
+        "de": "Pizzasauce, Mozzarella, grüne Paprika, Tomaten, Zucchini, Aubergine, Spitzpaprika und Zwiebeln.",
+        "ru": "Томатный соус, моцарелла, зелёный перец, помидор, кабачок, баклажан, красный перец и лук."
+      },
+      "price": 300,
+      "image": "/images/pizza-19.jpg",
+      "active": true
+    },
+    {
+      "id": "hamburger",
+      "categoryId": "burgers",
+      "name": {
+        "tr": "Hamburger",
+        "en": "Hamburger",
+        "de": "Hamburger",
+        "ru": "Гамбургер"
+      },
+      "description": {
+        "tr": "",
+        "en": "",
+        "de": "",
+        "ru": ""
+      },
+      "price": 270,
+      "image": "/images/burger.jpg",
+      "active": true
+    },
+    {
+      "id": "cheese-burger",
+      "categoryId": "burgers",
+      "name": {
+        "tr": "Cheese Burger",
+        "en": "Cheeseburger",
+        "de": "Cheeseburger",
+        "ru": "Чизбургер"
+      },
+      "description": {
+        "tr": "",
+        "en": "",
+        "de": "",
+        "ru": ""
+      },
+      "price": 270,
+      "image": "/images/burger.jpg",
+      "active": true
+    },
+    {
+      "id": "chicken-nugget",
+      "categoryId": "kids",
+      "name": {
+        "tr": "Chicken Nugget",
+        "en": "Chicken Nuggets",
+        "de": "Chicken Nuggets",
+        "ru": "Куриные наггетсы"
+      },
+      "description": {
+        "tr": "",
+        "en": "",
+        "de": "",
+        "ru": ""
+      },
+      "price": 200,
+      "image": "/images/kids-meal.svg",
+      "active": true
+    },
+    {
+      "id": "kids-meatball",
+      "categoryId": "kids",
+      "name": {
+        "tr": "Izgara Köfte",
+        "en": "Grilled Meatballs",
+        "de": "Gegrillte Köfte",
+        "ru": "Кёфте на гриле"
+      },
+      "description": {
+        "tr": "",
+        "en": "",
+        "de": "",
+        "ru": ""
+      },
+      "price": 200,
+      "image": "/images/kids-meal.svg",
+      "active": true
+    },
+    {
+      "id": "kids-margherita",
+      "categoryId": "kids",
+      "name": {
+        "tr": "Pizza Margarita",
+        "en": "Margherita Pizza",
+        "de": "Pizza Margherita",
+        "ru": "Пицца маргарита"
+      },
+      "description": {
+        "tr": "",
+        "en": "",
+        "de": "",
+        "ru": ""
+      },
+      "price": 200,
+      "image": "/images/kids-meal.svg",
+      "active": true
+    },
+    {
+      "id": "kids-pepperoni",
+      "categoryId": "kids",
+      "name": {
+        "tr": "Pizza Pepperoni",
+        "en": "Pepperoni Pizza",
+        "de": "Pizza Pepperoni",
+        "ru": "Пицца пепперони"
+      },
+      "description": {
+        "tr": "",
+        "en": "",
+        "de": "",
+        "ru": ""
+      },
+      "price": 200,
+      "image": "/images/kids-meal.svg",
+      "active": true
+    },
+    {
+      "id": "kids-salami",
+      "categoryId": "kids",
+      "name": {
+        "tr": "Pizza Salami",
+        "en": "Salami Pizza",
+        "de": "Pizza Salami",
+        "ru": "Пицца с салями"
+      },
+      "description": {
+        "tr": "",
+        "en": "",
+        "de": "",
+        "ru": ""
+      },
+      "price": 200,
+      "image": "/images/kids-meal.svg",
+      "active": true
+    },
+    {
+      "id": "lemon-cheesecake",
+      "categoryId": "desserts",
+      "name": {
+        "tr": "Limonlu Cheesecake",
+        "en": "Lemon Cheesecake",
+        "de": "Zitronen-Cheesecake",
+        "ru": "Лимонный чизкейк"
+      },
+      "description": {
+        "tr": "",
+        "en": "",
+        "de": "",
+        "ru": ""
+      },
+      "price": 150,
+      "image": "/images/dessert.jpg",
+      "active": true
+    },
+    {
+      "id": "raspberry-cheesecake",
+      "categoryId": "desserts",
+      "name": {
+        "tr": "Frambuazlı Cheesecake",
+        "en": "Raspberry Cheesecake",
+        "de": "Himbeer-Cheesecake",
+        "ru": "Малиновый чизкейк"
+      },
+      "description": {
+        "tr": "",
+        "en": "",
+        "de": "",
+        "ru": ""
+      },
+      "price": 150,
+      "image": "/images/dessert.jpg",
+      "active": true
+    },
+    {
+      "id": "tiramisu",
+      "categoryId": "desserts",
+      "name": {
+        "tr": "Tiramisu",
+        "en": "Tiramisu",
+        "de": "Tiramisu",
+        "ru": "Тирамису"
+      },
+      "description": {
+        "tr": "",
+        "en": "",
+        "de": "",
+        "ru": ""
+      },
+      "price": 150,
+      "image": "/images/dessert.jpg",
+      "active": true
+    },
+    {
+      "id": "cola",
+      "categoryId": "cold-drinks",
+      "name": {
+        "tr": "Cola",
+        "en": "Cola",
+        "de": "Cola",
+        "ru": "Кола"
+      },
+      "description": {
+        "tr": "",
+        "en": "",
+        "de": "",
+        "ru": ""
+      },
+      "price": 60,
+      "image": "/images/cold-drinks.svg",
+      "active": true
+    },
+    {
+      "id": "cola-light",
+      "categoryId": "cold-drinks",
+      "name": {
+        "tr": "Cola Light",
+        "en": "Diet Cola",
+        "de": "Cola Light",
+        "ru": "Кола лайт"
+      },
+      "description": {
+        "tr": "",
+        "en": "",
+        "de": "",
+        "ru": ""
+      },
+      "price": 60,
+      "image": "/images/cold-drinks.svg",
+      "active": true
+    },
+    {
+      "id": "cola-zero",
+      "categoryId": "cold-drinks",
+      "name": {
+        "tr": "Cola Zero",
+        "en": "Cola Zero",
+        "de": "Cola Zero",
+        "ru": "Кола зеро"
+      },
+      "description": {
+        "tr": "",
+        "en": "",
+        "de": "",
+        "ru": ""
+      },
+      "price": 60,
+      "image": "/images/cold-drinks.svg",
+      "active": true
+    },
+    {
+      "id": "fanta",
+      "categoryId": "cold-drinks",
+      "name": {
+        "tr": "Fanta",
+        "en": "Fanta",
+        "de": "Fanta",
+        "ru": "Фанта"
+      },
+      "description": {
+        "tr": "",
+        "en": "",
+        "de": "",
+        "ru": ""
+      },
+      "price": 60,
+      "image": "/images/cold-drinks.svg",
+      "active": true
+    },
+    {
+      "id": "sprite",
+      "categoryId": "cold-drinks",
+      "name": {
+        "tr": "Sprite",
+        "en": "Sprite",
+        "de": "Sprite",
+        "ru": "Спрайт"
+      },
+      "description": {
+        "tr": "",
+        "en": "",
+        "de": "",
+        "ru": ""
+      },
+      "price": 60,
+      "image": "/images/cold-drinks.svg",
+      "active": true
+    },
+    {
+      "id": "iced-tea",
+      "categoryId": "cold-drinks",
+      "name": {
+        "tr": "Icetea",
+        "en": "Iced Tea",
+        "de": "Eistee",
+        "ru": "Холодный чай"
+      },
+      "description": {
+        "tr": "",
+        "en": "",
+        "de": "",
+        "ru": ""
+      },
+      "price": 60,
+      "image": "/images/cold-drinks.svg",
+      "active": true
+    },
+    {
+      "id": "orange-juice",
+      "categoryId": "cold-drinks",
+      "name": {
+        "tr": "Portakal Suyu",
+        "en": "Orange Juice",
+        "de": "Orangensaft",
+        "ru": "Апельсиновый сок"
+      },
+      "description": {
+        "tr": "",
+        "en": "",
+        "de": "",
+        "ru": ""
+      },
+      "price": 60,
+      "image": "/images/cold-drinks.svg",
+      "active": true
+    },
+    {
+      "id": "lemonade",
+      "categoryId": "cold-drinks",
+      "name": {
+        "tr": "Limonata",
+        "en": "Lemonade",
+        "de": "Limonade",
+        "ru": "Лимонад"
+      },
+      "description": {
+        "tr": "",
+        "en": "",
+        "de": "",
+        "ru": ""
+      },
+      "price": 60,
+      "image": "/images/cold-drinks.svg",
+      "active": true
+    },
+    {
+      "id": "water",
+      "categoryId": "cold-drinks",
+      "name": {
+        "tr": "Su",
+        "en": "Water",
+        "de": "Wasser",
+        "ru": "Вода"
+      },
+      "description": {
+        "tr": "",
+        "en": "",
+        "de": "",
+        "ru": ""
+      },
+      "price": 60,
+      "image": "/images/cold-drinks.svg",
+      "active": true
+    },
+    {
+      "id": "ayran",
+      "categoryId": "cold-drinks",
+      "name": {
+        "tr": "Ayran",
+        "en": "Ayran",
+        "de": "Ayran",
+        "ru": "Айран"
+      },
+      "description": {
+        "tr": "",
+        "en": "",
+        "de": "",
+        "ru": ""
+      },
+      "price": 60,
+      "image": "/images/cold-drinks.svg",
+      "active": true
+    },
+    {
+      "id": "soda",
+      "categoryId": "cold-drinks",
+      "name": {
+        "tr": "Soda",
+        "en": "Mineral Water",
+        "de": "Mineralwasser",
+        "ru": "Минеральная вода"
+      },
+      "description": {
+        "tr": "",
+        "en": "",
+        "de": "",
+        "ru": ""
+      },
+      "price": 60,
+      "image": "/images/cold-drinks.svg",
+      "active": true
+    },
+    {
+      "id": "fruit-soda",
+      "categoryId": "cold-drinks",
+      "name": {
+        "tr": "Meyveli Soda",
+        "en": "Fruit-Flavoured Mineral Water",
+        "de": "Mineralwasser mit Fruchtgeschmack",
+        "ru": "Минеральная вода с фруктовым вкусом"
+      },
+      "description": {
+        "tr": "",
+        "en": "",
+        "de": "",
+        "ru": ""
+      },
+      "price": 60,
+      "image": "/images/cold-drinks.svg",
+      "active": true
+    },
+    {
+      "id": "fruit-juice",
+      "categoryId": "cold-drinks",
+      "name": {
+        "tr": "Meyve Suyu",
+        "en": "Fruit Juice",
+        "de": "Fruchtsaft",
+        "ru": "Фруктовый сок"
+      },
+      "description": {
+        "tr": "Şeftali, vişne veya karışık.",
+        "en": "Peach, sour cherry or mixed.",
+        "de": "Pfirsich, Sauerkirsche oder gemischt.",
+        "ru": "Персиковый, вишнёвый или смешанный."
+      },
+      "price": 60,
+      "image": "/images/cold-drinks.svg",
+      "active": true
+    },
+    {
+      "id": "tea",
+      "categoryId": "hot-drinks",
+      "name": {
+        "tr": "Çay",
+        "en": "Turkish Tea",
+        "de": "Türkischer Tee",
+        "ru": "Турецкий чай"
+      },
+      "description": {
+        "tr": "",
+        "en": "",
+        "de": "",
+        "ru": ""
+      },
+      "price": 65,
+      "image": "/images/hot-drinks.svg",
+      "active": true
+    },
+    {
+      "id": "turkish-coffee",
+      "categoryId": "hot-drinks",
+      "name": {
+        "tr": "Türk Kahvesi",
+        "en": "Turkish Coffee",
+        "de": "Türkischer Kaffee",
+        "ru": "Турецкий кофе"
+      },
+      "description": {
+        "tr": "",
+        "en": "",
+        "de": "",
+        "ru": ""
+      },
+      "price": 65,
+      "image": "/images/hot-drinks.svg",
+      "active": true
+    },
+    {
+      "id": "mastic-coffee",
+      "categoryId": "hot-drinks",
+      "name": {
+        "tr": "Damlasakızlı Türk Kahvesi",
+        "en": "Mastic Turkish Coffee",
+        "de": "Türkischer Kaffee mit Mastix",
+        "ru": "Турецкий кофе с мастикой"
+      },
+      "description": {
+        "tr": "",
+        "en": "",
+        "de": "",
+        "ru": ""
+      },
+      "price": 65,
+      "image": "/images/hot-drinks.svg",
+      "active": true
+    },
+    {
+      "id": "menengic",
+      "categoryId": "hot-drinks",
+      "name": {
+        "tr": "Menengiç",
+        "en": "Menengiç Coffee",
+        "de": "Menengiç-Kaffee",
+        "ru": "Кофе менengiç"
+      },
+      "description": {
+        "tr": "",
+        "en": "",
+        "de": "",
+        "ru": ""
+      },
+      "price": 65,
+      "image": "/images/hot-drinks.svg",
+      "active": true
+    },
+    {
+      "id": "nescafe",
+      "categoryId": "hot-drinks",
+      "name": {
+        "tr": "Nescafe",
+        "en": "Nescafé",
+        "de": "Nescafé",
+        "ru": "Нескафе"
+      },
+      "description": {
+        "tr": "",
+        "en": "",
+        "de": "",
+        "ru": ""
+      },
+      "price": 65,
+      "image": "/images/hot-drinks.svg",
+      "active": true
+    },
+    {
+      "id": "herbal-tea",
+      "categoryId": "hot-drinks",
+      "name": {
+        "tr": "Bitki Çayları",
+        "en": "Herbal Tea",
+        "de": "Kräutertee",
+        "ru": "Травяной чай"
+      },
+      "description": {
+        "tr": "",
+        "en": "",
+        "de": "",
+        "ru": ""
+      },
+      "price": 65,
+      "image": "/images/hot-drinks.svg",
+      "active": true
+    },
+    {
+      "id": "hot-chocolate",
+      "categoryId": "hot-drinks",
+      "name": {
+        "tr": "Sıcak Çikolata",
+        "en": "Hot Chocolate",
+        "de": "Heiße Schokolade",
+        "ru": "Горячий шоколад"
+      },
+      "description": {
+        "tr": "",
+        "en": "",
+        "de": "",
+        "ru": ""
+      },
+      "price": 65,
+      "image": "/images/hot-drinks.svg",
+      "active": true
+    }
+  ],
+  "regions": [
+    {
+      "id": "akcati",
+      "name": "Akçatı",
+      "minSubtotal": 0,
+      "deliveryFee": 0,
+      "active": true
+    },
+    {
+      "id": "akdam",
+      "name": "Akdam",
+      "minSubtotal": 0,
+      "deliveryFee": 0,
+      "active": true
+    },
+    {
+      "id": "alacami",
+      "name": "Alacami",
+      "minSubtotal": 0,
+      "deliveryFee": 0,
+      "active": true
+    },
+    {
+      "id": "alara",
+      "name": "Alara",
+      "minSubtotal": 0,
+      "deliveryFee": 0,
+      "active": true
+    },
+    {
+      "id": "aliefendi",
+      "name": "Aliefendi",
+      "minSubtotal": 0,
+      "deliveryFee": 0,
+      "active": true
+    },
+    {
+      "id": "asmaca",
+      "name": "Asmaca",
+      "minSubtotal": 0,
+      "deliveryFee": 0,
+      "active": true
+    },
+    {
+      "id": "avsallar",
+      "name": "Avsallar",
+      "minSubtotal": 0,
+      "deliveryFee": 0,
+      "active": true
+    },
+    {
+      "id": "bademagaci",
+      "name": "Bademağacı",
+      "minSubtotal": 0,
+      "deliveryFee": 0,
+      "active": true
+    },
+    {
+      "id": "basirli",
+      "name": "Basırlı",
+      "minSubtotal": 0,
+      "deliveryFee": 0,
+      "active": true
+    },
+    {
+      "id": "baskoy",
+      "name": "Başköy",
+      "minSubtotal": 0,
+      "deliveryFee": 0,
+      "active": true
+    },
+    {
+      "id": "bayir",
+      "name": "Bayır",
+      "minSubtotal": 0,
+      "deliveryFee": 0,
+      "active": true
+    },
+    {
+      "id": "bayirkozagaci",
+      "name": "Bayırkozağacı",
+      "minSubtotal": 0,
+      "deliveryFee": 0,
+      "active": true
+    },
+    {
+      "id": "bektas",
+      "name": "Bektaş",
+      "minSubtotal": 0,
+      "deliveryFee": 0,
+      "active": true
+    },
+    {
+      "id": "beldibi",
+      "name": "Beldibi",
+      "minSubtotal": 0,
+      "deliveryFee": 0,
+      "active": true
+    },
+    {
+      "id": "beyreli",
+      "name": "Beyreli",
+      "minSubtotal": 0,
+      "deliveryFee": 0,
+      "active": true
+    },
+    {
+      "id": "bicakci",
+      "name": "Bıçakçı",
+      "minSubtotal": 0,
+      "deliveryFee": 0,
+      "active": true
+    },
+    {
+      "id": "bucak",
+      "name": "Bucak",
+      "minSubtotal": 0,
+      "deliveryFee": 0,
+      "active": true
+    },
+    {
+      "id": "burcaklar",
+      "name": "Burçaklar",
+      "minSubtotal": 0,
+      "deliveryFee": 0,
+      "active": true
+    },
+    {
+      "id": "buyukhasbahce",
+      "name": "Büyükhasbahçe",
+      "minSubtotal": 0,
+      "deliveryFee": 0,
+      "active": true
+    },
+    {
+      "id": "buyukpinar",
+      "name": "Büyükpınar",
+      "minSubtotal": 0,
+      "deliveryFee": 0,
+      "active": true
+    },
+    {
+      "id": "cikcilli",
+      "name": "Cikcilli",
+      "minSubtotal": 0,
+      "deliveryFee": 0,
+      "active": true
+    },
+    {
+      "id": "cumhuriyet",
+      "name": "Cumhuriyet",
+      "minSubtotal": 0,
+      "deliveryFee": 0,
+      "active": true
+    },
+    {
+      "id": "cakallar",
+      "name": "Çakallar",
+      "minSubtotal": 0,
+      "deliveryFee": 0,
+      "active": true
+    },
+    {
+      "id": "camlica",
+      "name": "Çamlıca",
+      "minSubtotal": 0,
+      "deliveryFee": 0,
+      "active": true
+    },
+    {
+      "id": "carsi",
+      "name": "Çarşı",
+      "minSubtotal": 0,
+      "deliveryFee": 0,
+      "active": true
+    },
+    {
+      "id": "ciplakli",
+      "name": "Çıplaklı",
+      "minSubtotal": 0,
+      "deliveryFee": 0,
+      "active": true
+    },
+    {
+      "id": "degirmendere",
+      "name": "Değirmendere",
+      "minSubtotal": 0,
+      "deliveryFee": 0,
+      "active": true
+    },
+    {
+      "id": "demirtas",
+      "name": "Demirtaş",
+      "minSubtotal": 0,
+      "deliveryFee": 0,
+      "active": true
+    },
+    {
+      "id": "dere",
+      "name": "Dere",
+      "minSubtotal": 0,
+      "deliveryFee": 0,
+      "active": true
+    },
+    {
+      "id": "dinek",
+      "name": "Dinek",
+      "minSubtotal": 0,
+      "deliveryFee": 0,
+      "active": true
+    },
+    {
+      "id": "elikesik",
+      "name": "Elikesik",
+      "minSubtotal": 0,
+      "deliveryFee": 0,
+      "active": true
+    },
+    {
+      "id": "emisbeleni",
+      "name": "Emişbeleni",
+      "minSubtotal": 0,
+      "deliveryFee": 0,
+      "active": true
+    },
+    {
+      "id": "fakircali",
+      "name": "Fakırcalı",
+      "minSubtotal": 0,
+      "deliveryFee": 0,
+      "active": true
+    },
+    {
+      "id": "figla",
+      "name": "Fığla",
+      "minSubtotal": 0,
+      "deliveryFee": 0,
+      "active": true
+    },
+    {
+      "id": "gozubuyuk",
+      "name": "Gözübüyük",
+      "minSubtotal": 0,
+      "deliveryFee": 0,
+      "active": true
+    },
+    {
+      "id": "gozukucuklu",
+      "name": "Gözüküçüklü",
+      "minSubtotal": 0,
+      "deliveryFee": 0,
+      "active": true
+    },
+    {
+      "id": "gullerpinari",
+      "name": "Güllerpınarı",
+      "minSubtotal": 0,
+      "deliveryFee": 0,
+      "active": true
+    },
+    {
+      "id": "gumusgoze",
+      "name": "Gümüşgöze",
+      "minSubtotal": 0,
+      "deliveryFee": 0,
+      "active": true
+    },
+    {
+      "id": "gumuskavak",
+      "name": "Gümüşkavak",
+      "minSubtotal": 0,
+      "deliveryFee": 0,
+      "active": true
+    },
+    {
+      "id": "guney",
+      "name": "Güney",
+      "minSubtotal": 0,
+      "deliveryFee": 0,
+      "active": true
+    },
+    {
+      "id": "guzelbag",
+      "name": "Güzelbağ",
+      "minSubtotal": 0,
+      "deliveryFee": 0,
+      "active": true
+    },
+    {
+      "id": "hacet",
+      "name": "Hacet",
+      "minSubtotal": 0,
+      "deliveryFee": 0,
+      "active": true
+    },
+    {
+      "id": "hacikermiler",
+      "name": "Hacıkermiler",
+      "minSubtotal": 0,
+      "deliveryFee": 0,
+      "active": true
+    },
+    {
+      "id": "hacimehmetli",
+      "name": "Hacımehmetli",
+      "minSubtotal": 0,
+      "deliveryFee": 0,
+      "active": true
+    },
+    {
+      "id": "hisarici",
+      "name": "Hisariçi",
+      "minSubtotal": 0,
+      "deliveryFee": 0,
+      "active": true
+    },
+    {
+      "id": "hocalar",
+      "name": "Hocalar",
+      "minSubtotal": 0,
+      "deliveryFee": 0,
+      "active": true
+    },
+    {
+      "id": "i-mamli",
+      "name": "İmamlı",
+      "minSubtotal": 0,
+      "deliveryFee": 0,
+      "active": true
+    },
+    {
+      "id": "i-ncekum",
+      "name": "İncekum",
+      "minSubtotal": 0,
+      "deliveryFee": 0,
+      "active": true
+    },
+    {
+      "id": "i-sbatli",
+      "name": "İsbatlı",
+      "minSubtotal": 0,
+      "deliveryFee": 0,
+      "active": true
+    },
+    {
+      "id": "i-shakli",
+      "name": "İshaklı",
+      "minSubtotal": 0,
+      "deliveryFee": 0,
+      "active": true
+    },
+    {
+      "id": "kadipasa",
+      "name": "Kadıpaşa",
+      "minSubtotal": 0,
+      "deliveryFee": 0,
+      "active": true
+    },
+    {
+      "id": "karakocali",
+      "name": "Karakocalı",
+      "minSubtotal": 0,
+      "deliveryFee": 0,
+      "active": true
+    },
+    {
+      "id": "karamanlar",
+      "name": "Karamanlar",
+      "minSubtotal": 0,
+      "deliveryFee": 0,
+      "active": true
+    },
+    {
+      "id": "karapinar",
+      "name": "Karapınar",
+      "minSubtotal": 0,
+      "deliveryFee": 0,
+      "active": true
+    },
+    {
+      "id": "kargicak",
+      "name": "Kargıcak",
+      "minSubtotal": 0,
+      "deliveryFee": 0,
+      "active": true
+    },
+    {
+      "id": "kayabasi",
+      "name": "Kayabaşı",
+      "minSubtotal": 0,
+      "deliveryFee": 0,
+      "active": true
+    },
+    {
+      "id": "kestel",
+      "name": "Kestel",
+      "minSubtotal": 0,
+      "deliveryFee": 0,
+      "active": true
+    },
+    {
+      "id": "kesefli",
+      "name": "Keşefli",
+      "minSubtotal": 0,
+      "deliveryFee": 0,
+      "active": true
+    },
+    {
+      "id": "kizilcasehir",
+      "name": "Kızılcaşehir",
+      "minSubtotal": 0,
+      "deliveryFee": 0,
+      "active": true
+    },
+    {
+      "id": "kizlarpinari",
+      "name": "Kızlarpınarı",
+      "minSubtotal": 0,
+      "deliveryFee": 0,
+      "active": true
+    },
+    {
+      "id": "kocaoglanli",
+      "name": "Kocaoğlanlı",
+      "minSubtotal": 0,
+      "deliveryFee": 0,
+      "active": true
+    },
+    {
+      "id": "konakli",
+      "name": "Konaklı",
+      "minSubtotal": 0,
+      "deliveryFee": 0,
+      "active": true
+    },
+    {
+      "id": "kuzyaka",
+      "name": "Kuzyaka",
+      "minSubtotal": 0,
+      "deliveryFee": 0,
+      "active": true
+    },
+    {
+      "id": "kucukhasbahce",
+      "name": "Küçükhasbahçe",
+      "minSubtotal": 0,
+      "deliveryFee": 0,
+      "active": true
+    },
+    {
+      "id": "mahmutlar",
+      "name": "Mahmutlar",
+      "minSubtotal": 0,
+      "deliveryFee": 0,
+      "active": true
+    },
+    {
+      "id": "mahmutseydi",
+      "name": "Mahmutseydi",
+      "minSubtotal": 0,
+      "deliveryFee": 0,
+      "active": true
+    },
+    {
+      "id": "oba",
+      "name": "Oba",
+      "minSubtotal": 0,
+      "deliveryFee": 0,
+      "active": true
+    },
+    {
+      "id": "obaalacami",
+      "name": "Obaalacami",
+      "minSubtotal": 0,
+      "deliveryFee": 0,
+      "active": true
+    },
+    {
+      "id": "okurcalar",
+      "name": "Okurcalar",
+      "minSubtotal": 0,
+      "deliveryFee": 0,
+      "active": true
+    },
+    {
+      "id": "orhan",
+      "name": "Orhan",
+      "minSubtotal": 0,
+      "deliveryFee": 0,
+      "active": true
+    },
+    {
+      "id": "otekoy",
+      "name": "Öteköy",
+      "minSubtotal": 0,
+      "deliveryFee": 0,
+      "active": true
+    },
+    {
+      "id": "ozvadi",
+      "name": "Özvadi",
+      "minSubtotal": 0,
+      "deliveryFee": 0,
+      "active": true
+    },
+    {
+      "id": "pasakoy",
+      "name": "Paşaköy",
+      "minSubtotal": 0,
+      "deliveryFee": 0,
+      "active": true
+    },
+    {
+      "id": "payallar",
+      "name": "Payallar",
+      "minSubtotal": 0,
+      "deliveryFee": 0,
+      "active": true
+    },
+    {
+      "id": "saburlar",
+      "name": "Saburlar",
+      "minSubtotal": 0,
+      "deliveryFee": 0,
+      "active": true
+    },
+    {
+      "id": "sapadere",
+      "name": "Sapadere",
+      "minSubtotal": 0,
+      "deliveryFee": 0,
+      "active": true
+    },
+    {
+      "id": "saray",
+      "name": "Saray",
+      "minSubtotal": 0,
+      "deliveryFee": 0,
+      "active": true
+    },
+    {
+      "id": "seki",
+      "name": "Seki",
+      "minSubtotal": 0,
+      "deliveryFee": 0,
+      "active": true
+    },
+    {
+      "id": "sogukpinar",
+      "name": "Soğukpınar",
+      "minSubtotal": 0,
+      "deliveryFee": 0,
+      "active": true
+    },
+    {
+      "id": "sugozu",
+      "name": "Sugözü",
+      "minSubtotal": 0,
+      "deliveryFee": 0,
+      "active": true
+    },
+    {
+      "id": "suleymanlar",
+      "name": "Süleymanlar",
+      "minSubtotal": 0,
+      "deliveryFee": 0,
+      "active": true
+    },
+    {
+      "id": "sekerhane",
+      "name": "Şekerhane",
+      "minSubtotal": 0,
+      "deliveryFee": 0,
+      "active": true
+    },
+    {
+      "id": "sihlar",
+      "name": "Şıhlar",
+      "minSubtotal": 0,
+      "deliveryFee": 0,
+      "active": true
+    },
+    {
+      "id": "tasbasi",
+      "name": "Taşbaşı",
+      "minSubtotal": 0,
+      "deliveryFee": 0,
+      "active": true
+    },
+    {
+      "id": "tepe",
+      "name": "Tepe",
+      "minSubtotal": 0,
+      "deliveryFee": 0,
+      "active": true
+    },
+    {
+      "id": "tirilar",
+      "name": "Tırılar",
+      "minSubtotal": 0,
+      "deliveryFee": 0,
+      "active": true
+    },
+    {
+      "id": "tophane",
+      "name": "Tophane",
+      "minSubtotal": 0,
+      "deliveryFee": 0,
+      "active": true
+    },
+    {
+      "id": "toslak",
+      "name": "Toslak",
+      "minSubtotal": 0,
+      "deliveryFee": 0,
+      "active": true
+    },
+    {
+      "id": "tosmur",
+      "name": "Tosmur",
+      "minSubtotal": 0,
+      "deliveryFee": 0,
+      "active": true
+    },
+    {
+      "id": "turkler",
+      "name": "Türkler",
+      "minSubtotal": 0,
+      "deliveryFee": 0,
+      "active": true
+    },
+    {
+      "id": "turktas",
+      "name": "Türktaş",
+      "minSubtotal": 0,
+      "deliveryFee": 0,
+      "active": true
+    },
+    {
+      "id": "ugrak",
+      "name": "Uğrak",
+      "minSubtotal": 0,
+      "deliveryFee": 0,
+      "active": true
+    },
+    {
+      "id": "ugurlu",
+      "name": "Uğurlu",
+      "minSubtotal": 0,
+      "deliveryFee": 0,
+      "active": true
+    },
+    {
+      "id": "uzunoz",
+      "name": "Uzunöz",
+      "minSubtotal": 0,
+      "deliveryFee": 0,
+      "active": true
+    },
+    {
+      "id": "uzumlu",
+      "name": "Üzümlü",
+      "minSubtotal": 0,
+      "deliveryFee": 0,
+      "active": true
+    },
+    {
+      "id": "yalci",
+      "name": "Yalçı",
+      "minSubtotal": 0,
+      "deliveryFee": 0,
+      "active": true
+    },
+    {
+      "id": "yasirali",
+      "name": "Yasiralı",
+      "minSubtotal": 0,
+      "deliveryFee": 0,
+      "active": true
+    },
+    {
+      "id": "yaylakonak",
+      "name": "Yaylakonak",
+      "minSubtotal": 0,
+      "deliveryFee": 0,
+      "active": true
+    },
+    {
+      "id": "yaylali",
+      "name": "Yaylalı",
+      "minSubtotal": 0,
+      "deliveryFee": 0,
+      "active": true
+    },
+    {
+      "id": "yenice",
+      "name": "Yenice",
+      "minSubtotal": 0,
+      "deliveryFee": 0,
+      "active": true
+    },
+    {
+      "id": "yenikoy",
+      "name": "Yeniköy",
+      "minSubtotal": 0,
+      "deliveryFee": 0,
+      "active": true
+    },
+    {
+      "id": "yesiloz",
+      "name": "Yeşilöz",
+      "minSubtotal": 0,
+      "deliveryFee": 0,
+      "active": true
+    }
+  ],
+  "settings": {
+    "name": "Çıtır Pizza & Cafe",
+    "phone": "+90 242 538 86 84",
+    "address": "Oba Mahallesi, Karakuşlar Sokak, A Blok No: 2, Alanya / Antalya",
+    "defaultLanguage": "tr",
+    "supportedLanguages": [
+      "tr",
+      "en",
+      "de",
+      "ru"
+    ],
+    "paymentMethods": [
+      "cash_on_delivery",
+      "card_on_delivery",
+      "online_card"
+    ],
+    "heroImage": "/images/hero-pizza.jpg",
+    "visualsAreRepresentative": true,
+    "demoPrices": true,
+    "heroTitle": {
+      "tr": "Mutluluğun en çıtır hali.",
+      "en": "A little extra crunch, a lot of happiness.",
+      "de": "Knuspriger Genuss, der glücklich macht.",
+      "ru": "Хрустящее удовольствие для хорошего настроения."
+    },
+    "heroSubtitle": {
+      "tr": "Alanya Oba’da taze pizza ve sevilen lezzetler.",
+      "en": "Fresh pizza and local favourites in Oba, Alanya.",
+      "de": "Frische Pizza und beliebte Klassiker in Oba, Alanya.",
+      "ru": "Свежая пицца и любимые блюда в Оба, Алания."
+    },
+    "announcement": {
+      "tr": "Menü görsellerindeki fiyatlar kapalı olduğundan gösterilen fiyatlar geçicidir.",
+      "en": "Menu prices are temporary estimates because the supplied menu images hide the prices.",
+      "de": "Die angezeigten Preise sind vorläufige Schätzungen, da die Preise auf den Menübildern verdeckt sind.",
+      "ru": "Цены указаны предварительно: на предоставленных изображениях меню они закрыты."
+    },
+    "open": true
+  }
+}
