@@ -243,6 +243,7 @@
                     <div>
                         <span class="eyebrow">Referans Projelerimiz</span>
                         <h2 class="section__title">Antalya genelinde <span class="gradient-text">imza attığımız</span> işler</h2>
+                        <p class="section__note">Proje görselleri temsilidir.</p>
                     </div>
                     <div class="filters" role="tablist" aria-label="Proje filtresi">
                         <button class="filter is-active" data-filter="all" role="tab" aria-selected="true">Tümü</button>
@@ -310,10 +311,11 @@
                 <div class="section__head reveal">
                     <span class="eyebrow">Müşteri Görüşleri</span>
                     <h2 class="section__title">Antalya genelinde <span class="gradient-text">100'den fazla</span> mutlu müşteri</h2>
+                    <p class="section__lead">Yorumlar, hizmet aldığı müşterilerimizin izniyle ve onaylandıktan sonra yayınlanır.</p>
                 </div>
             </div>
             <div class="reviews" aria-label="Müşteri yorumları">
-                <div class="reviews__track">
+                <div class="reviews__track" id="reviewsTrack">
                     <blockquote class="review"><div class="stars">★★★★★</div><p>"İşçilik harika, kameralar çok net."</p></blockquote>
                     <blockquote class="review"><div class="stars">★★★★★</div><p>"Antalya'nın en profesyonel ekibi."</p></blockquote>
                     <blockquote class="review"><div class="stars">★★★★★</div><p>"Hızlı kurulum ve temiz çalışma."</p></blockquote>
@@ -325,6 +327,68 @@
                     <blockquote class="review"><div class="stars">★★★★★</div><p>"Alanya içerisindeki en iyi firmalardan biri. Teşekkürler."</p></blockquote>
                 </div>
             </div>
+            <div class="container review-actions reveal">
+                <p>Bizimle çalıştınız mı? Deneyiminizi paylaşın.</p>
+                <div class="hero__buttons">
+                    <button type="button" class="btn btn--primary" id="reviewOpen">
+                        Yorum Bırak
+                        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+                    </button>
+                    <a class="btn btn--ghost" href="https://www.google.com/maps/search/?api=1&amp;query=KARACA+G%C3%9CVENL%C4%B0K+VE+B%C4%B0L%C4%B0%C5%9E%C4%B0M+S%C4%B0STEMLER%C4%B0+Alanya" target="_blank" rel="noopener">Google'da Değerlendirin ↗</a>
+                </div>
+            </div>
+
+            <dialog class="modal" id="reviewDialog" aria-labelledby="reviewTitle">
+                <form class="form" id="reviewForm" method="dialog">
+                    <button type="button" class="modal__close" id="reviewClose" aria-label="Kapat">×</button>
+                    <h3 id="reviewTitle">Yorumunuzu paylaşın</h3>
+                    <p>Yorumunuz incelendikten sonra adınız ve soyadınızın baş harfiyle (ör. Ahmet Y.) yayınlanır.</p>
+                    <input type="text" name="_honey" class="hp" tabindex="-1" autocomplete="off" aria-hidden="true">
+                    <div class="field-row">
+                        <label class="field">
+                            <span>Adınız</span>
+                            <input type="text" name="ad" autocomplete="given-name" required maxlength="40">
+                        </label>
+                        <label class="field">
+                            <span>Soyadınız</span>
+                            <input type="text" name="soyad" autocomplete="family-name" required maxlength="40">
+                        </label>
+                    </div>
+                    <label class="field">
+                        <span>Aldığınız Hizmet</span>
+                        <select name="hizmet">
+                            <option>Kamera Sistemleri</option>
+                            <option>Alarm Sistemleri</option>
+                            <option>Network Altyapısı</option>
+                            <option>Uydu Sistemleri</option>
+                            <option>Bilgisayar Satış / Teknik Servis</option>
+                            <option>Ses Sistemleri</option>
+                            <option>Görüntülü Diafon</option>
+                            <option>Teknik Servis</option>
+                        </select>
+                    </label>
+                    <fieldset class="field rating">
+                        <legend>Puanınız</legend>
+                        <div class="rating__stars">
+                            <input type="radio" id="r5" name="puan" value="5" required><label for="r5" title="5 yıldız">★</label>
+                            <input type="radio" id="r4" name="puan" value="4"><label for="r4" title="4 yıldız">★</label>
+                            <input type="radio" id="r3" name="puan" value="3"><label for="r3" title="3 yıldız">★</label>
+                            <input type="radio" id="r2" name="puan" value="2"><label for="r2" title="2 yıldız">★</label>
+                            <input type="radio" id="r1" name="puan" value="1"><label for="r1" title="1 yıldız">★</label>
+                        </div>
+                    </fieldset>
+                    <label class="field">
+                        <span>Yorumunuz</span>
+                        <textarea name="yorum" rows="4" required minlength="10" maxlength="600"></textarea>
+                    </label>
+                    <label class="consent">
+                        <input type="checkbox" name="izin" required>
+                        <span><a href="/kvkk.html" target="_blank">KVKK Aydınlatma Metni</a>'ni okudum; yorumumun adım ve soyadımın baş harfiyle sitede yayınlanmasına izin veriyorum.</span>
+                    </label>
+                    <button type="submit" class="btn btn--primary btn--lg btn--block">Yorumu Gönder</button>
+                    <div class="form__status" role="status" aria-live="polite" hidden></div>
+                </form>
+            </dialog>
         </section>
 
         <!-- FAQ -->
@@ -420,7 +484,8 @@
 
                 <form class="form reveal" id="quoteForm">
                     <h3>Ücretsiz Keşif Formu</h3>
-                    <p>Formu doldurun, talebiniz WhatsApp üzerinden doğrudan ekibimize iletilsin.</p>
+                    <p>Formu doldurun, talebiniz doğrudan ekibimize e-posta ile iletilsin. En kısa sürede sizi arayalım.</p>
+                    <input type="text" name="_honey" class="hp" tabindex="-1" autocomplete="off" aria-hidden="true">
 
                     <label class="field">
                         <span>Adınız Soyadınız</span>
@@ -450,12 +515,13 @@
                     </label>
                     <label class="consent">
                         <input type="checkbox" name="kvkk" required>
-                        <span><a href="/kvkk.html" target="_blank">KVKK Aydınlatma Metni</a>'ni okudum; bilgilerimin teklif hazırlanması amacıyla işlenmesini kabul ediyorum.</span>
+                        <span><a href="/kvkk.html" target="_blank">KVKK Aydınlatma Metni</a>'ni okudum; bilgilerimin teklif hazırlanması amacıyla işlenmesini ve e-posta ile iletilmesini kabul ediyorum.</span>
                     </label>
                     <button type="submit" class="btn btn--primary btn--lg btn--block">
                         Hemen Teklif Al
                         <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
                     </button>
+                    <div class="form__status" role="status" aria-live="polite" hidden></div>
                 </form>
             </div>
         </section>
