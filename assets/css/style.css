@@ -283,6 +283,7 @@ a.service { display: block; color: inherit; }
 .review-actions { text-align: center; margin-top: 44px; }
 .review-actions p { color: var(--muted); }
 .review-actions .hero__buttons { justify-content: center; margin-top: 18px; }
+.review-actions__ok { max-width: 560px; margin: 18px auto 0; }
 .section__note { margin-top: 10px; font-size: 13.5px; color: var(--muted); }
 
 /* ---------- Review dialog ---------- */

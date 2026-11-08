@@ -111,7 +111,8 @@
     }
 
     // Forms are delivered by e-mail through FormSubmit (static site, no backend)
-    const MAIL_ENDPOINT = 'https://formsubmit.co/ajax/krcguvenlik07@gmail.com';
+    const MAIL_TO = 'krcguvenlik07@gmail.com';
+    const MAIL_ENDPOINT = `https://formsubmit.co/ajax/${MAIL_TO}`;
     const WA = 'https://wa.me/905387711146';
     const sendMail = async (fields) => {
         const res = await fetch(MAIL_ENDPOINT, {
@@ -123,6 +124,31 @@
         // Before the inbox is activated FormSubmit holds submissions and replies with an activation notice
         if (res.ok && (String(data.success) === 'true' || /activat/i.test(data.message || ''))) return;
         throw new Error(data.message || `HTTP ${res.status}`);
+    };
+    // AJAX can be blocked (CORS / Cloudflare bot check). A regular form POST lets the
+    // browser pass FormSubmit's check, then FormSubmit redirects back via _next.
+    const postNatively = (fields, back) => {
+        const f = document.createElement('form');
+        f.method = 'POST';
+        f.action = `https://formsubmit.co/${MAIL_TO}`;
+        f.hidden = true;
+        const all = { _template: 'table', _next: `${location.origin}/?gonderildi=${back}#${back === 'yorum' ? 'testimonials' : 'contact'}`, ...fields };
+        Object.entries(all).forEach(([k, v]) => {
+            const i = document.createElement('input');
+            i.type = 'hidden'; i.name = k; i.value = v;
+            f.appendChild(i);
+        });
+        document.body.appendChild(f);
+        f.submit();
+    };
+    const submitMail = async (fields, back) => {
+        try {
+            await sendMail(fields);
+            return true;
+        } catch {
+            postNatively(fields, back);
+            return false;
+        }
     };
     const setStatus = (form, type, html) => {
         const box = form.querySelector('.form__status');
@@ -142,32 +168,22 @@
         e.preventDefault();
         const d = new FormData(form);
         if (d.get('_honey')) return;
-        const waText = [
-            'Merhaba, ücretsiz keşif talebim var.',
-            `Ad Soyad: ${d.get('name')}`,
-            `Telefon: ${d.get('phone')}`,
-            `Hizmet: ${d.get('service')}`,
-            d.get('message') ? `Mesaj: ${d.get('message')}` : ''
-        ].filter(Boolean).join('\n');
-        const waLink = `<a class="btn btn--ghost" href="${WA}?text=${encodeURIComponent(waText)}" target="_blank" rel="noopener">WhatsApp'tan gönder</a>`;
         setBusy(form, true);
-        try {
-            await sendMail({
-                _subject: `Yeni keşif talebi: ${d.get('name')} (${d.get('service')})`,
-                'Ad Soyad': d.get('name'),
-                Telefon: d.get('phone'),
-                Hizmet: d.get('service'),
-                Mesaj: d.get('message') || '-',
-                'KVKK onayı': 'Evet',
-            });
-            form.reset();
-            setStatus(form, 'ok', `<strong>Talebiniz alındı.</strong> En kısa sürede sizi arayacağız. Acil durumlar için bizi arayabilir veya WhatsApp'tan yazabilirsiniz.`);
-        } catch {
-            setStatus(form, 'error', `<strong>Talebiniz gönderilemedi.</strong> Lütfen bilgilerinizi WhatsApp'tan iletin veya bizi arayın.<div class="form__status-actions">${waLink}<a class="btn btn--ghost" href="tel:+905387711146">Hemen Ara</a></div>`);
-        } finally {
-            setBusy(form, false);
-        }
+        const sent = await submitMail({
+            _subject: `Yeni keşif talebi: ${d.get('name')} (${d.get('service')})`,
+            'Ad Soyad': d.get('name'),
+            Telefon: d.get('phone'),
+            Hizmet: d.get('service'),
+            Mesaj: d.get('message') || '-',
+            'KVKK onayı': 'Evet',
+        }, 'teklif');
+        if (!sent) return; // page is navigating to the fallback POST
+        form.reset();
+        setBusy(form, false);
+        setStatus(form, 'ok', QUOTE_OK);
     });
+    const QUOTE_OK = `<strong>Talebiniz alındı.</strong> En kısa sürede sizi arayacağız. Acil durumlar için bizi arayabilir veya <a href="${WA}" target="_blank" rel="noopener">WhatsApp'tan</a> yazabilirsiniz.`;
+    const REVIEW_OK = '<strong>Teşekkür ederiz!</strong> Yorumunuz bize ulaştı; incelendikten sonra yayınlanacak.';
 
     // Review dialog
     const dialog = document.getElementById('reviewDialog');
@@ -188,25 +204,35 @@
             const puan = Number(d.get('puan'));
             const yorum = String(d.get('yorum')).trim();
             setBusy(reviewForm, true);
-            try {
-                await sendMail({
-                    _subject: `Yeni müşteri yorumu (${puan}/5) – onay bekliyor`,
-                    'Ad Soyad': `${ad} ${soyad}`,
-                    'Sitede görünecek ad': shown,
-                    Hizmet: d.get('hizmet'),
-                    Puan: `${puan} / 5`,
-                    Yorum: yorum,
-                    'Yayın izni': 'Evet',
-                    'Siteye eklemek için (yorumlar.json)': JSON.stringify({ ad: shown, hizmet: d.get('hizmet'), puan, yorum }),
-                });
-                reviewForm.reset();
-                setStatus(reviewForm, 'ok', '<strong>Teşekkür ederiz!</strong> Yorumunuz bize ulaştı; incelendikten sonra yayınlanacak.');
-            } catch {
-                setStatus(reviewForm, 'error', `<strong>Yorumunuz gönderilemedi.</strong> Lütfen biraz sonra tekrar deneyin veya <a href="${WA}" target="_blank" rel="noopener">WhatsApp'tan</a> iletin.`);
-            } finally {
-                setBusy(reviewForm, false);
-            }
+            const sent = await submitMail({
+                _subject: `Yeni müşteri yorumu (${puan}/5) – onay bekliyor`,
+                'Ad Soyad': `${ad} ${soyad}`,
+                'Sitede görünecek ad': shown,
+                Hizmet: d.get('hizmet'),
+                Puan: `${puan} / 5`,
+                Yorum: yorum,
+                'Yayın izni': 'Evet',
+                'Siteye eklemek için (yorumlar.json)': JSON.stringify({ ad: shown, hizmet: d.get('hizmet'), puan, yorum }),
+            }, 'yorum');
+            if (!sent) return;
+            reviewForm.reset();
+            setBusy(reviewForm, false);
+            setStatus(reviewForm, 'ok', REVIEW_OK);
         });
+    }
+
+    // Returning from the fallback POST (FormSubmit redirects to /?gonderildi=...)
+    const done = new URLSearchParams(location.search).get('gonderildi');
+    if (done) {
+        history.replaceState(null, '', location.pathname + location.hash);
+        if (done === 'teklif' && form) setStatus(form, 'ok', QUOTE_OK);
+        if (done === 'yorum' && reviewForm) {
+            const note = document.createElement('div');
+            note.className = 'form__status form__status--ok review-actions__ok';
+            note.setAttribute('role', 'status');
+            note.innerHTML = REVIEW_OK;
+            document.querySelector('.review-actions').appendChild(note);
+        }
     }
 
     // Google Maps is loaded on demand so no third-party cookies are set on page load
