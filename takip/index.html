@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <title>Araç Takip | Karaca Güvenlik</title>
+    <meta name="robots" content="noindex, nofollow">
+    <meta name="theme-color" content="#060912">
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+    <link rel="stylesheet" href="/assets/css/style.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="">
+    <link rel="stylesheet" href="/takip/takip.css">
+</head>
+<body class="tk">
+
+    <!-- GİRİŞ -->
+    <section class="tk-login" id="loginView">
+        <form class="tk-login__card" id="loginForm" autocomplete="on">
+            <img src="/LOGO.png" alt="Karaca Güvenlik" width="1189" height="230" class="tk-login__logo">
+            <h1>Araç Takip</h1>
+            <p class="tk-muted">Hesabınızla giriş yapın.</p>
+
+            <label>Sunucu adresi
+                <input type="url" id="server" name="server" placeholder="https://takip.alanadiniz.com" required>
+            </label>
+            <label>E-posta / kullanıcı adı
+                <input type="text" id="email" name="username" autocomplete="username" required>
+            </label>
+            <label>Şifre
+                <input type="password" id="password" name="password" autocomplete="current-password" required>
+            </label>
+            <label class="tk-check"><input type="checkbox" id="remember" checked> Beni hatırla (30 gün)</label>
+
+            <button class="btn btn--primary" type="submit" id="loginBtn">Giriş yap</button>
+            <p class="tk-error" id="loginError" role="alert" hidden></p>
+        </form>
+    </section>
+
+    <!-- PANEL -->
+    <section class="tk-app" id="appView" hidden>
+        <header class="tk-bar">
+            <a href="/" class="tk-bar__logo" aria-label="Karaca Güvenlik ana sayfa"><img src="/LOGO.png" alt="Karaca Güvenlik" width="1189" height="230"></a>
+            <span class="tk-bar__title">Araç Takip</span>
+            <span class="tk-bar__status" id="liveStatus" title="Son güncelleme">●</span>
+            <button class="tk-btn tk-btn--ghost" id="listToggle" aria-controls="sidebar" aria-expanded="true">Araçlar</button>
+            <button class="tk-btn tk-btn--ghost" id="logoutBtn">Çıkış</button>
+        </header>
+
+        <aside class="tk-side" id="sidebar">
+            <input type="search" id="search" class="tk-search" placeholder="Araç ara…" aria-label="Araç ara">
+            <ul class="tk-list" id="deviceList"></ul>
+
+            <div class="tk-detail" id="detail" hidden>
+                <div class="tk-detail__head">
+                    <h2 id="dName"></h2>
+                    <button class="tk-btn tk-btn--ghost" id="dClose" aria-label="Kapat">✕</button>
+                </div>
+                <dl class="tk-kv" id="dInfo"></dl>
+
+                <h3>Geçmiş rota</h3>
+                <div class="tk-row">
+                    <input type="datetime-local" id="hFrom" aria-label="Başlangıç">
+                    <input type="datetime-local" id="hTo" aria-label="Bitiş">
+                </div>
+                <div class="tk-row">
+                    <button class="tk-btn" data-range="today">Bugün</button>
+                    <button class="tk-btn" data-range="yesterday">Dün</button>
+                    <button class="tk-btn tk-btn--primary" id="hShow">Göster</button>
+                    <button class="tk-btn tk-btn--ghost" id="hClear" hidden>Temizle</button>
+                </div>
+                <p class="tk-muted" id="hSummary"></p>
+
+                <h3>Komutlar</h3>
+                <div class="tk-row">
+                    <button class="tk-btn tk-btn--danger" data-cmd="engineStop">Motoru durdur</button>
+                    <button class="tk-btn tk-btn--success" data-cmd="engineResume">Motoru çalıştır</button>
+                </div>
+                <div class="tk-row">
+                    <input type="text" id="customCmd" placeholder="Özel komut (örn. WHERE#)" aria-label="Özel komut">
+                    <button class="tk-btn" data-cmd="custom">Gönder</button>
+                </div>
+                <p class="tk-muted" id="cmdResult" role="status"></p>
+            </div>
+        </aside>
+
+        <div class="tk-map" id="map"></div>
+    </section>
+
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+    <script src="/takip/takip.js"></script>
+</body>
+</html>

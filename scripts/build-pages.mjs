@@ -427,6 +427,7 @@ ${urls.map((u) => `  <url><loc>${SITE}${u}</loc><lastmod>${today}</lastmod></url
 write('robots.txt', `User-agent: *
 Allow: /
 Disallow: /old.html
+Disallow: /takip/
 
 Sitemap: ${SITE}/sitemap.xml
 `);
