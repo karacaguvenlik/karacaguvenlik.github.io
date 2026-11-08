@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="tr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light">
+  <meta name="description" content="Çıtır Pizza & Cafe — tarayıcıda çalışan statik gösterim yönetim paneli.">
+  <title>Gösterim Yönetimi · Çıtır Pizza & Cafe</title>
+  <link rel="stylesheet" href="./admin.css">
+  <script src="./demo-store.js" defer></script>
+  <script src="./admin.js" defer></script>
+</head>
+<body>
+  <main id="login-view" class="login-view">
+    <section class="login-card" aria-labelledby="login-title">
+      <a class="brand brand-login" href="./index.html" aria-label="Siteye dön"><span class="brand-mark">Ç</span><span><strong>Çıtır</strong><small>Pizza & Cafe</small></span></a>
+      <p class="eyebrow">YÖNETİM · GÖSTERİM</p>
+      <h1 id="login-title">Panel gösterimi</h1>
+      <div class="demo-warning" role="note"><strong>Gösterim demosu — gerçek yetkilendirme yok; tüm veriler bu tarayıcıda</strong><span>Örnek veriler ve siparişler yereldir. Gerçek müşteri bilgisi, parola veya ödeme alınmaz.</span></div>
+      <p class="muted">İşlevleri örnek verilerle inceleyebilirsiniz.</p>
+      <p class="form-error" id="login-error" role="alert" hidden></p>
+      <button id="demo-enter" class="button button-primary button-wide" type="button">Demoyu aç <span aria-hidden="true">→</span></button>
+      <a class="back-link" href="./index.html">← İnternet sitesine dön</a>
+    </section>
+  </main>
+
+  <div id="app-view" class="app-shell" hidden>
+    <aside class="sidebar" id="sidebar">
+      <div class="sidebar-top">
+        <a class="brand" href="./index.html" aria-label="Çıtır Pizza & Cafe ana sayfa"><span class="brand-mark">Ç</span><span><strong>Çıtır</strong><small>Pizza & Cafe</small></span></a>
+        <button id="close-sidebar" class="icon-button sidebar-close" type="button" aria-label="Menüyü kapat">×</button>
+      </div>
+      <p class="nav-caption">GÖSTERİM PANELİ</p>
+      <nav id="main-nav" class="main-nav" aria-label="Ana menü">
+        <button type="button" data-view="dashboard" class="nav-item owner-only"><span class="nav-icon">⌂</span> Genel bakış</button>
+        <button type="button" data-view="orders" class="nav-item"><span class="nav-icon">▤</span> Örnek siparişler <span id="nav-order-count" class="nav-count" hidden>0</span></button>
+        <div class="nav-divider"></div>
+        <p class="nav-caption nav-caption-sub">MENÜ & MAĞAZA</p>
+        <button type="button" data-view="products" class="nav-item owner-only"><span class="nav-icon">▧</span> Ürünler</button>
+        <button type="button" data-view="categories" class="nav-item owner-only"><span class="nav-icon">☷</span> Kategoriler</button>
+        <button type="button" data-view="regions" class="nav-item owner-only"><span class="nav-icon">⌖</span> Teslimat bölgeleri</button>
+        <div class="nav-divider owner-only"></div>
+        <p class="nav-caption nav-caption-sub owner-only">İŞLETME</p>
+        <button type="button" data-view="settings" class="nav-item owner-only"><span class="nav-icon">⚙</span> Site ayarları</button>
+        <button type="button" data-view="users" class="nav-item owner-only"><span class="nav-icon">♙</span> Kullanıcılar · örnek</button>
+      </nav>
+      <div class="sidebar-bottom">
+        <div class="online-state"><span class="state-dot"></span><span>Yalnızca yerel demo</span></div>
+        <button type="button" id="logout-button" class="logout-button"><span>↪</span> Demo girişine dön</button>
+        <button type="button" id="reset-demo" class="logout-button reset-button"><span>↻</span> Demoyu sıfırla</button>
+      </div>
+    </aside>
+    <button type="button" id="sidebar-scrim" class="sidebar-scrim" aria-label="Menüyü kapat"></button>
+    <section class="workspace">
+      <header class="topbar">
+        <div class="topbar-heading"><button id="open-sidebar" class="icon-button menu-toggle" type="button" aria-label="Menüyü aç">☰</button><div><p class="eyebrow">ÇITIR PIZZA & CAFE · GÖSTERİM</p><h1 id="page-title">Genel bakış</h1></div></div>
+        <div class="topbar-actions"><span id="today-label" class="today-label"></span><a class="button button-light preview-link" href="./index.html" target="_blank" rel="noopener">Site önizleme <span aria-hidden="true">↗</span></a><button id="sound-toggle" class="button button-light sound-toggle" type="button" aria-pressed="false"><span aria-hidden="true">♬</span> Ses kapalı</button><div class="user-chip"><span class="avatar" id="user-avatar">Ç</span><span><strong id="user-name">demo</strong><small id="user-role">Gösterim kullanıcısı</small></span></div></div>
+      </header>
+      <div class="demo-banner" role="note"><strong>Gösterim demosu — gerçek yetkilendirme yok; tüm veriler bu tarayıcıda.</strong><span>Örnek siparişleri hazırlamayın. Gerçek müşteri veya ödeme işlemi yapılmaz.</span></div>
+      <div id="toast-region" class="toast-region" aria-live="polite" aria-atomic="true"></div>
+      <main id="page-content" class="page-content" tabindex="-1"></main>
+      <footer class="app-footer"><span>Çıtır Pizza & Cafe · Yerel gösterim</span><span id="last-refresh">Örnek sipariş verileri</span></footer>
+    </section>
+  </div>
+  <dialog id="app-dialog" class="app-dialog" aria-labelledby="dialog-title"><div id="dialog-content"></div></dialog>
+</body>
+</html>
