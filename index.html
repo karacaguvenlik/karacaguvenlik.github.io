@@ -493,7 +493,8 @@
                     </label>
                     <label class="field">
                         <span>Telefon Numaranız</span>
-                        <input type="tel" name="phone" autocomplete="tel" required>
+                        <input type="tel" name="phone" id="phone" autocomplete="tel" inputmode="tel" placeholder="05xx xxx xx xx" maxlength="20" required aria-describedby="phoneHint">
+                        <small class="field__hint" id="phoneHint">Cep veya sabit hat, örn. 0538 771 11 46</small>
                     </label>
                     <label class="field">
                         <span>İlgilendiğiniz Hizmet</span>
