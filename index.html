@@ -493,8 +493,10 @@
                     </label>
                     <label class="field">
                         <span>Telefon Numaranız</span>
-                        <input type="tel" name="phone" id="phone" autocomplete="tel" inputmode="tel" placeholder="xxx-xxx-xxxx" maxlength="20" required aria-describedby="phoneHint">
-                        <small class="field__hint" id="phoneHint">Cep veya sabit hat, başında 0 olmadan: <span class="nowrap">xxx-xxx-xxxx</span></small>
+                        <span class="phone-input">
+                            <span class="phone-input__prefix" aria-hidden="true">+90</span>
+                            <input type="tel" name="phone" id="phone" autocomplete="tel-national" inputmode="numeric" placeholder="5XX XXX XX XX" required>
+                        </span>
                     </label>
                     <label class="field">
                         <span>İlgilendiğiniz Hizmet</span>

@@ -386,10 +386,10 @@ a.service { display: block; color: inherit; }
 .field select option { background: var(--bg-2); }
 .field textarea { resize: vertical; min-height: 110px; }
 .field input:focus, .field select:focus, .field textarea:focus { border-color: var(--primary-2); box-shadow: 0 0 0 4px rgba(109,124,255,.18); }
-.nowrap { white-space: nowrap; }
-.field__hint { display: block; margin-top: 6px; font-size: 12.5px; color: var(--muted); }
+.field .phone-input { position: relative; display: block; margin: 0; font-size: inherit; font-weight: inherit; }
+.field .phone-input__prefix { position: absolute; left: 1px; top: 1px; bottom: 1px; display: flex; align-items: center; margin: 0; padding: 0 14px 0 18px; border-right: 1px solid var(--border-strong); font-size: 15px; color: #c3c9de; font-weight: 600; pointer-events: none; }
+.field .phone-input input { padding-left: 74px; letter-spacing: .02em; }
 .field input:user-invalid { border-color: rgba(239,68,68,.7); }
-.field input:user-invalid + .field__hint { color: #fca5a5; }
 .form .btn { margin-top: 8px; }
 
 /* ---------- Footer ---------- */
