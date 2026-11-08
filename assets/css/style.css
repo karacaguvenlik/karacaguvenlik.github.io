@@ -151,7 +151,7 @@ svg { width: 1em; height: 1em; fill: none; stroke: currentColor; stroke-width: 1
 
 .hero__title {
     font-family: var(--font-head); font-weight: 700; letter-spacing: -.035em; line-height: 1.04;
-    font-size: clamp(42px, 7.2vw, 92px); margin: 26px 0 24px; color: #fff;
+    font-size: clamp(42px, 7.2vw, 92px); margin: 0 0 24px; color: #fff;
 }
 .hero__lead { max-width: 580px; font-size: clamp(16px, 1.6vw, 19px); color: #a9b0c8; }
 .hero__buttons { display: flex; flex-wrap: wrap; gap: 14px; margin-top: 38px; }
