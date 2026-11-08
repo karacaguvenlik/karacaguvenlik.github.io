@@ -1,0 +1,21 @@
+ÇITIR PIZZA — GEÇİCİ GÖSTERİM PAKETİ
+
+Bu klasörün adı citirpizza olarak kalmalıdır.
+1. TURKTİCARET hosting kontrol panelinde Dosya Yöneticisi'ni açın.
+2. karacaguvenlik.site alan adının belge kökünü bulun. Klasör adı panele göre değişir (ör. public_html veya httpdocs); doğru alan adının kökünü seçin.
+3. Paket içindeki citirpizza klasörünü bu belge köküne yükleyin/çıkartın.
+4. Beklenen yerleşim: BELGE_KOKU/citirpizza/index.html ve BELGE_KOKU/citirpizza/admin.html.
+5. Kontrol adresleri:
+   https://karacaguvenlik.site/citirpizza/
+   https://karacaguvenlik.site/citirpizza/admin.html
+
+Bunlar hedef adreslerdir; hosting yüklemesi henüz yapılmadıysa çalışmazlar.
+Mevcut sitenin index.html, .htaccess, DNS veya diğer dosyalarını DEĞİŞTİRMEYİN. Var olan bir citirpizza klasörü varsa önce yedekleyin; üzerine kontrolsüz yazmayın.
+Alt dizine konacak robots.txt kök sitenin tarama ayarlarını değiştirmez. HTML sayfalarında noindex vardır; bu, erişim kontrolü değildir.
+
+GERÇEK SİPARİŞ / ÖDEME / GÜVENLİ GİRİŞ YOKTUR.
+Panel bilerek herkesin deneyebileceği temsili bir arayüzdür. Gerçek müşteri veya personel bilgisi yazmayın. Şifre veya kart bilgisi girilmez. Her cihaz kendi demo verisini görür; sunucuda ortak veritabanı yoktur.
+Menü, fiyat ve bölge ayarları yalnızca aynı tarayıcıda geçerlidir. Aynı tarayıcıdan eklenen temsili siparişler panelde görünür. Demo sıfırla düğmesiyle başlangıca dönebilirsiniz.
+Tüm fiyatlar örnektir. Gerçek sipariş sisteminin yerini tutmaz. İnternet bağlantısı Google Fonts için kullanılabilir; reklam ölçümü yoktur.
+
+Gösterim bitince yalnızca citirpizza klasörünü kaldırabilirsiniz. Kök siteyi veya başka klasörleri silmeyin.
