@@ -1,0 +1,88 @@
+/* Araç takip paneli — /assets/css/style.css değişkenlerini kullanır */
+.tk { height: 100dvh; overflow: hidden; }
+.tk-muted { color: var(--muted); font-size: 13px; }
+.tk-error { color: #fca5a5; font-size: 14px; }
+
+/* Giriş */
+.tk-login { min-height: 100dvh; display: grid; place-items: center; padding: 20px;
+    background: radial-gradient(60% 50% at 50% 0%, rgba(79, 91, 240, .25), transparent), var(--bg); }
+.tk-login__card { width: min(400px, 100%); display: grid; gap: 14px; padding: 32px;
+    background: var(--bg-2); border: 1px solid var(--border); border-radius: var(--radius); }
+.tk-login__logo { width: 180px; height: auto; margin-bottom: 4px; }
+.tk-login h1 { font-family: var(--font-head); font-size: 24px; }
+.tk-login label { display: grid; gap: 6px; font-size: 14px; color: var(--muted); }
+.tk-login .tk-check { display: flex; align-items: center; gap: 8px; }
+.tk input[type=url], .tk input[type=text], .tk input[type=password], .tk input[type=search], .tk input[type=datetime-local] {
+    width: 100%; padding: 10px 12px; border-radius: 10px; border: 1px solid var(--border-strong);
+    background: rgba(255, 255, 255, .04); color: var(--text); color-scheme: dark; }
+.tk input:focus { outline: 2px solid var(--primary-2); outline-offset: 1px; }
+
+/* Uygulama düzeni */
+.tk-app { height: 100dvh; display: grid; grid-template: 56px 1fr / 340px 1fr; }
+.tk-app[hidden], .tk-login[hidden] { display: none; }
+.tk-bar { grid-column: 1 / -1; display: flex; align-items: center; gap: 12px; padding: 0 14px;
+    background: var(--bg-2); border-bottom: 1px solid var(--border); }
+.tk-bar__logo img { height: 28px; width: auto; }
+.tk-bar__title { font-family: var(--font-head); font-weight: 600; margin-right: auto; }
+.tk-bar__status { color: var(--muted); font-size: 12px; }
+.tk-bar__status.is-live { color: var(--success); }
+.tk-bar__status.is-error { color: var(--danger); }
+#listToggle { display: none; }
+
+.tk-side { overflow-y: auto; padding: 12px; background: var(--bg); border-right: 1px solid var(--border);
+    display: flex; flex-direction: column; gap: 10px; }
+.tk-map { position: relative; z-index: 0; }
+
+/* Butonlar */
+.tk-btn { padding: 8px 12px; border-radius: 10px; border: 1px solid var(--border-strong); cursor: pointer;
+    background: var(--surface-2); color: var(--text); font-size: 14px; white-space: nowrap; }
+.tk-btn:hover { background: rgba(255, 255, 255, .1); }
+.tk-btn:disabled { opacity: .5; cursor: wait; }
+.tk-btn--ghost { background: transparent; }
+.tk-btn--primary { background: var(--primary); border-color: var(--primary); }
+.tk-btn--danger { background: rgba(239, 68, 68, .15); border-color: rgba(239, 68, 68, .5); color: #fecaca; }
+.tk-btn--success { background: rgba(34, 197, 94, .15); border-color: rgba(34, 197, 94, .5); color: #bbf7d0; }
+
+/* Araç listesi */
+.tk-list { list-style: none; display: grid; gap: 6px; }
+.tk-list li { display: grid; grid-template-columns: 10px 1fr auto; gap: 4px 10px; align-items: center;
+    padding: 10px 12px; border-radius: 12px; border: 1px solid var(--border); background: var(--surface); cursor: pointer; }
+.tk-list li:hover, .tk-list li.is-active { border-color: var(--primary-2); background: rgba(79, 91, 240, .12); }
+.tk-list .dot { width: 10px; height: 10px; border-radius: 50%; background: var(--muted); }
+.tk-list .dot.online { background: var(--success); }
+.tk-list .dot.offline { background: var(--danger); }
+.tk-list .name { font-weight: 600; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.tk-list .speed { font-size: 13px; color: var(--accent); }
+.tk-list .sub { grid-column: 2 / -1; font-size: 12px; color: var(--muted); }
+.tk-list .empty { display: block; cursor: default; color: var(--muted); font-size: 14px; }
+
+/* Detay */
+.tk-detail { display: grid; gap: 10px; padding: 14px; border-radius: 14px; border: 1px solid var(--border); background: var(--bg-2); }
+.tk-detail[hidden] { display: none; }
+.tk-detail__head { display: flex; justify-content: space-between; align-items: center; }
+.tk-detail h2 { font-family: var(--font-head); font-size: 18px; }
+.tk-detail h3 { font-size: 13px; text-transform: uppercase; letter-spacing: .06em; color: var(--muted); margin-top: 6px; }
+.tk-kv { display: grid; grid-template-columns: auto 1fr; gap: 4px 12px; font-size: 14px; }
+.tk-kv dt { color: var(--muted); }
+.tk-kv a { color: var(--accent); }
+.tk-row { display: flex; flex-wrap: wrap; gap: 8px; }
+.tk-row input { flex: 1 1 140px; }
+
+/* Harita işaretçisi */
+.tk-marker { width: 34px; height: 34px; display: grid; place-items: center; }
+.tk-marker svg { width: 30px; height: 30px; stroke: #fff; stroke-width: 1.5; filter: drop-shadow(0 2px 3px rgba(0,0,0,.5)); }
+.tk-marker.online svg { fill: var(--success); }
+.tk-marker.offline svg { fill: var(--danger); }
+.tk-marker.unknown svg { fill: #64748b; }
+.tk-label { background: rgba(6, 9, 18, .85); color: #fff; border: 0; border-radius: 6px; padding: 2px 6px; font-weight: 600; }
+.tk-label::before { display: none; }
+
+@media (max-width: 800px) {
+    .tk-app { grid-template: 56px 1fr / 1fr; }
+    .tk-map { grid-row: 2; grid-column: 1; }
+    .tk-side { grid-row: 2; grid-column: 1; z-index: 2; max-height: 60dvh; align-self: end;
+        border-right: 0; border-top: 1px solid var(--border); border-radius: 18px 18px 0 0; }
+    .tk-side.is-collapsed { display: none; }
+    #listToggle { display: inline-block; }
+    .tk-bar__logo { display: none; }
+}
