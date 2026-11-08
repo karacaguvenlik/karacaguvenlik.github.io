@@ -162,20 +162,16 @@
         btn.classList.toggle('is-busy', busy);
     };
 
-    // Turkish phone numbers: accepts 0538..., 538..., +90 538..., 90538...; mobile (5xx) or landline (2xx-4xx)
+    // Turkish phone input: fixed +90 prefix, typed as "5XX XXX XX XX".
+    // Leading 0, +90 / 90 and any separators are stripped (also when pasted).
     const phoneDigits = (v) => {
         let n = String(v).replace(/\D/g, '');
-        if (n.startsWith('90') && n.length === 12) n = n.slice(2);
-        if (n.length === 10) n = '0' + n;
-        return n;
+        if (n.startsWith('90') && n.length > 10) n = n.slice(2);
+        return n.replace(/^0+/, '').slice(0, 10);
     };
-    const phoneValid = (v) => /^0[2-5]\d{9}$/.test(phoneDigits(v));
-    // Displayed and e-mailed as xxx-xxx-xxxx (10 digits, without the leading 0)
-    const phoneFormat = (n) => {
-        const d = n.replace(/^0/, '');
-        return [d.slice(0, 3), d.slice(3, 6), d.slice(6, 10)].filter(Boolean).join('-');
-    };
-    const PHONE_MSG = 'Lütfen geçerli bir telefon numarası girin (xxx-xxx-xxxx).';
+    const phoneValid = (v) => /^[2-5]\d{9}$/.test(phoneDigits(v));
+    const phoneFormat = (n) => [n.slice(0, 3), n.slice(3, 6), n.slice(6, 8), n.slice(8, 10)].filter(Boolean).join(' ');
+    const PHONE_MSG = 'Lütfen geçerli bir telefon numarası girin.';
     const phone = document.getElementById('phone');
     if (phone) {
         const check = () => {
@@ -183,15 +179,11 @@
             phone.setCustomValidity(!v || phoneValid(v) ? '' : PHONE_MSG);
         };
         phone.addEventListener('input', (e) => {
-            // Live-format only plain digit entry starting with an area code (2-5); 0 / +90 forms are normalised on blur
-            if (e.inputType && e.inputType.startsWith('delete')) return check();
-            if (/^[\d\s-]*$/.test(phone.value) && /^[2-5]/.test(phone.value)) {
-                phone.value = phoneFormat(phone.value.replace(/\D/g, '').slice(0, 10));
-            }
+            if (!(e.inputType && e.inputType.startsWith('delete'))) phone.value = phoneFormat(phoneDigits(phone.value));
             check();
         });
         phone.addEventListener('blur', () => {
-            if (phoneValid(phone.value)) phone.value = phoneFormat(phoneDigits(phone.value));
+            phone.value = phoneFormat(phoneDigits(phone.value));
             check();
         });
     }
@@ -203,7 +195,7 @@
         const d = new FormData(form);
         if (d.get('_honey')) return;
         if (!phoneValid(d.get('phone'))) { phone.setCustomValidity(PHONE_MSG); phone.reportValidity(); return; }
-        d.set('phone', phoneFormat(phoneDigits(d.get('phone'))));
+        d.set('phone', '+90 ' + phoneFormat(phoneDigits(d.get('phone'))));
         setBusy(form, true);
         const sent = await submitMail({
             _subject: `Yeni keşif talebi: ${d.get('name')} (${d.get('service')})`,
