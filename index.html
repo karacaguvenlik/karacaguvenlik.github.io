@@ -3,442 +3,426 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Karaca Güvenlik | Profesyonel Güvenlik Çözümleri</title>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
-    <style>
-
-/* Acil Hat Butonu Stili */
-.btn-emergency {
-    background: #22c55e;
-    color: white !important;
-    padding: 10px 22px;
-    border-radius: 50px;
-    text-decoration: none;
-    font-weight: 700;
-    font-size: 13px;
-    display: flex;
-    align-items: center; 
-    gap: 10px;
-    transition: all 0.3s ease;
-    box-shadow: 0 4px 15px rgba(34, 197, 94, 0.2);
-    white-space: nowrap;
-}
-
-.btn-emergency:hover {
-    background: #16a34a;
-    transform: translateY(-2px);
-    box-shadow: 0 6px 20px rgba(34, 197, 94, 0.4);
-}
-
-/* Yanıp Sönen Küçük Işık */
-.pulse-dot {
-    width: 15px;
-    height: 15px;
-    background-color: #FF0000;
-    border-radius: 50%;
-    animation: dot-pulse 1.2s infinite;
-}
-
-@keyframes dot-pulse {
-    0% { transform: scale(0.8); opacity: 1; }
-    50% { transform: scale(1.3); opacity: 0.5; }
-    100% { transform: scale(0.8); opacity: 1; }
-}
-
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-        body { font-family: 'Poppins', sans-serif; background: #ffffff; color: #0f172a; scroll-behavior: smooth; line-height: 1.6; overflow-x: hidden; }
-        
-        /* Header ve Tıklanabilir Logo */
-        header { background: rgba(255, 255, 255, 0.95); display: flex; align-items: center; justify-content: space-between; padding: 15px 40px; position: fixed; width: 100%; z-index: 1000; border-bottom: 1px solid #e5e7eb; backdrop-filter: blur(10px); }
-        .logo-link { display: flex; align-items: center; text-decoration: none; }
-        .logo { height: 70px; transition: 0.3s; }
-        .logo:hover { transform: scale(1.05); }
-
-        nav a { color: #0f172a; text-decoration: none; font-weight: 500; padding: 8px 20px; border: 1.5px solid #e5e7eb; border-radius: 50px; transition: 0.3s; font-size: 14px; margin-left: 10px; }
-        nav a:hover { background: #2563eb; color: #fff; border-color: #2563eb; }
-
-  /* ANA GÖRSEL ALANI (HERO) */
-        .hero { 
-            height: 100vh; 
-            background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.7)), 
-            url('https://images.pexels.com/photos/1135452/pexels-photo-1135452.jpeg?auto=compress&cs=tinysrgb&w=1600'); 
-            background-size: cover; 
-            background-position: center; 
-            display: flex; 
-            flex-direction: column; 
-            justify-content: center; 
-            align-items: center; 
-            text-align: center; 
-            padding: 0 20px; 
-            color: #fff;
-        }
-        .hero h1 { font-size: clamp(32px, 6vw, 64px); font-weight: 700; margin-bottom: 15px; text-shadow: 0 4px 8px rgba(0,0,0,0.3); }
-        .hero p { font-size: clamp(16px, 2vw, 24px); max-width: 800px; opacity: 0.9; text-shadow: 0 2px 4px rgba(0,0,0,0.3); }
-
-        .btn { padding: 16px 40px; background: #2563eb; color: #fff; border-radius: 50px; text-decoration: none; font-weight: 600; transition: 0.3s; display: inline-block; border: none; cursor: pointer; margin-top: 30px; font-size: 18px; }
-        .btn:hover { transform: translateY(-3px); box-shadow: 0 10px 20px rgba(37, 99, 235, 0.4); }
-
-        .section { padding: 80px 20px; text-align: center; }
-        .bg-gray { background: #f8fafc; }
-        
-        /* Hizmet Kartları */
-        .container { max-width: 1200px; margin: 0 auto; display: flex; flex-wrap: wrap; justify-content: center; gap: 20px; }
-        .card { 
-            background: #fff; padding: 25px; width: 260px; border-radius: 20px; 
-            border: 1px solid #e5e7eb; font-weight: 600; transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-            cursor: pointer;
-        }
-        .card:hover { transform: translateY(-12px); box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1); border-color: #2563eb; color: #2563eb; }
-
-        /* Proje Izgara Sistemi */
-.project-grid { 
-    display: grid; 
-    grid-template-columns: repeat(4, 1fr); 
-    grid-template-rows: repeat(3, 280px); 
-    gap: 20px; 
-    max-width: 1200px; 
-    margin: 40px auto; 
-    padding: 0 20px;
-}
-
-.img-box { 
-    position: relative; 
-    border-radius: 20px; 
-    overflow: hidden; 
-    box-shadow: 0 10px 20px rgba(0,0,0,0.05);
-    background: #f1f5f9;
-    cursor: pointer;
-    height: 100%;
-}
-
-.img-box img { 
-    width: 100%; height: 100%; object-fit: cover; 
-    transition: 0.6s cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.overlay {
-    position: absolute;
-    top: 0; left: 0; width: 100%; height: 100%;
-    background: linear-gradient(to bottom, rgba(15, 23, 42, 0.2), rgba(15, 23, 42, 0.9));
-    display: flex; flex-direction: column; justify-content: center; align-items: center;
-    opacity: 0; transition: 0.4s ease;
-}
-
-.img-box:hover .overlay { opacity: 1; }
-.img-box:hover img { transform: scale(1.1); }
-
-.status-tag { color: white; padding: 6px 14px; border-radius: 50px; font-size: 11px; font-weight: 700; margin-bottom: 10px; }
-.tag-finished { background: #22c55e; box-shadow: 0 4px 10px rgba(34, 197, 94, 0.3); }
-.tag-ongoing { background: #f59e0b; box-shadow: 0 4px 10px rgba(245, 158, 11, 0.3); }
-.project-title { color: white; font-weight: 600; font-size: 15px; margin: 0; }
-
-        /* Slider */
-        .slider-wrapper { max-width: 850px; margin: 0 auto; overflow: hidden; position: relative; min-height: 250px; }
-        .slide-track { display: flex; transition: 0.5s ease; }
-        .slide-content { background: #fff; padding: 40px; border-radius: 25px; border: 1px solid #e5e7eb; }
-        .dots { display: flex; justify-content: center; gap: 5px; margin-top: 20px; }
-        .dot { width: 8px; height: 8px; background: #cbd5e1; border-radius: 50%; cursor: pointer; }
-        .dot.active { background: #2563eb; }
-
-       /* İletişim Formu */
-        .contact form { max-width: 500px; margin: 0 auto; }
-        .contact input, .contact textarea { 
-            width: 100%; padding: 14px 25px; margin: 8px 0; border-radius: 50px; 
-            border: 1px solid #e5e7eb; outline: none; font-family: inherit;
-        }
-        .contact textarea { border-radius: 20px; height: 100px; }
-        .whatsapp { position: fixed; bottom: 20px; right: 20px; background: #25D366; color: #fff; padding: 12px 25px; border-radius: 50px; text-decoration: none; font-weight: 600; z-index: 2000; box-shadow: 0 4px 15px rgba(0,0,0,0.2); }
-
-        /* MOBİL İÇİN DÜZENLEME */
-        .mobile-nav-container { display: none; align-items: center; gap: 15px; }
-        .menu-btn { font-size: 30px; cursor: pointer; color: #0f172a; }
-        
-        @media (max-width: 1024px) { 
-            .project-grid { grid-template-columns: repeat(2, 1fr); grid-template-rows: auto; } 
-            .img-box { height: 250px; }
-        }
-
-        @media (max-width: 768px) { 
-            header { padding: 10px 20px; height: 75px; }
-            .logo { height: 50px; }
-            
-            /* Masaüstü Nav ve Butonu Gizle */
-            nav#navbar ul { display: none; }
-            nav#navbar .btn-emergency { display: none; }
-            
-            /* Mobil Buton Konteynerını Göster */
-            .mobile-nav-container { display: flex; }
-            .mobile-nav-container .btn-emergency { 
-                font-size: 11px; 
-                padding: 8px 15px; 
-                line-height: 1.2;
-                text-align: center;
-            }
-
-            /* Açılır Menü Ayarı */
-            nav#navbar {
-                position: fixed; top: 75px; left: -100%; width: 100%; height: auto;
-                background: white; flex-direction: column; padding: 20px;
-                transition: 0.4s; border-bottom: 1px solid #e5e7eb; gap: 10px !important;
-                display: flex !important;
-            }
-            nav#navbar.active { left: 0; }
-            nav#navbar ul { display: flex; flex-direction: column; width: 100%; text-align: center; }
-            nav#navbar a { margin: 5px 0; width: 100%; display: block; }
-            
-            .project-grid { grid-template-columns: 1fr; }
-            .container { flex-direction: column; align-items: center; }
-            .card { width: 100%; }
-        }
-    </style>
+    <title>Karaca Güvenlik | Alanya Kamera, Alarm ve Network Sistemleri</title>
+    <meta name="description" content="Karaca Güvenlik ve Bilişim Sistemleri: Alanya ve Antalya genelinde kamera, alarm, network, diafon, uydu ve ses sistemleri kurulumu. 7/24 acil teknik servis, ücretsiz keşif.">
+    <meta name="theme-color" content="#060912">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Karaca Güvenlik | Profesyonel Güvenlik Çözümleri">
+    <meta property="og:description" content="Alanya ve Antalya genelinde akıllı güvenlik sistemleri ve zayıf akım çözümleri. Ücretsiz keşif için hemen arayın.">
+    <meta property="og:image" content="https://karacaguvenlik.github.io/LOGO.png">
+    <meta property="og:url" content="https://karacaguvenlik.github.io/">
+    <link rel="canonical" href="https://karacaguvenlik.github.io/">
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cpath d='M16 2 4 6v9c0 7.5 5.1 13.4 12 15 6.9-1.6 12-7.5 12-15V6z' fill='%233b44b8'/%3E%3Cpath d='M18 7c-3 6-5 12-5.5 18' stroke='%23fff' stroke-width='2.5' fill='none' stroke-linecap='round'/%3E%3C/svg%3E">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Sora:wght@500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <script>document.documentElement.classList.add('js');</script>
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "LocalBusiness",
+        "name": "Karaca Güvenlik ve Bilişim Sistemleri",
+        "image": "https://karacaguvenlik.github.io/LOGO.png",
+        "url": "https://karacaguvenlik.github.io/",
+        "telephone": "+90 538 771 11 46",
+        "email": "info@karacaguvenlik.com",
+        "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "Oba Mahallesi, Yüksek Sokak, No: 6/B",
+            "addressLocality": "Alanya",
+            "addressRegion": "Antalya",
+            "addressCountry": "TR"
+        },
+        "geo": { "@type": "GeoCoordinates", "latitude": 36.5404, "longitude": 32.0496 },
+        "openingHours": "Mo-Sa 09:00-19:00",
+        "areaServed": "Antalya"
+    }
+    </script>
 </head>
 <body>
 
-    <header>
-        <a href="#" class="logo-link"><img src="https://github.com/karacaguvenlik/karacaguvenlik.github.io/blob/c197555fc323ee63b44ff237ab1f5b90384de966/LOGO.png?raw=true" alt="Karaca Güvenlik" class="logo"></a>
-        
-        <div class="mobile-nav-container">
-            <a href="tel:+905387711146" class="btn-emergency">
-                <span class="pulse-dot"></span>
-                7/24 ACİL <br>TEKNİK SERVİS
+    <!-- HEADER -->
+    <header class="header" id="header">
+        <div class="header__inner">
+            <a href="#home" class="header__logo" aria-label="Karaca Güvenlik ana sayfa">
+                <img src="LOGO.png" alt="Karaca Güvenlik Bilişim Sistemleri" width="1189" height="230">
             </a>
-            <div class="menu-btn" onclick="toggleMenu()">☰</div>
+
+            <nav class="nav" id="nav" aria-label="Ana menü">
+                <a href="#home" class="nav__link">Ana Sayfa</a>
+                <a href="#services" class="nav__link">Hizmetler</a>
+                <a href="#process" class="nav__link">Süreç</a>
+                <a href="#projects" class="nav__link">Projeler</a>
+                <a href="#contact" class="nav__link">İletişim</a>
+                <a href="tel:+905387711146" class="btn btn--emergency nav__mobile-cta">
+                    <span class="pulse"></span> 7/24 Acil Teknik Servis
+                </a>
+            </nav>
+
+            <div class="header__actions">
+                <a href="tel:+905387711146" class="btn btn--emergency header__cta">
+                    <span class="pulse"></span>
+                    <span><small>7/24 Acil Servis</small>0538 771 11 46</span>
+                </a>
+                <button class="menu-toggle" id="menuToggle" aria-label="Menüyü aç" aria-expanded="false" aria-controls="nav">
+                    <span></span><span></span><span></span>
+                </button>
+            </div>
         </div>
-
-        <nav id="navbar" style="display: flex; align-items: center; gap: 30px;">
-            <ul style="display: flex; gap: 10px; list-style: none; margin: 0; padding: 0;">
-                <li><a href="#home" class="nav-link">Ana Sayfa</a></li>
-                <li><a href="#services" class="nav-link">Hizmetler</a></li>
-                <li><a href="#gallery" class="nav-link">Referanslar</a></li>
-                <li><a href="#contact" class="nav-link">İletişim</a></li>
-            </ul>
-
-            <a href="tel:+905387711146" class="btn-emergency">
-                <span class="pulse-dot"></span>
-                7/24 ACİL <br>TEKNİK SERVİS
-            </a>
-        </nav>
     </header>
 
-    <section class="hero" id="home">
-        <h1>Güvenlikte Profesyonel Çözüm</h1>
-        <p>Antalya'da akıllı güvenlik sistemleri ve zayıf akım çözümleri.</p>
-        <a href="#contact" class="btn">Ücretsiz Keşif Al</a>
-    </section>
+    <main>
+        <!-- HERO -->
+        <section class="hero" id="home">
+            <div class="hero__bg" aria-hidden="true"></div>
+            <div class="hero__grid" aria-hidden="true"></div>
+            <div class="hero__glow" aria-hidden="true"></div>
 
-    <section class="section bg-gray" id="services">
-        <h2>Hizmetlerimiz</h2>
-        <div class="container">
-            <div class="card">Kamera Sistemleri</div>
-            <div class="card">Alarm Sistemleri</div>
-            <div class="card">Network Altyapısı</div>
-            <div class="card">Uydu Sistemleri</div>
-            <div class="card">Bilgisayar Satış/Teknik Servis</div>
-            <div class="card">Ses Sistemleri</div>
-            <div class="card">Görüntülü Diafon</div>
-            <div class="card">Teknik Servis</div>
-        </div>
-    </section>
+            <div class="container hero__content">
+                <span class="eyebrow reveal"><span class="eyebrow__dot"></span> Alanya · Antalya</span>
+                <h1 class="hero__title reveal">
+                    Güvenlikte<br>
+                    <span class="gradient-text">Profesyonel Çözüm</span>
+                </h1>
+                <p class="hero__lead reveal">
+                    Akıllı kamera ve alarm sistemlerinden network altyapısına kadar; evinizi ve işletmenizi
+                    uçtan uca koruyan, anahtar teslim güvenlik ve zayıf akım çözümleri.
+                </p>
+                <div class="hero__buttons reveal">
+                    <a href="#contact" class="btn btn--primary btn--lg">
+                        Ücretsiz Keşif Al
+                        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+                    </a>
+                    <a href="tel:+905387711146" class="btn btn--ghost btn--lg">
+                        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"/></svg>
+                        Hemen Ara
+                    </a>
+                </div>
 
-    <section class="section" id="gallery">
-    <h2>Referans Projelerimiz</h2>
-    <p style="margin-bottom: 30px; color: #64748b;">Antalya genelinde aktif ve tamamlanmış çalışmalarımız.</p>
-    
-    <div class="project-grid">
-        <div class="img-box">
-            <img src="https://images.pexels.com/photos/34439834/pexels-photo-34439834.jpeg">
-            <div class="overlay"><span class="status-tag tag-ongoing">Devam Ediyor</span><p class="project-title">Alanya Oba Site Projesi</p></div>
-        </div>
-        <div class="img-box">
-            <img src="https://images.pexels.com/photos/4174773/pexels-photo-4174773.jpeg">
-            <div class="overlay"><span class="status-tag tag-ongoing">Devam Ediyor</span><p class="project-title">Market Network & Güvenlik Sistemi</p></div>
-        </div>
-        <div class="img-box">
-            <img src="https://images.pexels.com/photos/2599244/pexels-photo-25992444.jpeg?auto=compress&cs=tinysrgb&w=600">
-            <div class="overlay"><span class="status-tag tag-ongoing">Devam Ediyor</span><p class="project-title">Bölge Hastanesi Altyapı</p></div>
-        </div>
-        <div class="img-box">
-            <img src="https://images.pexels.com/photos/7310204/pexels-photo-73102044.jpeg?auto=compress&cs=tinysrgb&w=600">
-            <div class="overlay"><span class="status-tag tag-ongoing">Devam Ediyor</span><p class="project-title">Akıllı Şehir Kameraları</p></div>
-        </div>
-
-        <div class="img-box">
-            <img src="https://images.pexels.com/photos/33378036/pexels-photo-33378036.jpeg">
-            <div class="overlay"><span class="status-tag tag-finished">Tamamlandı</span><p class="project-title">Otel Fiber Optik Projesi</p></div>
-        </div>
-        <div class="img-box">
-            <img src="https://images.pexels.com/photos/2199190/pexels-photo-2199190.jpeg">
-            <div class="overlay"><span class="status-tag tag-finished">Tamamlandı</span><p class="project-title">İş Yeri 8 Adet IP Kamera Kurulumu</p></div>
-        </div>
-        <div class="img-box">
-            <img src="https://images.pexels.com/photos/3861969/pexels-photo-3861969.jpeg?auto=compress&cs=tinysrgb&w=600">
-            <div class="overlay"><span class="status-tag tag-finished">Tamamlandı</span><p class="project-title">Fabrika PDKS Sistemi</p></div>
-        </div>
-        <div class="img-box">
-            <img src="https://images.pexels.com/photos/10647324/pexels-photo-10647324.jpeg">
-            <div class="overlay"><span class="status-tag tag-finished">Tamamlandı</span><p class="project-title">Villa 16 Kameralı Güvenlik Paketi</p></div>
-        </div>
-
-        <div class="img-box">
-            <img src="https://images.pexels.com/photos/17748657/pexels-photo-17748657.jpeg">
-            <div class="overlay"><span class="status-tag tag-finished">Tamamlandı</span><p class="project-title">Restoran Network & Güvenlik Sistemi</p></div>
-        </div>
-        <div class="img-box">
-            <img src="https://images.pexels.com/photos/7585755/pexels-photo-7585755.jpeg">
-            <div class="overlay"><span class="status-tag tag-finished">Tamamlandı</span><p class="project-title">Cafe Zayıf Akım Sistem Montajı</p></div>
-        </div>
-        <div class="img-box">
-            <img src="https://images.pexels.com/photos/4439425/pexels-photo-4439425.jpeg?auto=compress&cs=tinysrgb&w=600">
-            <div class="overlay"><span class="status-tag tag-finished">Tamamlandı</span><p class="project-title">Mağaza Kamera Montajı</p></div>
-        </div>
-        <div class="img-box">
-            <img src="https://images.pexels.com/photos/1170412/pexels-photo-1170412.jpeg">
-            <div class="overlay"><span class="status-tag tag-finished">Tamamlandı</span><p class="project-title">Ofis Network Kurulumu</p></div>
-        </div>
-    </div>
-</section>
-
-    <section class="section bg-gray">
-    <h2 style="margin-bottom: 10px;">Müşteri Referanslarımız</h2>
-    <p style="color: #64748b; margin-bottom: 40px;">Antalya genelinde 100'den fazla aktif referans ve mutlu müşteri.</p>
-    
-    <div class="slider-wrapper" style="max-width: 1200px; margin: 0 auto; overflow: hidden; padding: 10px;">
-        <div class="slide-track" id="track" style="display: flex; transition: transform 0.8s cubic-bezier(0.4, 0, 0.2, 1);">
+                <ul class="hero__stats reveal">
+                    <li><strong>100+</strong><span>Aktif referans</span></li>
+                    <li><strong>7/24</strong><span>Acil teknik servis</span></li>
+                    <li><strong>8</strong><span>Uzmanlık alanı</span></li>
+                    <li><strong>Ücretsiz</strong><span>Yerinde keşif</span></li>
+                </ul>
             </div>
-        <div class="dots" id="dots" style="display: flex; justify-content: center; gap: 8px; margin-top: 30px;"></div>
-    </div>
-</section>
 
-<style>
-    /* Üçlü görünüm için genişlik ayarları */
-    .slide-group {
-        min-width: 100%;
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        gap: 25px;
-    }
-    .slide-content {
-        background: #fff;
-        padding: 30px;
-        border-radius: 20px;
-        border: 1px solid #e5e7eb;
-        box-shadow: 0 4px 12px rgba(0,0,0,0.03);
-        text-align: left;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-    }
-    
-    @media (max-width: 1024px) {
-        .slide-group { grid-template-columns: repeat(2, 1fr); }
-    }
-    @media (max-width: 768px) {
-        .slide-group { grid-template-columns: 1fr; }
-    }
-</style>
+            <a href="#services" class="hero__scroll" aria-label="Aşağı kaydır"><span></span></a>
+        </section>
 
-<script>
-    const names = ["Ahmet", "Mehmet", "Selin", "Mustafa", "Can", "Zeynep", "Hakan", "Elif", "Murat", "Deniz", "Yusuf", "Ece", "Kaan", "Pınar"];
-    const feedbacks = [
-        "İşçilik harika, kameralar çok net.",
-        "Antalya'nın en profesyonel ekibi.",
-        "Hızlı kurulum ve temiz çalışma.",
-        "Güvenilir hizmet, fiyatlar makul.",
-        "Teknik servis desteği çok hızlı.",
-        "Kurumsal çözümleri çok başarılı.",
-        "Gece görüş kalitesi beklediğimden iyi.",
-        "Network altyapımızı sorunsuz kurdular.",
-    "Alanya içerisindeki en iyi firmalardan biri. Teşekkürler."
-    ];
+        <!-- MARQUEE -->
+        <div class="marquee" aria-hidden="true">
+            <div class="marquee__track">
+                <span>IP Kamera</span><span>Alarm Sistemleri</span><span>Fiber Optik</span><span>Network Altyapısı</span><span>Görüntülü Diafon</span><span>PDKS</span><span>Uydu Sistemleri</span><span>Ses Sistemleri</span>
+                <span>IP Kamera</span><span>Alarm Sistemleri</span><span>Fiber Optik</span><span>Network Altyapısı</span><span>Görüntülü Diafon</span><span>PDKS</span><span>Uydu Sistemleri</span><span>Ses Sistemleri</span>
+            </div>
+        </div>
 
-    const track = document.getElementById('track');
-    const dotsContainer = document.getElementById('dots');
-    const totalComments = 99;
+        <!-- SERVICES -->
+        <section class="section" id="services">
+            <div class="container">
+                <div class="section__head reveal">
+                    <span class="eyebrow">Hizmetlerimiz</span>
+                    <h2 class="section__title">Tek çatı altında <span class="gradient-text">uçtan uca</span> güvenlik</h2>
+                    <p class="section__lead">Projelendirmeden kuruluma, bakımdan teknik servise kadar tüm süreci tek bir ekip olarak yönetiyoruz.</p>
+                </div>
 
-    for (let i = 0; i < totalComments / 3; i++) {
-        const group = document.createElement('div');
-        group.className = 'slide-group';
+                <div class="services">
+                    <article class="service reveal">
+                        <div class="service__icon"><svg viewBox="0 0 24 24"><path d="M16 8.5 21 6v12l-5-2.5"/><rect x="3" y="6" width="13" height="12" rx="2"/><circle cx="9.5" cy="12" r="2.5"/></svg></div>
+                        <h3>Kamera Sistemleri</h3>
+                        <p>IP ve analog kamera, gece görüşlü HD kayıt, uzaktan mobil izleme.</p>
+                    </article>
+                    <article class="service reveal">
+                        <div class="service__icon"><svg viewBox="0 0 24 24"><path d="M6 8a6 6 0 0 1 12 0c0 7 3 9 3 9H3s3-2 3-9"/><path d="M10.3 21a1.9 1.9 0 0 0 3.4 0"/></svg></div>
+                        <h3>Alarm Sistemleri</h3>
+                        <p>Kablolu ve kablosuz alarm, hareket ve kapı-pencere sensörleri.</p>
+                    </article>
+                    <article class="service reveal">
+                        <div class="service__icon"><svg viewBox="0 0 24 24"><rect x="9" y="2" width="6" height="6" rx="1"/><rect x="2" y="16" width="6" height="6" rx="1"/><rect x="16" y="16" width="6" height="6" rx="1"/><path d="M5 16v-3h14v3M12 8v5"/></svg></div>
+                        <h3>Network Altyapısı</h3>
+                        <p>Yapısal kablolama, fiber optik, Wi-Fi ve kurumsal ağ kurulumları.</p>
+                    </article>
+                    <article class="service reveal">
+                        <div class="service__icon"><svg viewBox="0 0 24 24"><path d="M4 10a7.3 7.3 0 0 0 10 10z"/><path d="m9 15 4-4"/><path d="M16 4a4 4 0 0 1 4 4M16 1a7 7 0 0 1 7 7"/></svg></div>
+                        <h3>Uydu Sistemleri</h3>
+                        <p>Merkezi uydu, çanak anten ve site/otel dağıtım sistemleri.</p>
+                    </article>
+                    <article class="service reveal">
+                        <div class="service__icon"><svg viewBox="0 0 24 24"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg></div>
+                        <h3>Bilgisayar Satış & Servis</h3>
+                        <p>Masaüstü, dizüstü ve çevre birimleri satışı, bakım ve onarım.</p>
+                    </article>
+                    <article class="service reveal">
+                        <div class="service__icon"><svg viewBox="0 0 24 24"><path d="M11 5 6 9H2v6h4l5 4z"/><path d="M15.5 8.5a5 5 0 0 1 0 7M19 5a10 10 0 0 1 0 14"/></svg></div>
+                        <h3>Ses Sistemleri</h3>
+                        <p>Anons, fon müziği ve profesyonel seslendirme sistemleri.</p>
+                    </article>
+                    <article class="service reveal">
+                        <div class="service__icon"><svg viewBox="0 0 24 24"><rect x="5" y="2" width="14" height="20" rx="2"/><rect x="8" y="5" width="8" height="7" rx="1"/><path d="M10 16h4M10 19h4"/></svg></div>
+                        <h3>Görüntülü Diafon</h3>
+                        <p>Villa, apartman ve siteler için görüntülü kapı giriş sistemleri.</p>
+                    </article>
+                    <article class="service reveal">
+                        <div class="service__icon"><svg viewBox="0 0 24 24"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.8-3.8a6 6 0 0 1-7.9 7.9l-6.9 6.9a2.1 2.1 0 0 1-3-3l6.9-6.9a6 6 0 0 1 7.9-7.9z"/></svg></div>
+                        <h3>Teknik Servis</h3>
+                        <p>Arıza tespiti, periyodik bakım ve 7/24 acil müdahale.</p>
+                    </article>
+                </div>
+            </div>
+        </section>
 
-        for (let j = 0; j < 3; j++) {
-            const n = names[Math.floor(Math.random() * names.length)] + " " + String.fromCharCode(65 + Math.floor(Math.random() * 26)) + ".";
-            const f = feedbacks[Math.floor(Math.random() * feedbacks.length)];
-            
-            group.innerHTML += `
-                <div class="slide-content">
+        <!-- PROCESS -->
+        <section class="section section--alt" id="process">
+            <div class="container split">
+                <div class="split__text reveal">
+                    <span class="eyebrow">Nasıl Çalışıyoruz?</span>
+                    <h2 class="section__title">Keşiften teslime<br><span class="gradient-text">şeffaf bir süreç</span></h2>
+                    <p class="section__lead">Her proje yerinde yapılan ücretsiz keşifle başlar. İhtiyacınızı dinler, mekâna en uygun sistemi tasarlar ve kurulumdan sonra da yanınızda oluruz.</p>
+                    <ul class="checks">
+                        <li>Mekâna özel projelendirme ve net fiyat teklifi</li>
+                        <li>Temiz işçilik, düzenli ve gizlenmiş kablolama</li>
+                        <li>Mobil uygulama kurulumu ve kullanım eğitimi</li>
+                        <li>Kurulum sonrası bakım ve 7/24 acil destek</li>
+                    </ul>
+                </div>
+
+                <ol class="steps">
+                    <li class="step reveal">
+                        <span class="step__num">01</span>
+                        <div><h3>Ücretsiz Keşif</h3><p>Uzman ekibimiz mekânınızı yerinde inceler, risk noktalarını belirler.</p></div>
+                    </li>
+                    <li class="step reveal">
+                        <span class="step__num">02</span>
+                        <div><h3>Projelendirme</h3><p>İhtiyaca ve bütçeye uygun sistem tasarlanır, teklif sunulur.</p></div>
+                    </li>
+                    <li class="step reveal">
+                        <span class="step__num">03</span>
+                        <div><h3>Profesyonel Kurulum</h3><p>Montaj, kablolama ve yapılandırma eksiksiz tamamlanır.</p></div>
+                    </li>
+                    <li class="step reveal">
+                        <span class="step__num">04</span>
+                        <div><h3>Destek & Bakım</h3><p>Teslim sonrası teknik servis ve periyodik bakım ile yanınızdayız.</p></div>
+                    </li>
+                </ol>
+            </div>
+        </section>
+
+        <!-- PROJECTS -->
+        <section class="section" id="projects">
+            <div class="container">
+                <div class="section__head section__head--row reveal">
                     <div>
-                        <div style="color:#fbbf24; margin-bottom: 10px; font-size: 18px;">★★★★★</div>
-                        <p style="font-style: italic; color: #475569; line-height: 1.5;">"${f}"</p>
+                        <span class="eyebrow">Referans Projelerimiz</span>
+                        <h2 class="section__title">Antalya genelinde <span class="gradient-text">imza attığımız</span> işler</h2>
                     </div>
-                    <div style="margin-top: 20px; font-weight: 600; color: #2563eb; font-size: 14px;">- ${n}</div>
+                    <div class="filters" role="tablist" aria-label="Proje filtresi">
+                        <button class="filter is-active" data-filter="all" role="tab" aria-selected="true">Tümü</button>
+                        <button class="filter" data-filter="ongoing" role="tab" aria-selected="false">Devam Eden</button>
+                        <button class="filter" data-filter="done" role="tab" aria-selected="false">Tamamlanan</button>
+                    </div>
                 </div>
-            `;
-        }
-        track.appendChild(group);
 
-        if (i < 8) { 
-            const dot = document.createElement('div');
-            dot.className = 'dot' + (i === 0 ? ' active' : '');
-            dot.onclick = () => { cIdx = i; update(); clearInterval(autoSlide); };
-            dotsContainer.appendChild(dot);
-        }
-    }
-
-    let cIdx = 0;
-    const dots = document.querySelectorAll('.dot');
-    function update() {
-        track.style.transform = `translateX(-${cIdx * 100}%)`;
-        dots.forEach((d, idx) => d.classList.toggle('active', idx === cIdx));
-    }
-
-    let autoSlide = setInterval(() => {
-        cIdx = (cIdx + 1) % 8;
-        update();
-    }, 6000);
-
-    // Mobil Menü Fonksiyonu
-    function toggleMenu() {
-        document.getElementById('navbar').classList.toggle('active');
-    }
-</script>
-
- <section class="section contact" id="contact" style="background: #f8fafc; padding: 80px 20px;">
-    <div style="max-width: 1200px; margin: 0 auto;">
-        <div style="display: flex; flex-wrap: wrap; gap: 40px; text-align: left;">
-            
-            <div style="flex: 1; min-width: 320px;">
-                <h2 style="text-align: left; margin-bottom: 15px; font-size: 25px; color: #0f172a;">Karaca Güvenlik ve Bilişim Sistemleri</h2>
-                <p style="color: #64748b; margin-bottom: 25px; font-size: 17px;">Antalya'nın güven teknoloji ortağı.</p>
-                
-                <div style="line-height: 1.8; font-size: 15px; margin-bottom: 25px;">
-                    <p><strong>📍 Adres:</strong> Oba Mahallesi, Yüksek Sokak, No: 6/B Alanya/ANTALYA</p>
-                    <p><strong>📞 Telefon:</strong> +90 538 771 11 46</p>
-                    <p><strong>✉️ E-posta:</strong> info@karacaguvenlik.com</p>
-                    <p style="margin-bottom: 15px;"><strong>⏰ Saatler:</strong> Pzt - Cmt: 09:00 - 19:00</p>
-                    
-                    <div style="border-radius: 15px; overflow: hidden; box-shadow: 0 5px 15px rgba(0,0,0,0.08); height: 200px; width: 100%; border: 1px solid #e5e7eb;">
-                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3205.5672826089603!2d32.049626675290725!3d36.540432582300575!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14dc992c581f2795%3A0x79a3e5f7aafaafbb!2zS0FSQUNBIEfDnFZFTkzEsEsgVkUgQsSwTMSwxZ7EsE0gU8SwU1RFTUxFUsSw!5e0!3m2!1str!2str!4v1773761056176!5m2!1str!2str" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-                    </div>
+                <div class="projects">
+                    <figure class="project project--wide reveal" data-status="ongoing">
+                        <img src="https://images.pexels.com/photos/34439834/pexels-photo-34439834.jpeg?auto=compress&cs=tinysrgb&w=1000" alt="Alanya Oba site projesi" loading="lazy">
+                        <figcaption><span class="tag tag--ongoing">Devam Ediyor</span><h3>Alanya Oba Site Projesi</h3></figcaption>
+                    </figure>
+                    <figure class="project reveal" data-status="ongoing">
+                        <img src="https://images.pexels.com/photos/4174773/pexels-photo-4174773.jpeg?auto=compress&cs=tinysrgb&w=700" alt="Market network ve güvenlik sistemi" loading="lazy">
+                        <figcaption><span class="tag tag--ongoing">Devam Ediyor</span><h3>Market Network & Güvenlik Sistemi</h3></figcaption>
+                    </figure>
+                    <figure class="project reveal" data-status="ongoing">
+                        <img src="https://images.pexels.com/photos/1054397/pexels-photo-1054397.jpeg?auto=compress&cs=tinysrgb&w=700" alt="Bölge hastanesi altyapı projesi" loading="lazy">
+                        <figcaption><span class="tag tag--ongoing">Devam Ediyor</span><h3>Bölge Hastanesi Altyapı</h3></figcaption>
+                    </figure>
+                    <figure class="project project--wide reveal" data-status="ongoing">
+                        <img src="https://images.pexels.com/photos/38143085/pexels-photo-38143085.jpeg?auto=compress&cs=tinysrgb&w=1000" alt="Akıllı şehir kameraları" loading="lazy">
+                        <figcaption><span class="tag tag--ongoing">Devam Ediyor</span><h3>Akıllı Şehir Kameraları</h3></figcaption>
+                    </figure>
+                    <figure class="project reveal" data-status="done">
+                        <img src="https://images.pexels.com/photos/33378036/pexels-photo-33378036.jpeg?auto=compress&cs=tinysrgb&w=700" alt="Otel fiber optik projesi" loading="lazy">
+                        <figcaption><span class="tag tag--done">Tamamlandı</span><h3>Otel Fiber Optik Projesi</h3></figcaption>
+                    </figure>
+                    <figure class="project reveal" data-status="done">
+                        <img src="https://images.pexels.com/photos/2199190/pexels-photo-2199190.jpeg?auto=compress&cs=tinysrgb&w=700" alt="İş yeri IP kamera kurulumu" loading="lazy">
+                        <figcaption><span class="tag tag--done">Tamamlandı</span><h3>İş Yeri 8 Adet IP Kamera Kurulumu</h3></figcaption>
+                    </figure>
+                    <figure class="project project--wide reveal" data-status="done">
+                        <img src="https://images.pexels.com/photos/13072973/pexels-photo-13072973.jpeg?auto=compress&cs=tinysrgb&w=1000" alt="Fabrika PDKS sistemi" loading="lazy">
+                        <figcaption><span class="tag tag--done">Tamamlandı</span><h3>Fabrika PDKS Sistemi</h3></figcaption>
+                    </figure>
+                    <figure class="project reveal" data-status="done">
+                        <img src="https://images.pexels.com/photos/10647324/pexels-photo-10647324.jpeg?auto=compress&cs=tinysrgb&w=700" alt="Villa 16 kameralı güvenlik paketi" loading="lazy">
+                        <figcaption><span class="tag tag--done">Tamamlandı</span><h3>Villa 16 Kameralı Güvenlik Paketi</h3></figcaption>
+                    </figure>
+                    <figure class="project reveal" data-status="done">
+                        <img src="https://images.pexels.com/photos/17748657/pexels-photo-17748657.jpeg?auto=compress&cs=tinysrgb&w=700" alt="Restoran network ve güvenlik sistemi" loading="lazy">
+                        <figcaption><span class="tag tag--done">Tamamlandı</span><h3>Restoran Network & Güvenlik Sistemi</h3></figcaption>
+                    </figure>
+                    <figure class="project reveal" data-status="done">
+                        <img src="https://images.pexels.com/photos/7585755/pexels-photo-7585755.jpeg?auto=compress&cs=tinysrgb&w=700" alt="Cafe zayıf akım sistem montajı" loading="lazy">
+                        <figcaption><span class="tag tag--done">Tamamlandı</span><h3>Cafe Zayıf Akım Sistem Montajı</h3></figcaption>
+                    </figure>
+                    <figure class="project reveal" data-status="done">
+                        <img src="https://images.pexels.com/photos/7364948/pexels-photo-7364948.jpeg?auto=compress&cs=tinysrgb&w=700" alt="Mağaza kamera montajı" loading="lazy">
+                        <figcaption><span class="tag tag--done">Tamamlandı</span><h3>Mağaza Kamera Montajı</h3></figcaption>
+                    </figure>
+                    <figure class="project project--wide reveal" data-status="done">
+                        <img src="https://images.pexels.com/photos/1170412/pexels-photo-1170412.jpeg?auto=compress&cs=tinysrgb&w=1000" alt="Ofis network kurulumu" loading="lazy">
+                        <figcaption><span class="tag tag--done">Tamamlandı</span><h3>Ofis Network Kurulumu</h3></figcaption>
+                    </figure>
                 </div>
             </div>
+        </section>
 
-            <div style="flex: 1; min-width: 320px;">
-                <form style="background: #fff; padding: 35px; border-radius: 25px; box-shadow: 0 10px 30px rgba(0,0,0,0.05); border: 1px solid #e5e7eb;">
-                    <h3 style="margin-bottom: 20px; color: #0f172a;">Ücretsiz Keşif Formu</h3>
-                    <input type="text" placeholder="Adınız Soyadınız" required style="width: 100%; padding: 14px 20px; margin-bottom: 15px; border-radius: 50px; border: 1px solid #e5e7eb; outline: none; display: block;">
-                    <input type="tel" placeholder="Telefon Numaranız" required style="width: 100%; padding: 14px 20px; margin-bottom: 15px; border-radius: 50px; border: 1px solid #e5e7eb; outline: none; display: block;">
-                    <textarea placeholder="Mesajınız" style="width: 100%; padding: 15px 20px; border-radius: 20px; height: 110px; border: 1px solid #e5e7eb; outline: none; margin-bottom: 15px; display: block; font-family: inherit; resize: none;"></textarea>
-                    <button type="submit" class="btn" style="width: 100%; margin-top: 0; cursor: pointer; border-radius: 50px;">Hemen Teklif Al</button>
+        <!-- TESTIMONIALS -->
+        <section class="section section--alt" id="testimonials">
+            <div class="container">
+                <div class="section__head reveal">
+                    <span class="eyebrow">Müşteri Görüşleri</span>
+                    <h2 class="section__title">Antalya genelinde <span class="gradient-text">100'den fazla</span> mutlu müşteri</h2>
+                </div>
+            </div>
+            <div class="reviews" aria-label="Müşteri yorumları">
+                <div class="reviews__track">
+                    <blockquote class="review"><div class="stars">★★★★★</div><p>"İşçilik harika, kameralar çok net."</p></blockquote>
+                    <blockquote class="review"><div class="stars">★★★★★</div><p>"Antalya'nın en profesyonel ekibi."</p></blockquote>
+                    <blockquote class="review"><div class="stars">★★★★★</div><p>"Hızlı kurulum ve temiz çalışma."</p></blockquote>
+                    <blockquote class="review"><div class="stars">★★★★★</div><p>"Güvenilir hizmet, fiyatlar makul."</p></blockquote>
+                    <blockquote class="review"><div class="stars">★★★★★</div><p>"Teknik servis desteği çok hızlı."</p></blockquote>
+                    <blockquote class="review"><div class="stars">★★★★★</div><p>"Kurumsal çözümleri çok başarılı."</p></blockquote>
+                    <blockquote class="review"><div class="stars">★★★★★</div><p>"Gece görüş kalitesi beklediğimden iyi."</p></blockquote>
+                    <blockquote class="review"><div class="stars">★★★★★</div><p>"Network altyapımızı sorunsuz kurdular."</p></blockquote>
+                    <blockquote class="review"><div class="stars">★★★★★</div><p>"Alanya içerisindeki en iyi firmalardan biri. Teşekkürler."</p></blockquote>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA BAND -->
+        <section class="cta">
+            <div class="container cta__inner reveal">
+                <div>
+                    <h2>Sisteminizde bir arıza mı var?</h2>
+                    <p>7/24 acil teknik servis hattımızdan bize hemen ulaşın.</p>
+                </div>
+                <div class="cta__buttons">
+                    <a href="tel:+905387711146" class="btn btn--white btn--lg">0538 771 11 46</a>
+                    <a href="https://wa.me/905387711146" class="btn btn--ghost btn--lg" target="_blank" rel="noopener">WhatsApp'tan Yaz</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- CONTACT -->
+        <section class="section" id="contact">
+            <div class="container contact">
+                <div class="contact__info reveal">
+                    <span class="eyebrow">İletişim</span>
+                    <h2 class="section__title">Karaca Güvenlik ve<br><span class="gradient-text">Bilişim Sistemleri</span></h2>
+                    <p class="section__lead">Antalya'nın güven teknoloji ortağı. Ücretsiz keşif ve fiyat teklifi için bize ulaşın.</p>
+
+                    <ul class="contact__list">
+                        <li>
+                            <span class="contact__icon"><svg viewBox="0 0 24 24"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0z"/><circle cx="12" cy="10" r="3"/></svg></span>
+                            <div><small>Adres</small>Oba Mahallesi, Yüksek Sokak, No: 6/B Alanya/ANTALYA</div>
+                        </li>
+                        <li>
+                            <span class="contact__icon"><svg viewBox="0 0 24 24"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"/></svg></span>
+                            <div><small>Telefon</small><a href="tel:+905387711146">+90 538 771 11 46</a></div>
+                        </li>
+                        <li>
+                            <span class="contact__icon"><svg viewBox="0 0 24 24"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-10 6L2 7"/></svg></span>
+                            <div><small>E-posta</small><a href="mailto:info@karacaguvenlik.com">info@karacaguvenlik.com</a></div>
+                        </li>
+                        <li>
+                            <span class="contact__icon"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg></span>
+                            <div><small>Çalışma Saatleri</small>Pzt - Cmt: 09:00 - 19:00 <em>(Acil servis 7/24)</em></div>
+                        </li>
+                    </ul>
+
+                    <div class="map">
+                        <iframe title="Karaca Güvenlik konum" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3205.5672826089603!2d32.049626675290725!3d36.540432582300575!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14dc992c581f2795%3A0x79a3e5f7aafaafbb!2zS0FSQUNBIEfDnFZFTkzEsEsgVkUgQsSwTMSwxZ7EsE0gU8SwU1RFTUxFUsSw!5e0!3m2!1str!2str!4v1773761056176!5m2!1str!2str" loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe>
+                    </div>
+                </div>
+
+                <form class="form reveal" id="quoteForm">
+                    <h3>Ücretsiz Keşif Formu</h3>
+                    <p>Formu doldurun, talebiniz WhatsApp üzerinden doğrudan ekibimize iletilsin.</p>
+
+                    <label class="field">
+                        <span>Adınız Soyadınız</span>
+                        <input type="text" name="name" autocomplete="name" required>
+                    </label>
+                    <label class="field">
+                        <span>Telefon Numaranız</span>
+                        <input type="tel" name="phone" autocomplete="tel" required>
+                    </label>
+                    <label class="field">
+                        <span>İlgilendiğiniz Hizmet</span>
+                        <select name="service">
+                            <option>Kamera Sistemleri</option>
+                            <option>Alarm Sistemleri</option>
+                            <option>Network Altyapısı</option>
+                            <option>Uydu Sistemleri</option>
+                            <option>Bilgisayar Satış / Teknik Servis</option>
+                            <option>Ses Sistemleri</option>
+                            <option>Görüntülü Diafon</option>
+                            <option>Teknik Servis</option>
+                            <option>Diğer</option>
+                        </select>
+                    </label>
+                    <label class="field">
+                        <span>Mesajınız</span>
+                        <textarea name="message" rows="4"></textarea>
+                    </label>
+                    <button type="submit" class="btn btn--primary btn--lg btn--block">
+                        Hemen Teklif Al
+                        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+                    </button>
                 </form>
             </div>
+        </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="container footer__inner">
+            <div class="footer__brand">
+                <img src="LOGO.png" alt="Karaca Güvenlik" width="1189" height="230" loading="lazy">
+                <p>Alanya ve Antalya genelinde akıllı güvenlik sistemleri ve zayıf akım çözümleri.</p>
+            </div>
+            <div class="footer__col">
+                <h4>Hizmetler</h4>
+                <a href="#services">Kamera Sistemleri</a>
+                <a href="#services">Alarm Sistemleri</a>
+                <a href="#services">Network Altyapısı</a>
+                <a href="#services">Görüntülü Diafon</a>
+            </div>
+            <div class="footer__col">
+                <h4>Kurumsal</h4>
+                <a href="#process">Çalışma Sürecimiz</a>
+                <a href="#projects">Referanslar</a>
+                <a href="#contact">İletişim</a>
+            </div>
+            <div class="footer__col">
+                <h4>İletişim</h4>
+                <a href="tel:+905387711146">+90 538 771 11 46</a>
+                <a href="mailto:info@karacaguvenlik.com">info@karacaguvenlik.com</a>
+                <span>Oba Mah. Yüksek Sk. No: 6/B Alanya</span>
+            </div>
         </div>
-    </div>
-</section>
+        <div class="container footer__bottom">
+            <span>© <span id="year">2026</span> Karaca Güvenlik ve Bilişim Sistemleri — Alanya</span>
+            <a href="#home">Başa dön ↑</a>
+        </div>
+    </footer>
 
-<footer style="padding: 10px; text-align: center; background: #0f172a; color: #fff;">
-    © 2026 Karaca Güvenlik Sistemleri - ALANYA
-</footer>
+    <a href="https://wa.me/905387711146" class="whatsapp" target="_blank" rel="noopener" aria-label="WhatsApp ile yazın">
+        <svg viewBox="0 0 32 32" aria-hidden="true"><path d="M16 3a13 13 0 0 0-11.2 19.6L3 29l6.6-1.7A13 13 0 1 0 16 3zm0 23.7c-2 0-4-.5-5.7-1.6l-.4-.2-3.9 1 1-3.8-.3-.4A10.7 10.7 0 1 1 16 26.7zm5.9-8c-.3-.2-1.9-1-2.2-1-.3-.1-.5-.2-.7.1l-1 1.3c-.2.2-.4.2-.7.1-.3-.2-1.4-.5-2.6-1.6-1-.9-1.6-1.9-1.8-2.2-.2-.3 0-.5.1-.7l.5-.6.3-.5v-.6l-1-2.4c-.3-.6-.5-.5-.7-.5h-.6c-.2 0-.6 0-.9.4-.3.3-1.1 1.1-1.1 2.7s1.2 3.2 1.3 3.4c.2.2 2.3 3.5 5.5 4.9 2.7 1.1 3.3.9 3.9.8.6-.1 1.9-.8 2.2-1.5.3-.8.3-1.4.2-1.5l-.6-.4z"/></svg>
+        <span>WhatsApp</span>
+    </a>
 
-    <a href="https://wa.me/905387711146" class="whatsapp">WhatsApp</a>
-
+    <script src="assets/js/main.js"></script>
 </body>
 </html>
