@@ -9,14 +9,21 @@
     <meta property="og:type" content="website">
     <meta property="og:title" content="Karaca Güvenlik | Profesyonel Güvenlik Çözümleri">
     <meta property="og:description" content="Alanya ve Antalya genelinde akıllı güvenlik sistemleri ve zayıf akım çözümleri. Ücretsiz keşif için hemen arayın.">
-    <meta property="og:image" content="https://karacaguvenlik.github.io/LOGO.png">
+    <meta property="og:image" content="https://karacaguvenlik.github.io/assets/img/og-image.jpg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
     <meta property="og:url" content="https://karacaguvenlik.github.io/">
+    <meta property="og:locale" content="tr_TR">
+    <meta name="twitter:card" content="summary_large_image">
     <link rel="canonical" href="https://karacaguvenlik.github.io/">
-    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cpath d='M16 2 4 6v9c0 7.5 5.1 13.4 12 15 6.9-1.6 12-7.5 12-15V6z' fill='%233b44b8'/%3E%3Cpath d='M18 7c-3 6-5 12-5.5 18' stroke='%23fff' stroke-width='2.5' fill='none' stroke-linecap='round'/%3E%3C/svg%3E">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Sora:wght@500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+    <link rel="icon" href="/favicon.ico" sizes="32x32">
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+    <link rel="preload" href="/assets/fonts/sora-latin.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="/assets/fonts/jakarta-latin.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="/assets/img/hero-960.webp" as="image" media="(max-width: 900px)">
+    <link rel="preload" href="/assets/img/hero-1920.webp" as="image" media="(min-width: 901px)">
+    <link rel="stylesheet" href="/assets/css/style.css">
     <script>document.documentElement.classList.add('js');</script>
     <script type="application/ld+json">
     {
@@ -39,6 +46,21 @@
         "areaServed": "Antalya"
     }
     </script>
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+            { "@type": "Question", "name": "Keşif ücretli mi?", "acceptedAnswer": { "@type": "Answer", "text": "Hayır. Alanya ve çevresinde yerinde keşif ücretsizdir. Mekânınızı inceler, ihtiyacınıza uygun sistemi ve net fiyat teklifini keşif sonrasında sunarız." } },
+            { "@type": "Question", "name": "Kamera sistemi kurulumu ne kadar sürer?", "acceptedAnswer": { "@type": "Answer", "text": "Süre kamera sayısına, kablolama mesafesine ve binanın yapısına göre değişir. Keşif sırasında size net bir kurulum süresi bildiririz." } },
+            { "@type": "Question", "name": "Kameraları telefondan izleyebilir miyim?", "acceptedAnswer": { "@type": "Answer", "text": "Evet. Kurulum sonrasında mobil uygulamayı telefonunuza kurar, canlı izleme ve kayıt izleme kullanımını yerinde gösteririz." } },
+            { "@type": "Question", "name": "Hangi bölgelere hizmet veriyorsunuz?", "acceptedAnswer": { "@type": "Answer", "text": "Merkezimiz Alanya Oba Mahallesi'ndedir. Alanya başta olmak üzere Antalya genelinde hizmet veriyoruz." } },
+            { "@type": "Question", "name": "Ürünlerin garantisi var mı?", "acceptedAnswer": { "@type": "Answer", "text": "Kurduğumuz ürünler yasal garanti kapsamındadır. Garanti ve bakım koşulları teklifinizde ayrıca belirtilir." } },
+            { "@type": "Question", "name": "Sistemde arıza olursa ne yapmalıyım?", "acceptedAnswer": { "@type": "Answer", "text": "7/24 acil teknik servis hattımızı arayabilir veya WhatsApp'tan yazabilirsiniz. Ekibimiz arızayı en kısa sürede tespit edip giderir." } },
+            { "@type": "Question", "name": "Mevcut kamera veya alarm sistemime servis veriyor musunuz?", "acceptedAnswer": { "@type": "Answer", "text": "Evet. Başka firmalarca kurulmuş sistemlerin arıza tespiti, onarımı, bakımı ve genişletilmesi için de hizmet veriyoruz." } }
+        ]
+    }
+    </script>
 </head>
 <body>
 
@@ -46,7 +68,7 @@
     <header class="header" id="header">
         <div class="header__inner">
             <a href="#home" class="header__logo" aria-label="Karaca Güvenlik ana sayfa">
-                <img src="LOGO.png" alt="Karaca Güvenlik Bilişim Sistemleri" width="1189" height="230">
+                <img src="/LOGO.png" alt="Karaca Güvenlik Bilişim Sistemleri" width="1189" height="230">
             </a>
 
             <nav class="nav" id="nav" aria-label="Ana menü">
@@ -54,10 +76,8 @@
                 <a href="#services" class="nav__link">Hizmetler</a>
                 <a href="#process" class="nav__link">Süreç</a>
                 <a href="#projects" class="nav__link">Projeler</a>
+                <a href="#sss" class="nav__link">SSS</a>
                 <a href="#contact" class="nav__link">İletişim</a>
-                <a href="tel:+905387711146" class="btn btn--emergency nav__mobile-cta">
-                    <span class="pulse"></span> 7/24 Acil Teknik Servis
-                </a>
             </nav>
 
             <div class="header__actions">
@@ -80,15 +100,15 @@
             <div class="hero__glow" aria-hidden="true"></div>
 
             <div class="container hero__content">
-                <h1 class="hero__title reveal">
+                <h1 class="hero__title">
                     Güvenlikte<br>
                     <span class="gradient-text">Profesyonel Çözüm</span>
                 </h1>
-                <p class="hero__lead reveal">
+                <p class="hero__lead">
                     Akıllı kamera ve alarm sistemlerinden network altyapısına kadar; evinizi ve işletmenizi
                     uçtan uca koruyan, anahtar teslim güvenlik ve zayıf akım çözümleri.
                 </p>
-                <div class="hero__buttons reveal">
+                <div class="hero__buttons">
                     <a href="#contact" class="btn btn--primary btn--lg">
                         Ücretsiz Keşif Al
                         <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
@@ -99,7 +119,7 @@
                     </a>
                 </div>
 
-                <ul class="hero__stats reveal">
+                <ul class="hero__stats">
                     <li><strong>100+</strong><span>Aktif referans</span></li>
                     <li><strong>7/24</strong><span>Acil teknik servis</span></li>
                     <li><strong>8</strong><span>Uzmanlık alanı</span></li>
@@ -128,46 +148,54 @@
                 </div>
 
                 <div class="services">
-                    <article class="service reveal">
+                    <a class="service reveal" href="/hizmetler/kamera-sistemleri.html">
                         <div class="service__icon"><svg viewBox="0 0 24 24"><path d="M16 8.5 21 6v12l-5-2.5"/><rect x="3" y="6" width="13" height="12" rx="2"/><circle cx="9.5" cy="12" r="2.5"/></svg></div>
                         <h3>Kamera Sistemleri</h3>
                         <p>IP ve analog kamera, gece görüşlü HD kayıt, uzaktan mobil izleme.</p>
-                    </article>
-                    <article class="service reveal">
+                        <span class="service__more">Detaylı bilgi <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+                    </a>
+                    <a class="service reveal" href="/hizmetler/alarm-sistemleri.html">
                         <div class="service__icon"><svg viewBox="0 0 24 24"><path d="M6 8a6 6 0 0 1 12 0c0 7 3 9 3 9H3s3-2 3-9"/><path d="M10.3 21a1.9 1.9 0 0 0 3.4 0"/></svg></div>
                         <h3>Alarm Sistemleri</h3>
                         <p>Kablolu ve kablosuz alarm, hareket ve kapı-pencere sensörleri.</p>
-                    </article>
-                    <article class="service reveal">
+                        <span class="service__more">Detaylı bilgi <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+                    </a>
+                    <a class="service reveal" href="/hizmetler/network-altyapisi.html">
                         <div class="service__icon"><svg viewBox="0 0 24 24"><rect x="9" y="2" width="6" height="6" rx="1"/><rect x="2" y="16" width="6" height="6" rx="1"/><rect x="16" y="16" width="6" height="6" rx="1"/><path d="M5 16v-3h14v3M12 8v5"/></svg></div>
                         <h3>Network Altyapısı</h3>
                         <p>Yapısal kablolama, fiber optik, Wi-Fi ve kurumsal ağ kurulumları.</p>
-                    </article>
-                    <article class="service reveal">
+                        <span class="service__more">Detaylı bilgi <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+                    </a>
+                    <a class="service reveal" href="/hizmetler/uydu-sistemleri.html">
                         <div class="service__icon"><svg viewBox="0 0 24 24"><path d="M4 10a7.3 7.3 0 0 0 10 10z"/><path d="m9 15 4-4"/><path d="M16 4a4 4 0 0 1 4 4M16 1a7 7 0 0 1 7 7"/></svg></div>
                         <h3>Uydu Sistemleri</h3>
                         <p>Merkezi uydu, çanak anten ve site/otel dağıtım sistemleri.</p>
-                    </article>
-                    <article class="service reveal">
+                        <span class="service__more">Detaylı bilgi <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+                    </a>
+                    <a class="service reveal" href="/hizmetler/bilgisayar-satis-servis.html">
                         <div class="service__icon"><svg viewBox="0 0 24 24"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg></div>
                         <h3>Bilgisayar Satış & Servis</h3>
                         <p>Masaüstü, dizüstü ve çevre birimleri satışı, bakım ve onarım.</p>
-                    </article>
-                    <article class="service reveal">
+                        <span class="service__more">Detaylı bilgi <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+                    </a>
+                    <a class="service reveal" href="/hizmetler/ses-sistemleri.html">
                         <div class="service__icon"><svg viewBox="0 0 24 24"><path d="M11 5 6 9H2v6h4l5 4z"/><path d="M15.5 8.5a5 5 0 0 1 0 7M19 5a10 10 0 0 1 0 14"/></svg></div>
                         <h3>Ses Sistemleri</h3>
                         <p>Anons, fon müziği ve profesyonel seslendirme sistemleri.</p>
-                    </article>
-                    <article class="service reveal">
+                        <span class="service__more">Detaylı bilgi <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+                    </a>
+                    <a class="service reveal" href="/hizmetler/goruntulu-diafon.html">
                         <div class="service__icon"><svg viewBox="0 0 24 24"><rect x="5" y="2" width="14" height="20" rx="2"/><rect x="8" y="5" width="8" height="7" rx="1"/><path d="M10 16h4M10 19h4"/></svg></div>
                         <h3>Görüntülü Diafon</h3>
                         <p>Villa, apartman ve siteler için görüntülü kapı giriş sistemleri.</p>
-                    </article>
-                    <article class="service reveal">
+                        <span class="service__more">Detaylı bilgi <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+                    </a>
+                    <a class="service reveal" href="/hizmetler/teknik-servis.html">
                         <div class="service__icon"><svg viewBox="0 0 24 24"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.8-3.8a6 6 0 0 1-7.9 7.9l-6.9 6.9a2.1 2.1 0 0 1-3-3l6.9-6.9a6 6 0 0 1 7.9-7.9z"/></svg></div>
                         <h3>Teknik Servis</h3>
                         <p>Arıza tespiti, periyodik bakım ve 7/24 acil müdahale.</p>
-                    </article>
+                        <span class="service__more">Detaylı bilgi <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+                    </a>
                 </div>
             </div>
         </section>
@@ -225,51 +253,51 @@
 
                 <div class="projects">
                     <figure class="project project--wide reveal" data-status="ongoing">
-                        <img src="https://images.pexels.com/photos/34439834/pexels-photo-34439834.jpeg?auto=compress&cs=tinysrgb&w=1000" alt="Alanya Oba site projesi" loading="lazy">
+                        <img src="/assets/img/projeler/oba-site-600.webp" srcset="/assets/img/projeler/oba-site-600.webp 600w, /assets/img/projeler/oba-site-1000.webp 1000w" sizes="(max-width: 640px) 100vw, 50vw" width="600" height="420" alt="Alanya Oba site projesi" loading="lazy" decoding="async">
                         <figcaption><span class="tag tag--ongoing">Devam Ediyor</span><h3>Alanya Oba Site Projesi</h3></figcaption>
                     </figure>
                     <figure class="project reveal" data-status="ongoing">
-                        <img src="https://images.pexels.com/photos/4174773/pexels-photo-4174773.jpeg?auto=compress&cs=tinysrgb&w=700" alt="Market network ve güvenlik sistemi" loading="lazy">
+                        <img src="/assets/img/projeler/market-network-600.webp" srcset="/assets/img/projeler/market-network-600.webp 600w, /assets/img/projeler/market-network-1000.webp 1000w" sizes="(max-width: 640px) 100vw, (max-width: 1100px) 50vw, 25vw" width="600" height="420" alt="Market network ve güvenlik sistemi" loading="lazy" decoding="async">
                         <figcaption><span class="tag tag--ongoing">Devam Ediyor</span><h3>Market Network & Güvenlik Sistemi</h3></figcaption>
                     </figure>
                     <figure class="project reveal" data-status="ongoing">
-                        <img src="https://images.pexels.com/photos/1054397/pexels-photo-1054397.jpeg?auto=compress&cs=tinysrgb&w=700" alt="Bölge hastanesi altyapı projesi" loading="lazy">
+                        <img src="/assets/img/projeler/hastane-altyapi-600.webp" srcset="/assets/img/projeler/hastane-altyapi-600.webp 600w, /assets/img/projeler/hastane-altyapi-1000.webp 1000w" sizes="(max-width: 640px) 100vw, (max-width: 1100px) 50vw, 25vw" width="600" height="420" alt="Bölge hastanesi altyapı projesi" loading="lazy" decoding="async">
                         <figcaption><span class="tag tag--ongoing">Devam Ediyor</span><h3>Bölge Hastanesi Altyapı</h3></figcaption>
                     </figure>
                     <figure class="project project--wide reveal" data-status="ongoing">
-                        <img src="https://images.pexels.com/photos/38143085/pexels-photo-38143085.jpeg?auto=compress&cs=tinysrgb&w=1000" alt="Akıllı şehir kameraları" loading="lazy">
+                        <img src="/assets/img/projeler/akilli-sehir-600.webp" srcset="/assets/img/projeler/akilli-sehir-600.webp 600w, /assets/img/projeler/akilli-sehir-1000.webp 1000w" sizes="(max-width: 640px) 100vw, 50vw" width="600" height="420" alt="Akıllı şehir kameraları" loading="lazy" decoding="async">
                         <figcaption><span class="tag tag--ongoing">Devam Ediyor</span><h3>Akıllı Şehir Kameraları</h3></figcaption>
                     </figure>
                     <figure class="project reveal" data-status="done">
-                        <img src="https://images.pexels.com/photos/33378036/pexels-photo-33378036.jpeg?auto=compress&cs=tinysrgb&w=700" alt="Otel fiber optik projesi" loading="lazy">
+                        <img src="/assets/img/projeler/otel-fiber-600.webp" srcset="/assets/img/projeler/otel-fiber-600.webp 600w, /assets/img/projeler/otel-fiber-1000.webp 1000w" sizes="(max-width: 640px) 100vw, (max-width: 1100px) 50vw, 25vw" width="600" height="420" alt="Otel fiber optik projesi" loading="lazy" decoding="async">
                         <figcaption><span class="tag tag--done">Tamamlandı</span><h3>Otel Fiber Optik Projesi</h3></figcaption>
                     </figure>
                     <figure class="project reveal" data-status="done">
-                        <img src="https://images.pexels.com/photos/2199190/pexels-photo-2199190.jpeg?auto=compress&cs=tinysrgb&w=700" alt="İş yeri IP kamera kurulumu" loading="lazy">
+                        <img src="/assets/img/projeler/isyeri-ip-kamera-600.webp" srcset="/assets/img/projeler/isyeri-ip-kamera-600.webp 600w, /assets/img/projeler/isyeri-ip-kamera-1000.webp 1000w" sizes="(max-width: 640px) 100vw, (max-width: 1100px) 50vw, 25vw" width="600" height="420" alt="İş yeri IP kamera kurulumu" loading="lazy" decoding="async">
                         <figcaption><span class="tag tag--done">Tamamlandı</span><h3>İş Yeri 8 Adet IP Kamera Kurulumu</h3></figcaption>
                     </figure>
                     <figure class="project project--wide reveal" data-status="done">
-                        <img src="https://images.pexels.com/photos/13072973/pexels-photo-13072973.jpeg?auto=compress&cs=tinysrgb&w=1000" alt="Fabrika PDKS sistemi" loading="lazy">
+                        <img src="/assets/img/projeler/fabrika-pdks-600.webp" srcset="/assets/img/projeler/fabrika-pdks-600.webp 600w, /assets/img/projeler/fabrika-pdks-1000.webp 1000w" sizes="(max-width: 640px) 100vw, 50vw" width="600" height="420" alt="Fabrika PDKS sistemi" loading="lazy" decoding="async">
                         <figcaption><span class="tag tag--done">Tamamlandı</span><h3>Fabrika PDKS Sistemi</h3></figcaption>
                     </figure>
                     <figure class="project reveal" data-status="done">
-                        <img src="https://images.pexels.com/photos/10647324/pexels-photo-10647324.jpeg?auto=compress&cs=tinysrgb&w=700" alt="Villa 16 kameralı güvenlik paketi" loading="lazy">
+                        <img src="/assets/img/projeler/villa-kamera-600.webp" srcset="/assets/img/projeler/villa-kamera-600.webp 600w, /assets/img/projeler/villa-kamera-1000.webp 1000w" sizes="(max-width: 640px) 100vw, (max-width: 1100px) 50vw, 25vw" width="600" height="420" alt="Villa 16 kameralı güvenlik paketi" loading="lazy" decoding="async">
                         <figcaption><span class="tag tag--done">Tamamlandı</span><h3>Villa 16 Kameralı Güvenlik Paketi</h3></figcaption>
                     </figure>
                     <figure class="project reveal" data-status="done">
-                        <img src="https://images.pexels.com/photos/17748657/pexels-photo-17748657.jpeg?auto=compress&cs=tinysrgb&w=700" alt="Restoran network ve güvenlik sistemi" loading="lazy">
+                        <img src="/assets/img/projeler/restoran-network-600.webp" srcset="/assets/img/projeler/restoran-network-600.webp 600w, /assets/img/projeler/restoran-network-1000.webp 1000w" sizes="(max-width: 640px) 100vw, (max-width: 1100px) 50vw, 25vw" width="600" height="420" alt="Restoran network ve güvenlik sistemi" loading="lazy" decoding="async">
                         <figcaption><span class="tag tag--done">Tamamlandı</span><h3>Restoran Network & Güvenlik Sistemi</h3></figcaption>
                     </figure>
                     <figure class="project reveal" data-status="done">
-                        <img src="https://images.pexels.com/photos/7585755/pexels-photo-7585755.jpeg?auto=compress&cs=tinysrgb&w=700" alt="Cafe zayıf akım sistem montajı" loading="lazy">
+                        <img src="/assets/img/projeler/cafe-zayif-akim-600.webp" srcset="/assets/img/projeler/cafe-zayif-akim-600.webp 600w, /assets/img/projeler/cafe-zayif-akim-1000.webp 1000w" sizes="(max-width: 640px) 100vw, (max-width: 1100px) 50vw, 25vw" width="600" height="420" alt="Cafe zayıf akım sistem montajı" loading="lazy" decoding="async">
                         <figcaption><span class="tag tag--done">Tamamlandı</span><h3>Cafe Zayıf Akım Sistem Montajı</h3></figcaption>
                     </figure>
                     <figure class="project reveal" data-status="done">
-                        <img src="https://images.pexels.com/photos/7364948/pexels-photo-7364948.jpeg?auto=compress&cs=tinysrgb&w=700" alt="Mağaza kamera montajı" loading="lazy">
+                        <img src="/assets/img/projeler/magaza-kamera-600.webp" srcset="/assets/img/projeler/magaza-kamera-600.webp 600w, /assets/img/projeler/magaza-kamera-1000.webp 1000w" sizes="(max-width: 640px) 100vw, (max-width: 1100px) 50vw, 25vw" width="600" height="420" alt="Mağaza kamera montajı" loading="lazy" decoding="async">
                         <figcaption><span class="tag tag--done">Tamamlandı</span><h3>Mağaza Kamera Montajı</h3></figcaption>
                     </figure>
                     <figure class="project project--wide reveal" data-status="done">
-                        <img src="https://images.pexels.com/photos/1170412/pexels-photo-1170412.jpeg?auto=compress&cs=tinysrgb&w=1000" alt="Ofis network kurulumu" loading="lazy">
+                        <img src="/assets/img/projeler/ofis-network-600.webp" srcset="/assets/img/projeler/ofis-network-600.webp 600w, /assets/img/projeler/ofis-network-1000.webp 1000w" sizes="(max-width: 640px) 100vw, 50vw" width="600" height="420" alt="Ofis network kurulumu" loading="lazy" decoding="async">
                         <figcaption><span class="tag tag--done">Tamamlandı</span><h3>Ofis Network Kurulumu</h3></figcaption>
                     </figure>
                 </div>
@@ -295,6 +323,46 @@
                     <blockquote class="review"><div class="stars">★★★★★</div><p>"Gece görüş kalitesi beklediğimden iyi."</p></blockquote>
                     <blockquote class="review"><div class="stars">★★★★★</div><p>"Network altyapımızı sorunsuz kurdular."</p></blockquote>
                     <blockquote class="review"><div class="stars">★★★★★</div><p>"Alanya içerisindeki en iyi firmalardan biri. Teşekkürler."</p></blockquote>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ -->
+        <section class="section" id="sss">
+            <div class="container faq-wrap">
+                <div class="section__head reveal">
+                    <span class="eyebrow">Sık Sorulan Sorular</span>
+                    <h2 class="section__title">Merak <span class="gradient-text">ettikleriniz</span></h2>
+                </div>
+                <div class="faq">
+                    <details class="faq__item reveal">
+                        <summary>Keşif ücretli mi?</summary>
+                        <p>Hayır. Alanya ve çevresinde yerinde keşif ücretsizdir. Mekânınızı inceler, ihtiyacınıza uygun sistemi ve net fiyat teklifini keşif sonrasında sunarız.</p>
+                    </details>
+                    <details class="faq__item reveal">
+                        <summary>Kamera sistemi kurulumu ne kadar sürer?</summary>
+                        <p>Süre kamera sayısına, kablolama mesafesine ve binanın yapısına göre değişir. Keşif sırasında size net bir kurulum süresi bildiririz.</p>
+                    </details>
+                    <details class="faq__item reveal">
+                        <summary>Kameraları telefondan izleyebilir miyim?</summary>
+                        <p>Evet. Kurulum sonrasında mobil uygulamayı telefonunuza kurar, canlı izleme ve kayıt izleme kullanımını yerinde gösteririz.</p>
+                    </details>
+                    <details class="faq__item reveal">
+                        <summary>Hangi bölgelere hizmet veriyorsunuz?</summary>
+                        <p>Merkezimiz Alanya Oba Mahallesi'ndedir. Alanya başta olmak üzere Antalya genelinde hizmet veriyoruz.</p>
+                    </details>
+                    <details class="faq__item reveal">
+                        <summary>Ürünlerin garantisi var mı?</summary>
+                        <p>Kurduğumuz ürünler yasal garanti kapsamındadır. Garanti ve bakım koşulları teklifinizde ayrıca belirtilir.</p>
+                    </details>
+                    <details class="faq__item reveal">
+                        <summary>Sistemde arıza olursa ne yapmalıyım?</summary>
+                        <p>7/24 acil teknik servis hattımızı arayabilir veya WhatsApp'tan yazabilirsiniz. Ekibimiz arızayı en kısa sürede tespit edip giderir.</p>
+                    </details>
+                    <details class="faq__item reveal">
+                        <summary>Mevcut kamera veya alarm sistemime servis veriyor musunuz?</summary>
+                        <p>Evet. Başka firmalarca kurulmuş sistemlerin arıza tespiti, onarımı, bakımı ve genişletilmesi için de hizmet veriyoruz.</p>
+                    </details>
                 </div>
             </div>
         </section>
@@ -340,8 +408,13 @@
                         </li>
                     </ul>
 
-                    <div class="map">
-                        <iframe title="Karaca Güvenlik konum" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3205.5672826089603!2d32.049626675290725!3d36.540432582300575!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14dc992c581f2795%3A0x79a3e5f7aafaafbb!2zS0FSQUNBIEfDnFZFTkzEsEsgVkUgQsSwTMSwxZ7EsE0gU8SwU1RFTUxFUsSw!5e0!3m2!1str!2str!4v1773761056176!5m2!1str!2str" loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe>
+                    <div class="map" id="map" data-src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3205.5672826089603!2d32.049626675290725!3d36.540432582300575!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14dc992c581f2795%3A0x79a3e5f7aafaafbb!2zS0FSQUNBIEfDnFZFTkzEsEsgVkUgQsSwTMSwxZ7EsE0gU8SwU1RFTUxFUsSw!5e0!3m2!1str!2str!4v1773761056176!5m2!1str!2str">
+                        <button type="button" class="map__load">
+                            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                            <span>Haritayı göster</span>
+                            <small>Tıkladığınızda Google Haritalar yüklenir.</small>
+                        </button>
+                        <a class="map__link" href="https://www.google.com/maps/search/?api=1&amp;query=KARACA+G%C3%9CVENL%C4%B0K+VE+B%C4%B0L%C4%B0%C5%9E%C4%B0M+S%C4%B0STEMLER%C4%B0+Alanya" target="_blank" rel="noopener">Google Haritalar'da aç ↗</a>
                     </div>
                 </div>
 
@@ -375,6 +448,10 @@
                         <span>Mesajınız</span>
                         <textarea name="message" rows="4"></textarea>
                     </label>
+                    <label class="consent">
+                        <input type="checkbox" name="kvkk" required>
+                        <span><a href="/kvkk.html" target="_blank">KVKK Aydınlatma Metni</a>'ni okudum; bilgilerimin teklif hazırlanması amacıyla işlenmesini kabul ediyorum.</span>
+                    </label>
                     <button type="submit" class="btn btn--primary btn--lg btn--block">
                         Hemen Teklif Al
                         <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
@@ -388,21 +465,24 @@
     <footer class="footer">
         <div class="container footer__inner">
             <div class="footer__brand">
-                <img src="LOGO.png" alt="Karaca Güvenlik" width="1189" height="230" loading="lazy">
+                <img src="/LOGO.png" alt="Karaca Güvenlik" width="1189" height="230" loading="lazy">
                 <p>Alanya ve Antalya genelinde akıllı güvenlik sistemleri ve zayıf akım çözümleri.</p>
             </div>
             <div class="footer__col">
                 <h4>Hizmetler</h4>
-                <a href="#services">Kamera Sistemleri</a>
-                <a href="#services">Alarm Sistemleri</a>
-                <a href="#services">Network Altyapısı</a>
-                <a href="#services">Görüntülü Diafon</a>
+                <a href="/hizmetler/kamera-sistemleri.html">Kamera Sistemleri</a>
+                <a href="/hizmetler/alarm-sistemleri.html">Alarm Sistemleri</a>
+                <a href="/hizmetler/network-altyapisi.html">Network Altyapısı</a>
+                <a href="/hizmetler/goruntulu-diafon.html">Görüntülü Diafon</a>
+                <a href="/hizmetler/teknik-servis.html">Teknik Servis</a>
             </div>
             <div class="footer__col">
                 <h4>Kurumsal</h4>
                 <a href="#process">Çalışma Sürecimiz</a>
                 <a href="#projects">Referanslar</a>
-                <a href="#contact">İletişim</a>
+                <a href="#sss">Sık Sorulan Sorular</a>
+            <a href="#contact">İletişim</a>
+            <a href="/kvkk.html">KVKK Aydınlatma Metni</a>
             </div>
             <div class="footer__col">
                 <h4>İletişim</h4>
@@ -422,6 +502,6 @@
         <span>WhatsApp</span>
     </a>
 
-    <script src="assets/js/main.js"></script>
+    <script src="/assets/js/main.js"></script>
 </body>
 </html>

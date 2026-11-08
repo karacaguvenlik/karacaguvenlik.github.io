@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+Disallow: /old.html
+
+Sitemap: https://karacaguvenlik.github.io/sitemap.xml
