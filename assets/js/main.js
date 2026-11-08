@@ -18,8 +18,8 @@
     nav.querySelectorAll('a').forEach((a) => a.addEventListener('click', () => setMenu(false)));
     document.addEventListener('keydown', (e) => { if (e.key === 'Escape') setMenu(false); });
 
-    // Active nav link
-    const links = [...document.querySelectorAll('.nav__link')];
+    // Active nav link (same-page anchors only; sub pages link to /#section)
+    const links = [...document.querySelectorAll('.nav__link')].filter((l) => l.getAttribute('href').startsWith('#'));
     const sections = links.map((l) => document.querySelector(l.getAttribute('href'))).filter(Boolean);
     const spy = new IntersectionObserver((entries) => {
         entries.forEach((entry) => {
@@ -81,9 +81,24 @@
         });
     }
 
+    // Google Maps is loaded on demand so no third-party cookies are set on page load
+    const map = document.getElementById('map');
+    if (map) {
+        map.querySelector('.map__load').addEventListener('click', () => {
+            const iframe = document.createElement('iframe');
+            iframe.src = map.dataset.src;
+            iframe.title = 'Karaca Güvenlik konum';
+            iframe.loading = 'lazy';
+            iframe.referrerPolicy = 'no-referrer-when-downgrade';
+            iframe.allowFullscreen = true;
+            map.appendChild(iframe);
+            map.classList.add('is-loaded');
+        });
+    }
+
     // Quote form -> WhatsApp (static site, no backend)
     const form = document.getElementById('quoteForm');
-    form.addEventListener('submit', (e) => {
+    if (form) form.addEventListener('submit', (e) => {
         e.preventDefault();
         const d = new FormData(form);
         const text = [
@@ -96,5 +111,6 @@
         window.open(`https://wa.me/905387711146?text=${encodeURIComponent(text)}`, '_blank', 'noopener');
     });
 
-    document.getElementById('year').textContent = new Date().getFullYear();
+    const year = document.getElementById('year');
+    if (year) year.textContent = new Date().getFullYear();
 })();
